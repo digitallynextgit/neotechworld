@@ -22,7 +22,7 @@ const featuresData: Feature[] = [
     icon: <Pill className="w-10 h-10 text-white" />,
     title: "Right Drug. Right Dose. First Time.",
     paragraph:
-      "Trial-and-error prescriptions aren't just risky—they're costly. We eliminate the mismatch through pharmacogenomics.",
+      "Trial-and-error prescriptions aren't just risky - they're costly. We eliminate the mismatch through pharmacogenomics.",
     btn: "Learn More",
     btnLink: "/#",
     images: [

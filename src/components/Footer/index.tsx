@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer id="footer"
-      className="wow fadeInUp relative z-10 bg-transparent pt-20 lg:pt-[100px]"
+      className="wow fadeInUp relative  bg-transparent pt-20 lg:pt-[100px]"
       data-wow-delay=".15s"
     >
       <div className="ml-[12vw]">
@@ -20,10 +20,10 @@ const Footer = () => {
                   className="max-w-full"
                 />
               </Link>
-              <p className="mb-8 max-w-[270px] text-base text-white">
+              {/* <p className="mb-8 max-w-[270px] text-base text-white">
                 We create digital experiences for brands and companies by using
                 technology.
-              </p>
+              </p> */}
               <div className="-mx-3 flex items-center">
                 <Link
                   aria-label="social link"
@@ -187,7 +187,8 @@ const Footer = () => {
                     href="#"
                     className="mb-3 inline-block text-base text-white hover:text-red-500"
                   >
-                    LineIcons
+                    Precision Diagnostics
+
                   </Link>
                 </li>
                 <li>
@@ -195,7 +196,7 @@ const Footer = () => {
                     href="#"
                     className="mb-3 inline-block text-base text-white hover:text-red-500"
                   >
-                    Next.js Templates
+                  Pharmacogenomics
                   </Link>
                 </li>
                 <li>
@@ -203,7 +204,7 @@ const Footer = () => {
                     href="#"
                     className="mb-3 inline-block text-base text-white hover:text-red-500"
                   >
-                    TailAdmin
+                    Preventive Genomics
                   </Link>
                 </li>
                 <li>
@@ -211,7 +212,7 @@ const Footer = () => {
                     href="#"
                     className="mb-3 inline-block text-base text-white hover:text-red-500"
                   >
-                    PlainAdmin
+                   Clinical R&D & Registry Solutions
                   </Link>
                 </li>
               </ul>

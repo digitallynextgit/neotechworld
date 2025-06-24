@@ -30,7 +30,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
           <p className="mx-auto my-[6vh] w-[80vw] rounded-full bg-white/80 p-[1.5vw] text-[1.25vw] font-medium text-red-700">
             NeoTech World Lab empowers healthcare systems, doctors,
             researchers, and institutions to make every treatment
-            count—through genomics that reduce guesswork, cut cost, and
+            count - through genomics that reduce guesswork, cut cost, and
             unlock population-wide precision.
           </p>
           <div className="mb-[2vh] flex w-full flex-col justify-center">

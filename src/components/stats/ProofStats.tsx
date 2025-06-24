@@ -162,7 +162,7 @@ export default function ProofStats() {
             <div className="overflow-hidden">
               <Image
                 ref={imageRef}
-                src="/images/about/about-image-01.jpg"
+                src="/number.webp"
                 alt="Medical Statistics"
                 className="h-[80vh] w-full object-cover"
                 width={1200}

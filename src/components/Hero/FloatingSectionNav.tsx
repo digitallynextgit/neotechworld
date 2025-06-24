@@ -6,8 +6,8 @@ const sectionNav = [
   { id: "works", label: "Works" },
   { id: "numbers", label: "Numbers" },
   { id: "who", label: "Who" },
-  { id: "blogs", label: "blogs" },
-  { id: "footer", label: "footer" },
+  { id: "blogs", label: "Blogs" },
+  { id: "footer", label: "Footer" },
   
 ];
 

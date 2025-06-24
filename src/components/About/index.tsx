@@ -12,7 +12,7 @@ const offerings = [
   {
     icon: <Pill className="w-10 h-10 text-newblue mb-4" />, // Pharmacogenomics
     title: "Pharmacogenomics",
-    desc: "Tailor every prescription to the patient's DNA—eliminating waste and risk.",
+    desc: "Tailor every prescription to the patient's DNA - eliminating waste and risk.",
     img: "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&w=600&q=80",
   },
   {
@@ -24,7 +24,7 @@ const offerings = [
   {
     icon: <BookOpenCheck className="w-10 h-10 text-newblue mb-4" />, // Clinical R&D
     title: "Clinical R&D & Registry Solutions",
-    desc: "Turn data into decisions—build national registries, dashboards, and publishable insight.",
+    desc: "Turn data into decisions - build national registries, dashboards, and publishable insight.",
     img: "https://images.pexels.com/photos/2280547/pexels-photo-2280547.jpeg?auto=compress&w=600&q=80",
   },
 ];

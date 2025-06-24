@@ -47,7 +47,7 @@ const statsData = [
     suffix: "→ 4",
     prefix: "",
     label:
-      "One patient's medication load reduced from 12 to 4—improving stability and preventing hospitalization",
+      "One patient's medication load reduced from 12 to 4 - improving stability and preventing hospitalization",
     start: 12,
     end: 4,
     duration: 1500,
@@ -205,7 +205,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
         Results
       </ScrollFloat>
       <p className="mb-10  text-[2vw] text-white/80 ">
-        When care is guided by insight, outcomes improve—for everyone.
+        When care is guided by insight, outcomes improve - for everyone.
       </p>
       <div className="grid w-full grid-cols-1 gap-4 text-left sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-4  ">
         {statsData.map((stat, i) => {
