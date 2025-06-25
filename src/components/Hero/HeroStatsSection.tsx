@@ -48,8 +48,8 @@ const statsData = [
     prefix: "",
     label:
       "One patient's medication load reduced from 12 to 4 - improving stability and preventing hospitalization",
-    start: 12,
-    end: 4,
+    start: 0,
+    end: 12,
     duration: 1500,
     isDecrease: true,
   },

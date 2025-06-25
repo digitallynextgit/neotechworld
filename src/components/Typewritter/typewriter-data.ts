@@ -6,17 +6,17 @@ interface TypewriterItem {
 
 export const typewriterData: TypewriterItem[] = [
   {
-    text: "Before the first scan.",
+    text: "Before the first <i>scan</i>.",
     // tag: "#WhatNext?",
     image: "/banner/1.webp"
   },
   {
-    text: "Before the first symptom.",
+    text: "Before the first <i>symptom</i>.",
     // tag: "#WhatNext?",
     image: "/banner/2.webp"
   },
   {
-    text: "Before the first dose.",
+    text: "Before the first <i>dose</i>.",
     // tag: "#WhatNext?",
     image: "/banner/3.webp"
   },

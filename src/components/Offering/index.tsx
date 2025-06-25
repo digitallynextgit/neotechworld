@@ -165,7 +165,7 @@ export function Offering() {
               href="#"
               className="border border-black bg-red-500 text-red-500 hover:bg-red-500/10"
             >
-              Book a Pilot Program
+              Explore Real-World Outcomes
             </PrimaryButton>
           </div>
         </div>

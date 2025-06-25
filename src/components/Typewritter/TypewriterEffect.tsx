@@ -103,7 +103,8 @@ const TypewriterEffect = ({ onImageChange }: TypewriterEffectProps) => {
               loop: true,
               delay: 50,
               deleteSpeed: 25,
-              cursor: ''
+              cursor: '',
+              // html: true
             }}
           />
         </div>
