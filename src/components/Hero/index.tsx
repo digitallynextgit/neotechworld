@@ -348,7 +348,7 @@ const Hero = ({ posts }: HeroProps) => {
       <main id="hero-main-section">
         <div className="relative z-10 flex w-full items-center justify-center">
           <div className="mx-auto h-[100vh] w-full max-w-[1600px]">
-            <DnaCanvas modelPath="/3d/dna.glb" />
+            <DnaCanvas modelPath="/dna.glb" />
           </div>
         </div>
         {/* Content */}

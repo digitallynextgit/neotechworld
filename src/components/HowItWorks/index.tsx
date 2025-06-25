@@ -247,7 +247,7 @@ export default function HowItWorks() {
                 loop
                 playsInline
               >
-                <source src="/about.mp4" />
+                <source src="/DNA.mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

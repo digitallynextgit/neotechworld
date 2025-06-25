@@ -89,15 +89,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
           </div>
         </div>
       </div>
-      <div className="absolute z-30 -left-[40vw] top-[55vh] flex w-full items-center justify-center">
-        <button
-          onClick={scrollToNextSection}
-          className="duration-600 z-40 flex h-[8vw] w-[8vw] rotate-0 items-center justify-center rounded-full border-2 border-white bg-white shadow-lg transition-all hover:rotate-6 hover:scale-105"
-          aria-label="Scroll to next section"
-        >
-          <FaArrowDown size={"2vw"} color="#FF5C5C" />
-        </button>
-      </div>
+      
     </div>
   </div>
 );

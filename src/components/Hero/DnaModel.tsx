@@ -13,19 +13,20 @@ function Model({ modelPath }: DnaModelProps) {
   const { scene } = useGLTF(modelPath);
   const modelRef = useRef<THREE.Group>(null);
 
-  // Removed vertical movement animation
+  // Added vertical axis rotation (x-axis)
   useFrame(() => {
     if (modelRef.current) {
-      modelRef.current.rotation.y += 0.005; // Keep rotation
+      modelRef.current.rotation.x += 0.005; // Vertical axis rotation only
+      // Removed horizontal rotation (y-axis)
     }
   });
 
-  return <primitive object={scene} ref={modelRef} scale={1} position={[0, 0, 0]} />;
+  return <primitive object={scene} ref={modelRef} scale={3} position={[0, 0, 0]} />;
 }
 
 export default function DnaCanvas({ modelPath }: DnaModelProps) {
   return (
-    <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+    <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
       <ambientLight intensity={1.5} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <directionalLight position={[-5, -5, -5]} intensity={0.5} />
