@@ -31,7 +31,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
           data-wow-delay=".2s"
         >
           <div className="mt-[-7vw] mb-[8vh]">
-          <h1 className="mb-[2vh] text-[6vw] font-normal leading-[1.1] text-white">
+          <h1 className="mb-[2vh] text-[5vw] font-normal leading-[1.1] text-white">
           Know First. Treat Smarter.
           </h1>
           <div className="h-[2vw] mb-[2vh] mt-[-5vw] text-white">
