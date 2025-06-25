@@ -65,7 +65,7 @@ const TypewriterEffect = ({ onImageChange }: TypewriterEffectProps) => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: '5vw', // ← this line
+    fontSize: '4vw', // ← this line
     lineHeight: 1.2,
     fontWeight: 'semibold'
   }}
