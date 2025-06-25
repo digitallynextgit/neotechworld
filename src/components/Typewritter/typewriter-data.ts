@@ -11,12 +11,12 @@ export const typewriterData: TypewriterItem[] = [
     image: "/banner/1.webp"
   },
   {
-    text: "Before the first scan.",
+    text: "Before the first symptom.",
     // tag: "#WhatNext?",
     image: "/banner/2.webp"
   },
   {
-    text: "Before the first scan.",
+    text: "Before the first dose.",
     // tag: "#WhatNext?",
     image: "/banner/3.webp"
   },
