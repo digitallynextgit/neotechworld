@@ -1,6 +1,9 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaArrowDown, FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import TypewriterText from "./TypewriterText";
+import TypewriterEffect from "../Typewritter/TypewriterEffect";
+
 
 interface HeroMainContentProps {
   buttonProgress: number;
@@ -16,7 +19,10 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
   buttonCurrent,
   setButtonCurrent,
   scrollToNextSection,
-}) => (
+}) => {
+
+  
+  return (
   <div className="relative z-20 mx-auto w-[100vw] h-[80vh] flex flex-col justify-center mt-[-45vw] px-[6vw]">
     <div className="flex flex-wrap items-center justify-center w-full h-full">
       <div className="w-full">
@@ -24,10 +30,15 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
           className="hero-content wow fadeInUp mx-auto text-center"
           data-wow-delay=".2s"
         >
+          <div className="mt-[-7vw] mb-[8vh]">
           <h1 className="mb-[2vh] text-[6vw] font-normal leading-[1.1] text-white">
-            From Risk to Response We Help Systems Save Lives.
+          Know First. Treat Smarter.
           </h1>
-          <p className="mx-auto my-[6vh] w-[80vw] rounded-full bg-white/80 p-[1.5vw] text-[1.25vw] font-medium text-red-700">
+          <div className="h-[2vw] mb-[2vh] mt-[-5vw] text-white">
+          <TypewriterEffect />
+          </div>
+          </div>
+          <p className="mx-auto my-[6vh] w-[80vw] mt-[12vw] rounded-full bg-white/80 p-[1.5vw] text-[1.25vw] font-medium text-red-700">
             NeoTech World Lab empowers healthcare systems, doctors,
             researchers, and institutions to make every treatment
             count - through genomics that reduce guesswork, cut cost, and
@@ -92,6 +103,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
       
     </div>
   </div>
-);
+  );
+};
 
-export default HeroMainContent; 
+export default HeroMainContent;

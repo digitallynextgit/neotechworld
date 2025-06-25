@@ -75,12 +75,12 @@ const Header = () => {
   const menuItemRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const lineRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const handleMenuHover = (idx: number) => {
-    gsap.to(menuItemRefs.current[idx], { x: 24, duration: 0.3, ease: "power1.out" });
-    gsap.to(lineRefs.current[idx], { scaleX: 1, transformOrigin: '100% 50%', duration: 0.3, ease: "power1.out" });
+    gsap.to(menuItemRefs.current[idx], { x: 24, duration: 0.1, ease: "power2.out" });
+    gsap.to(lineRefs.current[idx], { scaleX: 1, transformOrigin: '0% 25%', duration: 0.1, ease: "power2.out" });
   };
   const handleMenuLeave = (idx: number) => {
-    gsap.to(menuItemRefs.current[idx], { x: 0, duration: 0.3, ease: "power1.in" });
-    gsap.to(lineRefs.current[idx], { scaleX: 0, transformOrigin: '100% 50%', duration: 0.3, ease: "power1.in" });
+    gsap.to(menuItemRefs.current[idx], { x: 0, duration: 0.1, ease: "power2.in" });
+    gsap.to(lineRefs.current[idx], { scaleX: 0, transformOrigin: '0% 25%', duration: 0.1, ease: "power2.in" });
   };
 
   // Prevent background scroll when menu is open
@@ -184,15 +184,15 @@ const Header = () => {
                     onMouseEnter={() => handleMenuHover(idx)}
                     onMouseLeave={() => handleMenuLeave(idx)}
                   >
-                    <div className="flex flex-col items-start">
+                    <div className="flex flex-row items-center gap-4">
                       <span
                         ref={el => { lineRefs.current[idx] = el!; }}
-                        className="block h-2 w-28 bg-white origin-right scale-x-0 mb-2 "
+                        className="block h-[5px] w-12 mt-[4vw]  bg-white origin-left scale-x-0"
                         style={{ display: 'block', transform: 'scaleX(0)' }}
                       />
                       <span
                         ref={el => { menuItemRefs.current[idx] = el!; }}
-                        className={`text-white text-7xl font-light transition-all duration-700 opacity-0 translate-y-8
+                        className={`text-white text-7xl font-light transition-all duration-300 opacity-0 translate-y-8
                           ${menuOpen ? `opacity-100 translate-y-0 delay-[${200 + idx * 100}ms]` : ''}`}
                         style={{ transitionDelay: menuOpen ? `${200 + idx * 100}ms` : '0ms' }}
                       >
