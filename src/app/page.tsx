@@ -5,6 +5,7 @@ import CallToAction from "@/components/CallToAction";
 // import ScrollUp from "@/components/Common/ScrollUp";
 // import Contact from "@/components/Contact";
 // import Faq from "@/components/Faq";
+import Image from "next/image";
 
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
@@ -28,16 +29,17 @@ export default function Home() {
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
 
   return (
-    <main className="relative">
+    <main className="relative overflow-x-auto">
       {/* Full-page background video */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover opacity-85"
-        src="/bg3.mp4"
+        className="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover"
+        src="/bg5.mp4"
       />
+      {/* <Image src="/bgimage.webp" alt="" width={1200} height={100}/> */}
       <div className="relative z-10 overflow-hidden ">
         {/* <ScrollUp /> */}
         <Hero />

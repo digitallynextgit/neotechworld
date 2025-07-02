@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FaArrowDown, FaArrowRight, FaArrowLeft } from "react-icons/fa";
 // import TypewriterText from "./TypewriterText";
 import TypewriterEffect from "../Typewritter/TypewriterEffect";
+import DnaCanvas from "./DnaModel";
 
 
 interface HeroMainContentProps {
@@ -30,11 +31,13 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
           className="hero-content wow fadeInUp mx-auto text-center"
           data-wow-delay=".2s"
         >
-          <div className="mt-[-7vw] mb-[8vh]">
+          <div className="mt-[-8vw] mb-[8vh]">
             {/* <h3 className="mb-[2vh] text-[2vw] underline italic leading-[1.1] text-white font-bold ">NMC Genetics</h3> */}
-          <h1 className="mb-[2vh] text-[5vw] font-normal leading-[1.1] text-white">
-            From Unknowns to Outcomes.
-          </h1>
+          <div className="mb-[2vh] text-[4vw] font-normal leading-[1.1] text-white flex flex-col justify-center items-center">
+                 <DnaCanvas modelPath="/dna.glb" />
+            <h1 className="w-[80%]">From Unknowns to Outcomes.</h1>
+       
+          </div>
           <div className="h-[2vw] mb-[2vh] mt-[-5vw] text-white font-bold">
           <TypewriterEffect />
           </div>

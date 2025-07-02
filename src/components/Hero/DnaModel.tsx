@@ -26,7 +26,7 @@ function Model({ modelPath }: DnaModelProps) {
 
 export default function DnaCanvas({ modelPath }: DnaModelProps) {
   return (
-    <Canvas camera={{ position: [0, 0, 10], fov: 50 }} className='opacity-95'>
+    <Canvas camera={{ position: [0, 0, 10], fov: 90 }} className='opacity-95 '>
       <ambientLight intensity={1.5} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <directionalLight position={[-5, -5, -5]} intensity={0.5} />
