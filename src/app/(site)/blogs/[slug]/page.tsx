@@ -187,11 +187,11 @@ export default async function Post({ params }: Props) {
                         </h2>
                         <span className="mb-10 inline-block h-[2px] w-20 bg-primary"></span>
                       </div>
-                      {posts.slice(0, 3).map((blog, i) => (
+                      {posts.slice(0, 3).map((blog: Blog, i: number) => (
                         <PopularArticle
                           key={i}
                           image={blog?.coverImage}
-                          title={blog?.title.slice(0, 30)}
+                          title={blog?.title?.slice(0, 30) || ''}
                           name={blog?.author}
                         />
                       ))}
@@ -226,7 +226,7 @@ export default async function Post({ params }: Props) {
               <span className="mb-10 inline-block h-[2px] w-20 bg-primary"></span>
             </div>
 
-            {posts.slice(0, 3).map((blog, key) => (
+            {posts.slice(0, 3).map((blog: Blog, key: number) => (
               <div key={key} className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3">
                 <SingleBlog blog={blog} />
               </div>

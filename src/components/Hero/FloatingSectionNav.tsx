@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 
 const sectionNav = [
-  { id: "result", label: "Result" },
-  { id: "expertise", label: "Expertise" },
+  { id: "result", label: "Outcomes" },
+  { id: "expertise", label: "Specialization" },
   { id: "works", label: "Works" },
-  { id: "numbers", label: "Numbers" },
   { id: "who", label: "Who" },
   { id: "blogs", label: "Blogs" },
   { id: "footer", label: "Footer" },
@@ -87,17 +86,17 @@ function FloatingSectionNav() {
   return (
     <nav
       ref={navRef}
-      className={`fixed left-8 top-1/2 z-40 flex -translate-y-1/2 flex-col items-start gap-4 transition-colors duration-300 ${isOnWhiteBg ? "text-gray-900" : "text-white"}`}
+      className={`fixed left-8 top-1/2 z-40 flex -translate-y-1/2 flex-col items-start gap-4 transition-colors duration-300 ${isOnWhiteBg ? "text-gray-900" : "text-black"}`}
     >
       {sectionNav.map((item) => (
         <button
           key={item.id}
           onClick={() => handleClick(item.id)}
-          className={`flex items-center gap-2 text-[1.25vw] font-light transition ${active === item.id ? (isOnWhiteBg ? "font-bold text-gray-900" : "font-bold text-white") : isOnWhiteBg ? "text-gray-400" : "text-white/60"}`}
+          className={`flex items-center gap-2 text-[1.25vw] font-light transition ${active === item.id ? (isOnWhiteBg ? "font-bold text-gray-900" : "font-bold text-black") : isOnWhiteBg ? "text-black" : "text-black/80"}`}
           style={{ outline: "none" }}
         >
           <span
-            className={`h-2 w-2 rounded-full transition-all duration-200 ${active === item.id ? (isOnWhiteBg ? "bg-gray-900" : "bg-white") : isOnWhiteBg ? "bg-gray-300" : "bg-white/30"}`}
+            className={`h-2 w-2 rounded-full transition-all duration-200 ${active === item.id ? (isOnWhiteBg ? "bg-gray-900" : "bg-black/80") : isOnWhiteBg ? "bg-gray-300" : "bg-white/30"}`}
           ></span>
           <span>{item.label}</span>
         </button>

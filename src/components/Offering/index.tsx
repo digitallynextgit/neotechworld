@@ -55,7 +55,7 @@ export function Offering() {
       const cardTl = gsap.timeline({
         scrollTrigger: {
           trigger: card,
-          start: "top 80%",
+          start: "top 100%",
           toggleActions: "play none none reset",
         },
       });
@@ -156,18 +156,11 @@ export function Offering() {
         <div className="flex flex-row items-center justify-between ">
           <ScrollFloat
             containerClassName="mb-6"
-            textClassName=" text-[6vw] text-black font-medium "
+            textClassName=" text-[5.5vw] text-black font-medium "
           >
             Our Core Offerings
           </ScrollFloat>
-          <div className="flex justify-center ">
-            <PrimaryButton
-              href="#"
-              className="border border-black bg-red-500 text-red-500 hover:bg-red-500/10"
-            >
-              Explore Real-World Outcomes
-            </PrimaryButton>
-          </div>
+          
         </div>
         <p className="mb-[2.5vw] text-[1.25vw]">
           From insight to impact—delivered with clinical precision.

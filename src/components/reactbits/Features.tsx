@@ -1,143 +1,211 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { FaBrain, FaDna, FaTools, FaSearch, FaArrowRight, FaPlus } from "react-icons/fa"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
 interface Feature {
-  step: string
-  title?: string
-  content: string
-  images: string[]
-  currentImageIndex: number
+  title: string
+  solution: string
+  icon: React.ReactNode
+  color: string
 }
 
 interface FeatureStepsProps {
-  features: Feature[]
+  features?: Feature[]
   className?: string
   title?: string
-  autoPlayInterval?: number
-  imageHeight?: string
 }
 
 export function FeatureSteps({
   features,
   className,
   title = "",
-  autoPlayInterval = 3000,
-  imageHeight = "h-[400px]",
 }: FeatureStepsProps) {
-  const [currentFeature, setCurrentFeature] = useState(0)
-  const [progress, setProgress] = useState(0)
-  const [localFeatures, setLocalFeatures] = useState<Feature[]>(features)
-
+  const [activeFeature, setActiveFeature] = useState<number | null>(null)
+  const cardsRef = useRef<HTMLDivElement>(null)
+  
   useEffect(() => {
-    const timer = setInterval(() => {
-      if (progress < 100) {
-        setProgress((prev) => prev + 100 / (autoPlayInterval / 100))
-      } else {
-        setCurrentFeature((prev) => (prev + 1) % localFeatures.length)
-        setProgress(0)
-      }
-    }, 100)
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger)
+    
+    if (cardsRef.current) {
+      const cards = cardsRef.current.querySelectorAll('.feature-card')
+      
+      // Create GSAP animation for each card
+      cards.forEach((card, index) => {
+        gsap.fromTo(card, 
+          { y: 100, opacity: 0 },
+          { 
+            y: 0, 
+            opacity: 1, 
+            duration: 0.8, 
+            delay: index * 0.2,
+            scrollTrigger: {
+              trigger: card,
+              start: "top bottom-=100",
+              end: "bottom top",
+              toggleActions: "play reverse restart reverse", // Play animation every time element enters viewport
+              scrub: false, // Don't tie animation progress to scroll position
+              markers: false, // Set to true for debugging
+              once: false // Allow animation to play multiple times
+            }
+          }
+        )
+      })
+    }
+    
+    return () => {
+      // Clean up ScrollTrigger instances
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    }
+  }, [])
 
-    return () => clearInterval(timer)
-  }, [progress, localFeatures.length, autoPlayInterval])
+  // Default features with red color theme
+  const defaultFeatures: Feature[] = [
+    {
+      title: "Precision Diagnostics",
+      solution: "Treating More with Less",
+      icon: <FaBrain className="text-3xl" />,
+      color: "from-red-400 to-red-600"
+    },
+    {
+      title: "Pharmacogenomics",
+      solution: "Right Drug. Right Dose.",
+      icon: <FaDna className="text-3xl" />,
+      color: "from-red-400 to-red-600"
+    },
+    {
+      title: "Clinical R&D",
+      solution: "Research to Real-World",
+      icon: <FaTools className="text-3xl" />,
+      color: "from-red-400 to-red-600"
+    },
+    {
+      title: "Preventive Genomics",
+      solution: "Prevention That Pays",
+      icon: <FaSearch className="text-3xl" />,
+      color: "from-red-400 to-red-600"
+    }
+  ]
 
+  const featuresToRender = features || defaultFeatures
+  
   return (
-    <div className={cn("p-8 md:p-12", className)}>
-      <div className="max-w-7xl mx-auto w-full">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 text-center">
+    <div className={cn("py-16 relative", className)}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">
           {title}
         </h2>
 
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-10">
-          <div className="order-2 md:order-1 space-y-8">
-            {localFeatures.map((feature, index) => (
-              <motion.div
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {featuresToRender.map((feature, index) => (
+            <div
                 key={index}
-                className="flex items-center gap-6 md:gap-8 cursor-pointer"
-                initial={{ opacity: 0.3 }}
-                animate={{ opacity: index === currentFeature ? 1 : 0.3 }}
-                transition={{ duration: 0.5 }}
-                onClick={() => {
-                  setCurrentFeature(index);
-                  const newFeatures = [...localFeatures];
-                  newFeatures[index].currentImageIndex = 
-                    (newFeatures[index].currentImageIndex + 1) % newFeatures[index].images.length;
-                  setLocalFeatures(newFeatures);
-                  setProgress(0);
-                }}
+                className={cn(
+                  "feature-card relative overflow-hidden rounded-2xl cursor-pointer",
+                  "h-[320px] transition-all duration-300 border-2 border-red-500",
+                  "backdrop-blur-lg bg-white/10 shadow-lg hover:shadow-xl"
+                )}
+                onClick={() => setActiveFeature(activeFeature === index ? null : index)}
               >
-                <motion.div
-                  className={cn(
-                    "w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border-2",
-                    index === currentFeature
-                      ? "bg-primary border-primary text-primary-foreground scale-110"
-                      : "bg-muted border-muted-foreground",
-                  )}
-                >
-                  {index <= currentFeature ? (
-                    <span className="text-lg font-bold">✓</span>
-                  ) : (
-                    <span className="text-lg font-semibold">{index + 1}</span>
-                  )}
-                </motion.div>
-
-                <div className="flex-1">
-                  <h3 className="text-[1.5vw] font-semibold">
-                    {feature.title || feature.step}
+                {/* Glass Effect Background with Red Tint */}
+                <div className="absolute inset-0 bg-gradient-to-br from-red-100/30 to-red-50/20 backdrop-filter backdrop-blur-md" />
+                
+                {/* Card Content */}
+                <div className="relative z-10 h-full flex flex-col items-center justify-center p-6 text-gray-800">
+                  {/* Icon with colored background */}
+                  <div className="mb-6">
+                    <div className={cn(
+                      "w-20 h-20 rounded-full flex items-center justify-center",
+                      "bg-gradient-to-br", feature.color, "text-white"
+                    )}>
+                      {feature.icon}
+                    </div>
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-xl font-bold mb-2 text-center">
+                    {feature.title}
                   </h3>
-                  <p className="text-black text-[1vw]">
-                    {feature.content}
-                  </p>
+                  
+                  {/* Solution */}
+                  <p className="text-center text-gray-600 mb-4">{feature.solution}</p>
+                  
+                  {/* Click Indicator */}
+                  <div className="mt-4 flex items-center gap-2 bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full border border-red-300">
+                    <FaPlus size={12} className="text-red-500" />
+                    <span className="text-sm font-medium text-red-500">Click to explore</span>
+                  </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div
-            className={cn(
-              "order-1 md:order-2 relative h-[50vh]  overflow-hidden rounded-lg"
-            )}
-          >
-            <AnimatePresence mode="wait">
-              {localFeatures.map(
-                (feature, index) =>
-                  index === currentFeature && (
-                    <motion.div
-                      key={index}
-                      className="absolute inset-0 rounded-lg overflow-hidden"
-                      initial={{ y: 100, opacity: 0, rotateX: -20 }}
-                      animate={{ y: 0, opacity: 1, rotateX: 0 }}
-                      exit={{ y: -100, opacity: 0, rotateX: 20 }}
-                      transition={{ duration: 0.5, ease: "easeInOut" }}
+                
+                {/* Expanded View */}
+                <AnimatePresence>
+                  {activeFeature === index && (
+                    <motion.div 
+                      className="absolute inset-0 bg-white/90 backdrop-filter backdrop-blur-lg z-20 flex flex-col border-2 border-red-500 rounded-2xl"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ type: "spring", damping: 25, stiffness: 300 }}
                     >
-                      <div
-                        className="relative w-full h-full cursor-pointer"
-                        onClick={() => {
-                          setCurrentFeature(index);
-                          const newFeatures = [...localFeatures];
-                          newFeatures[index].currentImageIndex = 
-                            (newFeatures[index].currentImageIndex + 1) % newFeatures[index].images.length;
-                          setLocalFeatures(newFeatures);
-                          setProgress(0);
-                        }}
-                      >
-                        <Image
-                          src={feature.images[feature.currentImageIndex]}
-                          alt={feature.step}
-                          className="w-full h-full object-cover transition-transform transform hover:scale-105"
-                          width={1000}
-                          height={500}
-                        />
+                      {/* Header with red band */}
+                      <div className="h-24 flex items-center justify-between px-6 bg-gradient-to-r from-red-400 to-red-600">
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white">
+                            {feature.icon}
+                          </div>
+                          <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+                        </div>
+                        <button 
+                          className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            setActiveFeature(null)
+                          }}
+                        >
+                          ×
+                        </button>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="flex-grow p-6 overflow-auto">
+                        <h4 className="text-xl font-bold mb-4 text-red-600">{feature.solution}</h4>
+                        
+                        <div className="space-y-4">
+                          <div className="p-4 bg-red-50 rounded-lg border border-red-100">
+                            <h5 className="font-medium mb-2 text-red-700">Key Benefits</h5>
+                            <ul className="list-disc pl-5 space-y-1 text-red-600">
+                              <li>Improved patient outcomes</li>
+                              <li>Reduced healthcare costs</li>
+                              <li>Personalized treatment plans</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Footer */}
+                      <div className="p-4 border-t border-red-100">
+                        <button 
+                          className="w-full py-3 text-white rounded-lg font-medium flex items-center justify-center gap-2 bg-gradient-to-r from-red-400 to-red-600"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            // This would typically link to a more detailed page
+                            console.log(`Learn more about ${feature.title}`)
+                          }}
+                        >
+                          Learn more
+                          <FaArrowRight />
+                        </button>
                       </div>
                     </motion.div>
-                  )
-              )}
-            </AnimatePresence>
-          </div>
+                      )}
+                </AnimatePresence>
+                </div>
+          ))}
         </div>
       </div>
     </div>

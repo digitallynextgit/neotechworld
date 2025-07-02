@@ -3,7 +3,7 @@ import SingleBlog from "./SingleBlog";
 
 const HomeBlogSection = ({ posts }: any) => {
   return (
-    <section className="bg-white relative pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+    <section className="bg-white relative pb-10 pt-20  lg:pb-20 lg:pt-[120px]">
       <div className="ml-[12vw] max-w-[80vw]">
         <div className="mb-[60px]">
           <SectionTitle

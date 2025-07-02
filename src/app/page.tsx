@@ -1,17 +1,17 @@
 // import About from "@/components/About";
 import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import CallToAction from "@/components/CallToAction";
-import Clients from "@/components/Clients";
-import ScrollUp from "@/components/Common/ScrollUp";
+// import Clients from "@/components/Clients";
+// import ScrollUp from "@/components/Common/ScrollUp";
 // import Contact from "@/components/Contact";
 // import Faq from "@/components/Faq";
 
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
-import { Offering } from "@/components/Offering";
+// import { Offering } from "@/components/Offering";
 // import Pricing from "@/components/Pricing";
 // import Team from "@/components/Team";
-import ProofStats from "@/components/stats/ProofStats";
+// import ProofStats from "@/components/stats/ProofStats";
 import WhoWeServe from "@/components/stats/WhoWeServe";
 
 // import Testimonials from "@/components/Testimonials";
@@ -35,15 +35,15 @@ export default function Home() {
         muted
         loop
         playsInline
-        className="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover"
-        src="/gradient.webm"
+        className="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover opacity-85"
+        src="/bg3.mp4"
       />
       <div className="relative z-10 overflow-hidden ">
         {/* <ScrollUp /> */}
         <Hero />
-        <Offering />
+        {/* <Offering /> */}
         <HowItWorks />
-        <ProofStats />
+        {/* <ProofStats /> */}
         <WhoWeServe />
  
         {/* <Testimonials /> */}

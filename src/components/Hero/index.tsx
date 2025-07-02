@@ -1,7 +1,5 @@
 "use client";
 
-import { PiggyBank, Pill, Hospital, UserCheck } from "lucide-react";
-
 import { useEffect, useRef, useState, useCallback } from "react";
 import ScrollFloat from "@/components/reactbits/ScrollFloat";
 import gsap from "gsap";
@@ -16,6 +14,7 @@ import HeroStatsSection from "./HeroStatsSection";
 import HeroMainContent from "./HeroMainContent";
 import Features from "../Features";
 import { FeatureSteps } from "../reactbits/Features";
+import { statsData } from "@/data/statsData";
 gsap.registerPlugin(ScrollTrigger);
 
 type Blog = {
@@ -33,59 +32,6 @@ type HeroProps = {
 
 const BLOG_TICKER_INTERVAL = 6000; // ms
 const BUTTON_TICKER_INTERVAL = 5000; // ms
-
-const statsData = [
-  {
-    icon: (
-      <PiggyBank className="mb-6 h-8 w-8 text-white transition-all duration-300 hover:scale-110" />
-    ), // Cost savings
-    value: 35,
-    suffix: "%",
-    prefix: "",
-    label: "Cost savings in pilot studies",
-    start: 28,
-    end: 35,
-    duration: 1500,
-  },
-  {
-    icon: (
-      <Pill className="mb-6 h-8 w-8 text-white  transition-all duration-300 hover:scale-110" />
-    ), // Medication adherence
-    value: 15,
-    suffix: "%",
-    prefix: "",
-    label: "Better medication adherence",
-    start: 0,
-    end: 15,
-    duration: 1200,
-  },
-  {
-    icon: (
-      <Hospital className="mb-6 h-8 w-8 text-white  transition-all duration-300 hover:scale-110" />
-    ), // Hospital readmissions
-    value: 14,
-    suffix: "%",
-    prefix: "",
-    label: "Drop in hospital readmissions",
-    start: 0,
-    end: 14,
-    duration: 1200,
-  },
-  {
-    icon: (
-      <UserCheck className="mb-6 h-8 w-8 text-white transition-all duration-300 hover:scale-110" />
-    ), // Patient case
-    value: 12,
-    suffix: "→ 4",
-    prefix: "",
-    label:
-      "One patient's medication load reduced from 12 to 4—improving stability and preventing hospitalization",
-    start: 12,
-    end: 4,
-    duration: 1500,
-    isDecrease: true,
-  },
-];
 
 const features = [
   {
@@ -394,23 +340,19 @@ const Hero = ({ posts }: HeroProps) => {
           <div className="flex flex-row items-center justify-between ">
             <ScrollFloat
               containerClassName="mb-6"
-              textClassName=" text-[6vw] text-black font-medium "
+              textClassName=" text-[4.5vw] text-black font-medium "
             >
-              What We Solve
+             What We Solve—and How
             </ScrollFloat>
             {/* CTA Button centered below columns */}
-            <div className="flex justify-center ">
-              <PrimaryButton href="#" className="bg-red-500 ">
-                Book a Pilot Program
-              </PrimaryButton>
-            </div>
+            
           </div>
 
           <div className=" w-[68vw] rotate-180 border-[.02vw] border-white" />
           <FeatureSteps
-          features={features}
+          // features={features}
           // title="Your Journey Starts Here"
-          autoPlayInterval={4000}
+          // autoPlayInterval={4000}
 
         />
         </div>

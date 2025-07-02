@@ -31,10 +31,11 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
           data-wow-delay=".2s"
         >
           <div className="mt-[-7vw] mb-[8vh]">
+            <h3 className="mb-[2vh] text-[2vw] underline italic leading-[1.1] text-white font-bold ">NMC Genetics</h3>
           <h1 className="mb-[2vh] text-[5vw] font-normal leading-[1.1] text-white">
-          Know First. Treat Smarter.
+            From Unknowns to Outcomes.
           </h1>
-          <div className="h-[2vw] mb-[2vh] mt-[-5vw] text-white">
+          <div className="h-[2vw] mb-[2vh] mt-[-5vw] text-white font-bold">
           <TypewriterEffect />
           </div>
           </div>
@@ -57,7 +58,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
               <div className="flex items-center gap-[1vw]">
                 <Link
                   href="#"
-                  className="whitespace-nowrap rounded-full border border-white bg-white/90 px-[2vw] py-[2vh] text-[1vw] -ml-[14vw] font-semibold text-red shadow transition hover:bg-primary/90"
+                  className="whitespace-nowrap rounded-full border border-white bg-white/90 px-[2vw] py-[2vh] text-[1vw] -ml-[14vw] font-semibold text-red shadow transition hover:bg-red-500 hover:text-white  hover:scale-105 hover:transition-all ease-in"
                   style={{ minWidth: "12vw", textAlign: "center" }}
                 >
                   Empower your mission &rarr;
