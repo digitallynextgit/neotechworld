@@ -31,7 +31,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
           data-wow-delay=".2s"
         >
           <div className="mt-[-7vw] mb-[8vh]">
-            <h3 className="mb-[2vh] text-[2vw] underline italic leading-[1.1] text-white font-bold ">NMC Genetics</h3>
+            {/* <h3 className="mb-[2vh] text-[2vw] underline italic leading-[1.1] text-white font-bold ">NMC Genetics</h3> */}
           <h1 className="mb-[2vh] text-[5vw] font-normal leading-[1.1] text-white">
             From Unknowns to Outcomes.
           </h1>
