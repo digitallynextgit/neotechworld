@@ -222,8 +222,8 @@ const Hero = ({ posts }: HeroProps) => {
     });
   }, []);
 
-  // Animate number bounce when count finishes
-  function useCountUpBounce({
+  // Custom hook for the Hero component to use
+  const useCountUpBounceForHero = ({
     start,
     end,
     duration,
@@ -235,7 +235,7 @@ const Hero = ({ posts }: HeroProps) => {
     duration: number;
     shouldStart: boolean;
     idx: number;
-  }) {
+  }) => {
     const [count, setCount] = useState(start);
     
     useEffect(() => {
@@ -317,7 +317,7 @@ const Hero = ({ posts }: HeroProps) => {
         <HeroStatsSection
           statsData={statsData}
           inView={inView}
-          useCountUpBounce={useCountUpBounce}
+          getCounterValue={useCountUpBounceForHero}
           boxRefs={boxRefs}
           iconRefs={iconRefs}
           numberRefs={numberRefs}

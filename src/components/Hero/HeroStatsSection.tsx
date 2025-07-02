@@ -5,7 +5,7 @@ import { Stat } from "@/data/statsData";
 interface HeroStatsSectionProps {
   statsData: Stat[];
   inView: boolean;
-  useCountUpBounce: (args: {
+  getCounterValue: (args: {
     start: number;
     end: number;
     duration: number;
@@ -21,7 +21,7 @@ interface HeroStatsSectionProps {
 const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
   statsData,
   inView,
-  useCountUpBounce,
+  getCounterValue,
   boxRefs,
   iconRefs,
   numberRefs,
@@ -36,15 +36,16 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
   const counters = statsData.map((stat, index) => {
     if (stat.isText) return { value: stat.value };
     
-    return {
-      value: useCountUpBounce({
-        start: stat.start,
-        end: stat.end,
-        duration: stat.duration,
-        shouldStart: inView,
-        idx: index,
-      })
-    };
+    // Call the function prop to get the counter value
+    const counterValue = getCounterValue({
+      start: stat.start,
+      end: stat.end,
+      duration: stat.duration,
+      shouldStart: inView,
+      idx: index,
+    });
+    
+    return { value: counterValue };
   });
 
   return (

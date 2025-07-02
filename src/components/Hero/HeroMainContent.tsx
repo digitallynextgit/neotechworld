@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaArrowDown, FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import TypewriterText from "./TypewriterText";
+// import TypewriterText from "./TypewriterText";
 import TypewriterEffect from "../Typewritter/TypewriterEffect";
 
 

@@ -4,6 +4,7 @@ import SingleBlog from "@/components/Blog/SingleBlog";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { getAllPosts, getPostBySlug } from "@/utils/markdown";
 import markdownToHtml from "@/utils/markdownToHtml";
+import { Blog } from "@/types/blog";
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
@@ -190,9 +191,9 @@ export default async function Post({ params }: Props) {
                       {posts.slice(0, 3).map((blog: Blog, i: number) => (
                         <PopularArticle
                           key={i}
-                          image={blog?.coverImage}
+                          image={blog?.coverImage || '/images/blog/blog-01.jpg'}
                           title={blog?.title?.slice(0, 30) || ''}
-                          name={blog?.author}
+                          name={blog?.author || 'Unknown'}
                         />
                       ))}
                     </div>

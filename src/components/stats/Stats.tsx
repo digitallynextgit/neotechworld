@@ -99,7 +99,11 @@ function Stats() {
   const counter2 = useCountUp({ ...statsData[2], shouldStart: inView || forceReset });
   const counter3 = useCountUp({ ...statsData[3], shouldStart: inView || forceReset });
 
-  const allCounters = [counter0, counter1, counter2, counter3];
+  // Use useMemo to prevent the array from changing on every render
+  const allCounters = React.useMemo(
+    () => [counter0, counter1, counter2, counter3],
+    [counter0, counter1, counter2, counter3]
+  );
 
   // Reset loading state after all animations finish
   useEffect(() => {
