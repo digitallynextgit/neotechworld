@@ -1,5 +1,6 @@
 "use client";
 import { signOut, useSession } from "next-auth/react";
+import { IoSearch } from "react-icons/io5";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
@@ -119,10 +120,7 @@ const Header = () => {
         <div className="flex items-center gap-6">
           {/* Search Icon */}
           <button aria-label="Search" className="focus:outline-none">
-            <svg width="32" height="32" fill="none" stroke="white" strokeWidth="2.5" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="7" />
-              <line x1="16.5" y1="16.5" x2="22" y2="22" strokeLinecap="round" />
-            </svg>
+            <IoSearch className="text-[#C8AA6A] text-[3vw]"/>
           </button>
           {/* Hamburger Button */}
           <button
@@ -144,7 +142,7 @@ const Header = () => {
           {/* Left box: logo, Made by Büro, slides from top */}
           <div
             ref={leftBoxRef}
-            className="fixed top-0 left-0 h-full w-1/4 min-w-[25vw] bg-[#FF3B3B] z-[1001]"
+            className="fixed top-0 left-0 h-full w-1/4 min-w-[25vw] bg-red-700 z-[1001]"
             style={{ transform: 'translateY(-100%)' }}
           >
             <div className="p-6 w-full flex items-start">
@@ -161,7 +159,7 @@ const Header = () => {
           {/* Right box: menu, slides from bottom */}
           <div
             ref={rightBoxRef}
-            className="fixed bottom-0 right-0 h-full w-3/4 min-w-[75vw] bg-[#FF5C5C] z-[1002]"
+            className="fixed bottom-0 right-0 h-full w-3/4 min-w-[75vw] bg-red-600 z-[1002]"
             style={{ transform: 'translateY(100%)' }}
           >
             {/* Top right: dropdown and close button */}

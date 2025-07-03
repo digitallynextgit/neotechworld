@@ -51,7 +51,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
           <div className="mb-[2vh] flex w-full flex-col justify-center">
             <div className="relative mb-[6vh] ml-[10vw] h-[0.2vh] w-[70vw] bg-white/40">
               <div
-                className="absolute left-0 top-0 h-full bg-white transition-all duration-200"
+                className="absolute left-0 top-0 h-full bg-[#C8AA6A] transition-all duration-200"
                 style={{ width: `${buttonProgress}%` }}
               />
             </div>

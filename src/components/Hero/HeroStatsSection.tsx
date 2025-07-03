@@ -81,7 +81,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
               key={i}
               className="flex flex-col justify-between gap-0 rounded-md border border-white bg-transparent p-4"
             >
-              <div className=""
+              <div className="text-[]"
                 ref={(el) => {
                   iconRefs.current[i] = el;
                   console.log(`Icon ref ${i} set:`, !!el);

@@ -96,7 +96,7 @@ export function FeatureSteps({
   
   return (
     <div className={cn("py-16 relative", className)}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">
           {title}
         </h2>
@@ -107,7 +107,7 @@ export function FeatureSteps({
                 key={index}
                 className={cn(
                   "feature-card relative overflow-hidden rounded-2xl cursor-pointer",
-                  "h-[320px] transition-all duration-300 border-2 border-red-500",
+                  "h-[320px] transition-all duration-300 border-2 border-red-700",
                   "backdrop-blur-lg bg-white/10 shadow-lg hover:shadow-xl"
                 )}
                 onClick={() => setActiveFeature(activeFeature === index ? null : index)}
@@ -121,7 +121,7 @@ export function FeatureSteps({
                   <div className="mb-6">
                     <div className={cn(
                       "w-20 h-20 rounded-full flex items-center justify-center",
-                      "bg-gradient-to-br", feature.color, "text-white"
+                      "bg-red-700", feature.color, "text-[#C8AA6A]"
                     )}>
                       {feature.icon}
                     </div>
@@ -136,9 +136,9 @@ export function FeatureSteps({
                   <p className="text-center text-gray-600 mb-4">{feature.solution}</p>
                   
                   {/* Click Indicator */}
-                  <div className="mt-4 flex items-center gap-2 bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full border border-red-300">
-                    <FaPlus size={12} className="text-red-500" />
-                    <span className="text-sm font-medium text-red-500">Click to explore</span>
+                  <div className="mt-4 flex items-center gap-2 bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full border border-red-700">
+                    <FaPlus size={12} className="text-red-700" />
+                    <span className="text-sm font-medium text-red-700">Click to explore</span>
                   </div>
                 </div>
                 
@@ -146,14 +146,14 @@ export function FeatureSteps({
                 <AnimatePresence>
                   {activeFeature === index && (
                     <motion.div 
-                      className="absolute inset-0 bg-white/90 backdrop-filter backdrop-blur-lg z-20 flex flex-col border-2 border-red-500 rounded-2xl"
+                      className="absolute inset-0 bg-white/70 backdrop-filter backdrop-blur-lg z-20 flex flex-col border-2 border-red-700 rounded-2xl"
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.9 }}
                       transition={{ type: "spring", damping: 25, stiffness: 300 }}
                     >
                       {/* Header with red band */}
-                      <div className="h-24 flex items-center justify-between px-6 bg-gradient-to-r from-red-400 to-red-600">
+                      <div className="h-24 flex items-center justify-between px-6 bg-gradient-to-r from-red-500 to-red-700">
                         <div className="flex items-center gap-4">
                           <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white">
                             {feature.icon}
@@ -173,12 +173,12 @@ export function FeatureSteps({
                       
                       {/* Content */}
                       <div className="flex-grow p-6 overflow-auto">
-                        <h4 className="text-xl font-bold mb-4 text-red-600">{feature.solution}</h4>
+                        <h4 className="text-xl font-bold mb-4 text-red-700">{feature.solution}</h4>
                         
                         <div className="space-y-4">
                           <div className="p-4 bg-red-50 rounded-lg border border-red-100">
                             <h5 className="font-medium mb-2 text-red-700">Key Benefits</h5>
-                            <ul className="list-disc pl-5 space-y-1 text-red-600">
+                            <ul className="list-disc pl-5 space-y-1 text-red-700">
                               <li>Improved patient outcomes</li>
                               <li>Reduced healthcare costs</li>
                               <li>Personalized treatment plans</li>
@@ -190,7 +190,7 @@ export function FeatureSteps({
                       {/* Footer */}
                       <div className="p-4 border-t border-red-100">
                         <button 
-                          className="w-full py-3 text-white rounded-lg font-medium flex items-center justify-center gap-2 bg-gradient-to-r from-red-400 to-red-600"
+                          className="w-full py-3 text-white rounded-lg font-medium flex items-center justify-center gap-2 bg-gradient-to-r from-red-500 to-red-700"
                           onClick={(e) => {
                             e.stopPropagation()
                             // This would typically link to a more detailed page

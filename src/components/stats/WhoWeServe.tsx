@@ -287,7 +287,7 @@ export default function WhoWeServe() {
                 }}
               >
                 <div className="mb-4 flex items-center gap-4">
-                  <div className="rounded-full bg-red-500 bg-opacity-20 p-3">
+                  <div className="rounded-full bg-[#C9AA6B] text-red-700 p-3">
                     {servicesData[active].icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white">
@@ -332,8 +332,8 @@ export default function WhoWeServe() {
                       className={cn(
                         "rounded-full px-4 py-2 text-sm transition-all duration-300",
                         isActive(index)
-                          ? "bg-red-500 text-white"
-                          : "bg-red-500 bg-opacity-20 text-white hover:bg-opacity-40"
+                          ? "bg-red-500 text-white "
+                          : "bg-red-700 bg-opacity-20 text-white hover:bg-opacity-40"
                       )}
                     >
                       {service.title}
