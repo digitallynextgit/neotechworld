@@ -4,7 +4,7 @@ import { FaCalendarCheck, FaHandshake, FaNetworkWired, FaHospital } from "react-
 
 const CallToAction = () => {
   return (
-    <section id="blogs" className="relative z-10 overflow-hidden bg-white/20">
+    <section id="blogs" className="relative z-10 overflow-hidden ">
       <div className="relative max-w-[85vw] overflow-hidden rounded-r-full py-24">
         <div className="-mx-4 flex flex-wrap items-stretch ml-[12vw]">
           <div className="w-full px-4">

@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer id="footer"
-      className="wow fadeInUp relative bg-transparent pt-20 lg:pt-[100px]"
+      className="wow fadeInUp relative bg-red-700 pt-20 lg:pt-[100px]"
       data-wow-delay=".15s"
     >
       <div className="ml-[12vw]">

@@ -34,7 +34,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
           <div className="mt-[-8vw] mb-[8vh]">
             {/* <h3 className="mb-[2vh] text-[2vw] underline italic leading-[1.1] text-white font-bold ">NMC Genetics</h3> */}
           <div className="mb-[2vh] text-[4vw] font-normal leading-[1.1] text-white flex flex-col justify-center items-center">
-                 <DnaCanvas modelPath="/dna.glb" />
+                 {/* <DnaCanvas modelPath="/dna2.glb" /> */}
             <h1 className="w-[80%]">From Unknowns to Outcomes.</h1>
        
           </div>
