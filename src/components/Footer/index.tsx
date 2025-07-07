@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer id="footer"
+    <footer id="contact"
       className="wow fadeInUp relative bg-red-700 pt-20 lg:pt-[100px]"
       data-wow-delay=".15s"
     >
@@ -117,12 +117,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
+                  {/* <Link
                     href="#"
                     className="mb-3 inline-block text-base text-white hover:text-red-500"
                   >
                     About
-                  </Link>
+                  </Link> */}
                 </li>
                 <li>
                   <Link
@@ -166,12 +166,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
+                  {/* <Link
                     href="#"
                     className="mb-3 inline-block text-base text-white hover:text-red-500"
                   >
                     Refund policy
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             </div>
@@ -187,7 +187,7 @@ const Footer = () => {
                     href="#"
                     className="mb-3 inline-block text-base text-white hover:text-red-500"
                   >
-                    Precision Diagnostics
+                   Clinical diagnosis
 
                   </Link>
                 </li>
@@ -212,7 +212,7 @@ const Footer = () => {
                     href="#"
                     className="mb-3 inline-block text-base text-white hover:text-red-500"
                   >
-                   Clinical R&D & Registry Solutions
+                   Research & Development
                   </Link>
                 </li>
               </ul>
@@ -249,12 +249,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
+                  {/* <Link
                     href="#"
                     className="mb-3 inline-block text-base text-white hover:text-red-500"
                   >
                     About
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             </div>
@@ -292,7 +292,7 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/3 lg:w-1/2">
               <div className="my-1 flex justify-center md:justify-end">
                   <p className="text-base text-white">
-                    &copy; 2025 NeoTech
+                    &copy; 2025 Neotech
                   </p>
                 </div>
             </div>

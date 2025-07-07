@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils"
 import { FaBrain, FaDna, FaTools, FaSearch, FaArrowRight, FaPlus } from "react-icons/fa"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import Image from "next/image"
 
 interface Feature {
   title: string
@@ -67,27 +68,27 @@ export function FeatureSteps({
   // Default features with red color theme
   const defaultFeatures: Feature[] = [
     {
-      title: "Precision Diagnostics",
-      solution: "Treating More with Less",
-      icon: <FaBrain className="text-3xl" />,
+      title: "Clinical diagnosis",
+      solution: "Genetic Answers for Clearer Clinical Decisions",
+      icon: <Image src="/icons/note.webp" alt="Precision Diagnostics" width={50} height={50} className="text-[#C8AB6B]" />,
       color: "from-red-400 to-red-600"
     },
     {
       title: "Pharmacogenomics",
-      solution: "Right Drug. Right Dose.",
-      icon: <FaDna className="text-3xl" />,
+      solution: "Right Drug, Right Dose, right from the Start — Advancing Safer,Smarter, Personalized Care/ Genetic Insights for Smarter Prescribing",
+      icon: <Image src="/icons/drugs.webp" alt="Pharmacogenomics" width={50} height={50} className="text-[#C8AB6B]" />,
       color: "from-red-400 to-red-600"
     },
     {
-      title: "Clinical R&D",
-      solution: "Research to Real-World",
-      icon: <FaTools className="text-3xl" />,
+      title: "Research & Development",
+      solution: "Research to real world",
+      icon: <Image src="/icons/prevent.webp" alt="Clinical R&D" width={50} height={50} className="text-[#C8AB6B]" />,
       color: "from-red-400 to-red-600"
     },
     {
       title: "Preventive Genomics",
-      solution: "Prevention That Pays",
-      icon: <FaSearch className="text-3xl" />,
+      solution: "Empower Your Health Through Genomic Insights",
+      icon: <Image src="/icons/loupe.webp" alt="Preventive Genomics" width={50} height={50} className="text-[#C8AB6B]" />,
       color: "from-red-400 to-red-600"
     }
   ]
@@ -121,7 +122,7 @@ export function FeatureSteps({
                   <div className="mb-6">
                     <div className={cn(
                       "w-20 h-20 rounded-full flex items-center justify-center",
-                      "bg-red-700", feature.color, "text-[#C8AA6A]"
+                      "bg-[#C8AB6B]", feature.color, "text-[#C8AA6A]"
                     )}>
                       {feature.icon}
                     </div>

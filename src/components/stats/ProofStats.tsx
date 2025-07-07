@@ -36,7 +36,7 @@ const statsData = [
   {
     icon: <CiMapPin className="mb-4 h-12 w-12 text-black" />,
     value: "100+",
-    label: "public health pilots influenced by NeoTech-level genomics",
+    label: "public health pilots influenced by Neotech-level genomics",
   },
 ];
 

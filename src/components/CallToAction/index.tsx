@@ -23,7 +23,7 @@ const CallToAction = () => {
                 >
                   <div className="flex flex-row items-center justify-start gap-2 text-white">
                     <FaCalendarCheck className="text-[1vw] text-white " />
-                    Book a Demo
+                    Talk to expert
                   </div>
                 </Link>
                 
@@ -47,7 +47,7 @@ const CallToAction = () => {
                   </div>
                 </Link>
                 
-                <Link
+                {/* <Link
                   href="/"
                   className="inline-block rounded-full border border-transparent bg-red-500 px-7 py-3 text-base font-medium text-black transition hover:scale-110 hover:border-2 hover:border-white"
                 >
@@ -55,7 +55,7 @@ const CallToAction = () => {
                     <FaHospital className="text-[1vw] text-white " />
                     Download Hospital Kit
                   </div>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

@@ -230,7 +230,7 @@ export default function HowItWorks() {
                   }
                   setCurrentStepIndex((prev) => (prev + 1) % steps.length);
                 }}
-                className="rounded-full bg-white/20 border border-red-700 p-5 text-[1.25vw] text-red-700"
+                className="transform rounded-full bg-white/20 border border-red-700 p-5 text-[1.25vw] text-red-700 transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
               >
                 →
               </button>

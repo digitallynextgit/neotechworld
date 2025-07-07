@@ -6,8 +6,7 @@ const sectionNav = [
   { id: "works", label: "Works" },
   { id: "who", label: "Who" },
   { id: "blogs", label: "Blogs" },
-  { id: "footer", label: "Footer" },
-  
+  { id: "contact", label: "Contact Us" },
 ];
 
 function FloatingSectionNav() {
