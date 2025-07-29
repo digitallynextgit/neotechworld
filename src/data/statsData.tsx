@@ -20,7 +20,7 @@ export interface Stat {
 export const statsData: Stat[] = [
   {
     icon: (
-      <GiReceiveMoney className="mb-6 h-12 w-12 text-[#C8AA6A] transition-all duration-300 hover:scale-110" />
+      <GiReceiveMoney className="mb-6 h-12 w-12 text-white transition-all duration-300 hover:scale-110" />
     ),
     value: 35,
     suffix: "%",
@@ -32,7 +32,7 @@ export const statsData: Stat[] = [
   },
   {
     icon: (
-      <GiMedicinePills className="mb-6 h-12 w-12 text-[#C8AA6A] transition-all duration-300 hover:scale-110" />
+      <GiMedicinePills className="mb-6 h-12 w-12 text-white transition-all duration-300 hover:scale-110" />
     ),
     value: 15,
     suffix: "%",
@@ -44,7 +44,7 @@ export const statsData: Stat[] = [
   },
   {
     icon: (
-      <FaHospital className="mb-6 h-12 w-12 text-[#C8AA6A] transition-all duration-300 hover:scale-110" />
+      <FaHospital className="mb-6 h-12 w-12 text-white transition-all duration-300 hover:scale-110" />
     ),
     value: 14,
     suffix: "%",
@@ -56,7 +56,7 @@ export const statsData: Stat[] = [
   },
   {
     icon: (
-      <FaUserNurse className="mb-6 h-12 w-12 text-[#C8AA6A] transition-all duration-300 hover:scale-110" />
+      <FaUserNurse className="mb-6 h-12 w-12 text-white transition-all duration-300 hover:scale-110" />
     ),
     value: 12 ,
     suffix: "-> 4",
@@ -68,7 +68,7 @@ export const statsData: Stat[] = [
   },
   {
     icon: (
-      <FaEarthAmericas className="mb-6 h-12 w-12 text-[#C8AA6A] transition-all duration-300 hover:scale-110" />
+      <FaEarthAmericas className="mb-6 h-12 w-12 text-white transition-all duration-300 hover:scale-110" />
     ),
     value: 42,
     suffix: "%",
@@ -80,7 +80,7 @@ export const statsData: Stat[] = [
   },
   {
     icon: (
-      <GiDna1 className="mb-6 h-12 w-12 text-[#C8AA6A] transition-all duration-300 hover:scale-110" />
+      <GiDna1 className="mb-6 h-12 w-12 text-white transition-all duration-300 hover:scale-110" />
     ),
     value: 100,
     suffix: "+",

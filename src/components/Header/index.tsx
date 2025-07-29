@@ -113,14 +113,14 @@ const Header = () => {
       <header className={`fixed left-0 top-0 z-50 w-full flex items-center justify-between px-20 py-2 transition-all duration-300 ${sticky ? 'bg-black/30 backdrop-blur-md shadow-lg' : ''}`}>
         {/* Logo and Brand */}
         <Link className="flex items-center gap-3 text-white hover:text-white" href={"/"}>
-          <Image src="/logo4.webp" alt="Logo" width={1200} height={64} className="w-[11vw] h-full"/>
+          <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[11vw] h-full"/>
           {/* <span className="text-white text-2xl font-semibold">Hematogenix</span> */}
         </Link>
         {/* Right Icons */}
         <div className="flex items-center gap-6">
           {/* Search Icon */}
           <button aria-label="Search" className="focus:outline-none">
-            <IoSearch className="text-[#C8AA6A] text-[3vw]"/>
+            <IoSearch className="text-white text-[3vw]"/>
           </button>
           {/* Hamburger Button */}
           <button
@@ -146,7 +146,7 @@ const Header = () => {
             style={{ transform: 'translateY(-100%)' }}
           >
             <div className="p-6 w-full flex items-start">
-              <Image src="/logo4.webp" alt="Logo" width={1200} height={64} className="w-[200px] h-full"/>
+              <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[200px] h-full"/>
             </div>
             <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start gap-2">
               <div className="flex flex-col gap-1 text-white text-sm">
@@ -185,12 +185,12 @@ const Header = () => {
                     <div className="flex flex-row items-center gap-4">
                       <span
                         ref={el => { lineRefs.current[idx] = el!; }}
-                        className="block h-[5px] w-12 mt-[4vw]  bg-white origin-left scale-x-0"
+                        className="block h-[5px] w-12 mt-[1vw]  bg-white origin-left scale-x-0"
                         style={{ display: 'block', transform: 'scaleX(0)' }}
                       />
                       <span
                         ref={el => { menuItemRefs.current[idx] = el!; }}
-                        className={`text-white text-7xl font-light transition-all duration-300 opacity-0 translate-y-8
+                        className={`text-white text-5xl font-light transition-all duration-300 opacity-0 translate-y-8
                           ${menuOpen ? `opacity-100 translate-y-0 delay-[${200 + idx * 100}ms]` : ''}`}
                         style={{ transitionDelay: menuOpen ? `${200 + idx * 100}ms` : '0ms' }}
                       >

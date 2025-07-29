@@ -108,7 +108,7 @@ export function FeatureSteps({
                 key={index}
                 className={cn(
                   "feature-card relative overflow-hidden rounded-2xl cursor-pointer",
-                  "h-[320px] transition-all duration-300 border-2 border-red-700",
+                  "h-[60vh] transition-all duration-300 border-2 border-red-700",
                   "backdrop-blur-lg bg-white/10 shadow-lg hover:shadow-xl"
                 )}
                 onClick={() => setActiveFeature(activeFeature === index ? null : index)}
@@ -122,7 +122,7 @@ export function FeatureSteps({
                   <div className="mb-6">
                     <div className={cn(
                       "w-20 h-20 rounded-full flex items-center justify-center",
-                      "bg-[#C8AB6B]", feature.color, "text-[#C8AA6A]"
+                      "bg-white", feature.color, "text-white"
                     )}>
                       {feature.icon}
                     </div>

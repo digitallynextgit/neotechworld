@@ -21,14 +21,14 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
   scrollToNextSection,
 }) => {
   return (
-    <div className="relative z-20 mx-auto mt-[-45vw] flex h-[80vh] w-[100vw] flex-col justify-center px-[6vw]">
+    <div className="relative z-20 mx-auto mt-[-38vw] flex h-[80vh] w-[100vw] flex-col justify-center px-[6vw]">
       <div className="flex h-full w-full flex-wrap items-center justify-center">
         <div className="w-full">
           <div
             className="hero-content wow fadeInUp mx-auto text-center"
             data-wow-delay=".2s"
           >
-            <div className="mb-[8vh] mt-[-8vw]">
+            <div className="mb-[8vh] mt-[0vw]">
               {/* <h3 className="mb-[2vh] text-[2vw] underline italic leading-[1.1] text-white font-bold ">NMC Genetics</h3> */}
               <div className="mb-[2vh] flex flex-col items-center justify-center text-[4vw] font-normal leading-[1.1] text-white">
                 {/* <DnaCanvas modelPath="/dna2.glb" /> */}
@@ -47,7 +47,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
             <div className="mb-[2vh] flex w-full flex-col justify-center">
               <div className="relative mb-[6vh] ml-[10vw] h-[0.2vh] w-[70vw] bg-white/40">
                 <div
-                  className="absolute left-0 top-0 h-full bg-[#C8AA6A] transition-all duration-200"
+                  className="absolute left-0 top-0 h-full bg-white transition-all duration-200"
                   style={{ width: `${buttonProgress}%` }}
                 />
               </div>

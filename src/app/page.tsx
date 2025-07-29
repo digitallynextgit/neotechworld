@@ -37,7 +37,7 @@ export default function Home() {
         loop
         playsInline
         className="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover"
-        src="/bg5.mp4"
+        src="/herobg.mp4"
       />
       {/* <Image src="/bgimage.webp" alt="" width={1200} height={100}/> */}
       <div className="relative z-10 overflow-hidden ">

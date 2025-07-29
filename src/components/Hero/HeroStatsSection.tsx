@@ -67,9 +67,9 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
         </p>
         <div className="grid w-full grid-cols-1 gap-4 text-left sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3">
           {statsData.map((stat, i) => {
-            console.log(`Rendering stat ${i}:`, stat);
+            // console.log(`Rendering stat ${i}:`, stat);
             const count = stat.isText ? stat.value : counters[i].value;
-            console.log(`Stat ${i} count:`, count);
+            // console.log(`Stat ${i} count:`, count);
             return (
               <div
                 ref={(el) => {
@@ -80,7 +80,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
                 className="flex flex-col justify-between gap-0 rounded-md border border-white bg-transparent p-4"
               >
                 <div
-                  className="text-[]"
+                  className="text-white"
                   ref={(el) => {
                     iconRefs.current[i] = el;
                     console.log(`Icon ref ${i} set:`, !!el);

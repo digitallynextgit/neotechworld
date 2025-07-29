@@ -287,14 +287,14 @@ export default function WhoWeServe() {
                 }}
               >
                 <div className="mb-4 flex items-center gap-4">
-                  <div className="rounded-full bg-[#C9AA6B] text-red-700 p-3">
+                  <div className="rounded-full text-red-500 p-3">
                     {servicesData[active].icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white">
                     {servicesData[active].title}
                   </h3>
                 </div>
-                <motion.p className="my-4 text-lg text-gray-300">
+                <motion.p className="my-4 text-lg text-white">
                   {servicesData[active].description
                     .split(" ")
                     .map((word, index) => (
@@ -343,7 +343,7 @@ export default function WhoWeServe() {
                 <div className="flex gap-4">
                   <button
                     onClick={handlePrev}
-                    className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-red-500 bg-opacity-20"
+                    className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-red-500 "
                   >
                     <CaretLeft
                       weight="thin"
@@ -352,7 +352,7 @@ export default function WhoWeServe() {
                   </button>
                   <button
                     onClick={handleNext}
-                    className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-red-500 bg-opacity-20"
+                    className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-red-500 "
                   >
                     <CaretRight
                       weight="thin"
