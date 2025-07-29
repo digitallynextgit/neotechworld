@@ -21,7 +21,8 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
   scrollToNextSection,
 }) => {
   return (
-    <div className="relative z-20 mx-auto mt-[-38vw] flex h-[80vh] w-[100vw] flex-col justify-center px-[6vw]">
+    <div className="relative z-20 mx-auto md:mt-[-55vw] lg:mt-[-38vw] flex h-[80vh] w-[100vw] flex-col justify-center px-[6vw]">
+
       <div className="flex h-full w-full flex-wrap items-center justify-center">
         <div className="w-full">
           <div
