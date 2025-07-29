@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer id="contact"
-      className="wow fadeInUp relative bg-red-700 pt-20 lg:pt-[100px]"
+      className="wow fadeInUp relative bg-white pt-20 lg:pt-[100px]"
       data-wow-delay=".15s"
     >
       <div className="ml-[12vw]">
@@ -13,14 +13,14 @@ const Footer = () => {
             <div className="mb-10 w-full">
               <Link href="/" className="mb-6 inline-block max-w-[160px]">
                 <Image
-                  src="/logofooter.webp"
+                  src="/logofooter.png"
                   alt="logo"
                   width={140}
                   height={30}
                   className="max-w-full"
                 />
               </Link>
-              {/* <p className="mb-8 max-w-[270px] text-base text-white">
+              {/* <p className="mb-8 max-w-[270px] text-base text-[#09173b]">
                 We create digital experiences for brands and companies by using
                 technology.
               </p> */}
@@ -28,7 +28,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-white hover:text-red-500"
+                  className="px-3 text-[#09173b] hover:text-red-500"
                 >
                   <svg
                     width="22"
@@ -44,7 +44,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-white hover:text-red-500"
+                  className="px-3 text-[#09173b] hover:text-red-500"
                 >
                   <svg
                     width="22"
@@ -60,7 +60,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-white hover:text-red-500"
+                  className="px-3 text-[#09173b] hover:text-red-500"
                 >
                   <svg
                     width="22"
@@ -78,7 +78,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-white hover:text-red-500"
+                  className="px-3 text-[#09173b] hover:text-red-500"
                 >
                   <svg
                     width="22"
@@ -96,14 +96,14 @@ const Footer = () => {
           </div>
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
             <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-white">
+              <h4 className="mb-9 text-lg font-semibold text-[#09173b]">
                 About Us
               </h4>
               <ul>
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     Home
                   </Link>
@@ -111,7 +111,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     Features
                   </Link>
@@ -119,7 +119,7 @@ const Footer = () => {
                 <li>
                   {/* <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     About
                   </Link> */}
@@ -127,7 +127,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     Testimonial
                   </Link>
@@ -137,14 +137,14 @@ const Footer = () => {
           </div>
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
             <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-white">
+              <h4 className="mb-9 text-lg font-semibold text-[#09173b]">
                 Features
               </h4>
               <ul>
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     How it works
                   </Link>
@@ -152,7 +152,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     Privacy policy
                   </Link>
@@ -160,7 +160,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     Terms of Service
                   </Link>
@@ -168,7 +168,7 @@ const Footer = () => {
                 <li>
                   {/* <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     Refund policy
                   </Link> */}
@@ -178,14 +178,14 @@ const Footer = () => {
           </div>
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
             <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-white">
+              <h4 className="mb-9 text-lg font-semibold text-[#09173b]">
                 Our Products
               </h4>
               <ul>
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                    Clinical diagnosis
 
@@ -194,7 +194,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                   Pharmacogenomics
                   </Link>
@@ -202,7 +202,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     Preventive Genomics
                   </Link>
@@ -210,7 +210,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                    Research & Development
                   </Link>
@@ -220,14 +220,14 @@ const Footer = () => {
           </div>
           <div className="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
             <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-white">
+              <h4 className="mb-9 text-lg font-semibold text-[#09173b]">
                 Useful Links
               </h4>
               <ul>
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     FAQ
                   </Link>
@@ -235,7 +235,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     Blogs
                   </Link>
@@ -243,7 +243,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     Support
                   </Link>
@@ -251,7 +251,7 @@ const Footer = () => {
                 <li>
                   {/* <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-white hover:text-red-500"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-red-500"
                   >
                     About
                   </Link> */}
@@ -270,19 +270,19 @@ const Footer = () => {
                 <div className="-mx-3 flex items-center justify-center md:justify-start">
                   <Link
                     href="#"
-                    className="px-3 text-base text-white hover:text-red-500 hover:underline"
+                    className="px-3 text-base text-[#09173b] hover:text-red-500 hover:underline"
                   >
                     Privacy policy
                   </Link>
                   <Link
                     href="#"
-                    className="px-3 text-base text-white hover:text-red-500 hover:underline"
+                    className="px-3 text-base text-[#09173b] hover:text-red-500 hover:underline"
                   >
                     Legal notice
                   </Link>
                   <Link
                     href="#"
-                    className="px-3 text-base text-white hover:text-red-500 hover:underline"
+                    className="px-3 text-base text-[#09173b] hover:text-red-500 hover:underline"
                   >
                     Terms of service
                   </Link>
@@ -291,7 +291,7 @@ const Footer = () => {
             </div>
             <div className="w-full px-4 md:w-1/3 lg:w-1/2">
               <div className="my-1 flex justify-center md:justify-end">
-                  <p className="text-base text-white">
+                  <p className="text-base text-[#09173b]">
                     &copy; 2025 Neotech
                   </p>
                 </div>

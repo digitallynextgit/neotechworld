@@ -77,10 +77,10 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
                   console.log(`Box ref ${i} set:`, !!el);
                 }}
                 key={i}
-                className="flex flex-col justify-between gap-0 rounded-md border border-white bg-transparent p-4"
+                className="flex flex-col justify-between gap-0 rounded-md border border-[#fdb73e] bg-transparent p-4"
               >
                 <div
-                  className="text-white"
+                  className="text-[#fdb73e]"
                   ref={(el) => {
                     iconRefs.current[i] = el;
                     console.log(`Icon ref ${i} set:`, !!el);
@@ -90,7 +90,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
                 </div>
                 <h2 className="font-regular flex flex-row items-end gap-2 text-left text-[4vw] tracking-tighter text-white">
                   {stat.prefix && (
-                    <span className="text-[2vw] text-white">{stat.prefix}</span>
+                    <span className="text-[2vw] text-[#fdb73e]">{stat.prefix}</span>
                   )}
                   {stat.isText ? (
                     <span
@@ -113,7 +113,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
                       >
                         {count}
                       </span>
-                      <span className="text-[2vw] text-white">
+                      <span className="text-[2vw] text-[#fdb73e]">
                         {stat.suffix}
                       </span>
                     </>
@@ -135,7 +135,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
                     </>
                   )}
                 </h2>
-                <p className="text-left text-[1.25vw] leading-relaxed tracking-tight text-white">
+                <p className="text-left text-[1.25vw] leading-relaxed tracking-tight text-[#fdb73e]">
                   {stat.label}
                 </p>
               </div>

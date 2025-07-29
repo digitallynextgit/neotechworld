@@ -29,16 +29,16 @@ export default function Home() {
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
 
   return (
-    <main className="relative overflow-x-auto">
+    <main className="relative overflow-x-auto bg-[#09173b]">
       {/* Full-page background video */}
-      <video
+      {/* <video
         autoPlay
         muted
         loop
         playsInline
         className="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover"
         src="/herobg.mp4"
-      />
+      /> */}
       {/* <Image src="/bgimage.webp" alt="" width={1200} height={100}/> */}
       <div className="relative z-10 overflow-hidden ">
         {/* <ScrollUp /> */}

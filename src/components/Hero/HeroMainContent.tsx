@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaArrowDown, FaArrowRight, FaArrowLeft } from "react-icons/fa";
 // import TypewriterText from "./TypewriterText";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import TypewriterEffect from "../Typewritter/TypewriterEffect";
 import DnaCanvas from "./DnaModel";
 
@@ -21,8 +22,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
   scrollToNextSection,
 }) => {
   return (
-    <div className="relative z-20 mx-auto md:mt-[-55vw] lg:mt-[-38vw] flex h-[80vh] w-[100vw] flex-col justify-center px-[6vw]">
-
+    <div className="relative z-20 mx-auto flex h-[80vh] w-[100vw] flex-col justify-center px-[6vw] md:mt-[-55vw] lg:mt-[-38vw]">
       <div className="flex h-full w-full flex-wrap items-center justify-center">
         <div className="w-full">
           <div
@@ -39,19 +39,20 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
                 <TypewriterEffect />
               </div>
             </div>
-            <p className="mx-auto my-[6vh] mt-[12vw] w-[80vw] rounded-full bg-white/80 p-[1.5vw] text-[1.25vw] font-medium text-red-700">
+            <DotLottieReact src="/dnaloader.lottie" loop autoplay className="mt-[-10vw]"/>
+            {/* <p className="mx-auto my-[6vh] mt-[12vw] w-[0vw] rounded-full bg-transparent p-[1.5vw] text-[1.25vw] font-medium text-red-700">
               Neotech World Lab empowers healthcare systems, doctors, and
               researchers to make every treatment count—by harnessing genomics
               to reduce guesswork, refine diagnosis, and enable truly
               personalized care.
-            </p>
-            <div className="mb-[2vh] flex w-full flex-col justify-center">
-              <div className="relative mb-[6vh] ml-[10vw] h-[0.2vh] w-[70vw] bg-white/40">
+            </p> */}
+            <div className="mb-[2vh] flex w-full flex-col justify-center mt-[-25vh]">
+              {/* <div className="relative mb-[6vh] ml-[10vw] h-[0.2vh] w-[70vw] bg-white/40">
                 <div
                   className="absolute left-0 top-0 h-full bg-white transition-all duration-200"
                   style={{ width: `${buttonProgress}%` }}
                 />
-              </div>
+              </div> */}
               {/* Button Ticker (split layout) */}
               <div className="mx-auto flex w-full max-w-[40vw] flex-row items-center justify-between px-[2vw] pb-[1vh]">
                 {/* Left: Empower your mission + left arrow */}

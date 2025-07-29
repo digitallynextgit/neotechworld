@@ -113,14 +113,14 @@ const Header = () => {
       <header className={`fixed left-0 top-0 z-50 w-full flex items-center justify-between px-20 py-2 transition-all duration-300 ${sticky ? 'bg-black/30 backdrop-blur-md shadow-lg' : ''}`}>
         {/* Logo and Brand */}
         <Link className="flex items-center gap-3 text-white hover:text-white" href={"/"}>
-          <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[11vw] h-full"/>
+          <Image src="/logo.webp" alt="Logo" width={1200} height={64} className="w-[11vw] h-full"/>
           {/* <span className="text-white text-2xl font-semibold">Hematogenix</span> */}
         </Link>
         {/* Right Icons */}
         <div className="flex items-center gap-6">
           {/* Search Icon */}
           <button aria-label="Search" className="focus:outline-none">
-            <IoSearch className="text-white text-[3vw]"/>
+            <IoSearch className="text-[#fdb73e] text-[3vw]"/>
           </button>
           {/* Hamburger Button */}
           <button

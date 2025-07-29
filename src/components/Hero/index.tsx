@@ -294,7 +294,8 @@ const Hero = ({ posts }: HeroProps) => {
       <main id="hero-main-section">
         <div className="relative z-10 flex w-full items-center justify-center">
           <div className="mx-auto h-[100vh] w-full max-w-[1600px]">
-            <DnaCanvas modelPath="/dna3.glb" />
+            {/* <DnaCanvas modelPath="/dna3.glb" /> */}
+    
           </div>
         </div>
         {/* Content */}
@@ -340,7 +341,7 @@ const Hero = ({ posts }: HeroProps) => {
           <div className="flex flex-row items-center justify-between ">
             <ScrollFloat
               containerClassName="mb-6"
-              textClassName=" text-[4.5vw] text-black font-medium "
+              textClassName=" text-[4.5vw] text-white font-medium "
             >
              What We Solve—and How
             </ScrollFloat>
