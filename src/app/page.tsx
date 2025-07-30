@@ -18,6 +18,7 @@ import WhoWeServe from "@/components/stats/WhoWeServe";
 // import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
+import DnaCanvas from "@/components/Hero/DnaModel";
 
 export const metadata: Metadata = {
   title: "NeoTech",
@@ -36,11 +37,20 @@ export default function Home() {
         muted
         loop
         playsInline
-        className="pointer-events-none fixed inset-0 z-0 h-full w-full object-cover"
-        src="/herobg.mp4"
+        className="pointer-events-none fixed inset-0 z-0 h-[35vh] w-[30vw] object-cover mt-[22vw] ml-[35vw]"
+        src="/newdna.gif"
       /> */}
+      {/* <img
+  className="pointer-events-none fixed inset-0 z-0 h-[100vh] w-[100vw] object-cover"
+  src="/newdna.gif"
+  alt="DNA animation"
+/> */}
+
       {/* <Image src="/bgimage.webp" alt="" width={1200} height={100}/> */}
       <div className="relative z-10 overflow-hidden ">
+        <div className="absolute inset-0 z-0 h-screen">
+           <DnaCanvas modelPath="/dna.glb" />
+         </div>
         {/* <ScrollUp /> */}
         <Hero />
         {/* <Offering /> */}

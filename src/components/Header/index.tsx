@@ -120,7 +120,7 @@ const Header = () => {
         <div className="flex items-center gap-6">
           {/* Search Icon */}
           <button aria-label="Search" className="focus:outline-none">
-            <IoSearch className="text-[#fdb73e] text-[3vw]"/>
+            <IoSearch className="text-[#fe5d66] text-[3vw]"/>
           </button>
           {/* Hamburger Button */}
           <button

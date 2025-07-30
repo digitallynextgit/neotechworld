@@ -28,7 +28,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-[#09173b] hover:text-[#fdb73e]"
+                  className="px-3 text-[#09173b] hover:text-[#fe5d66]"
                 >
                   <svg
                     width="22"
@@ -44,7 +44,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-[#09173b] hover:text-[#fdb73e]"
+                  className="px-3 text-[#09173b] hover:text-[#fe5d66]"
                 >
                   <svg
                     width="22"
@@ -60,7 +60,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-[#09173b] hover:text-[#fdb73e]"
+                  className="px-3 text-[#09173b] hover:text-[#fe5d66]"
                 >
                   <svg
                     width="22"
@@ -78,7 +78,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-[#09173b] hover:text-[#fdb73e]"
+                  className="px-3 text-[#09173b] hover:text-[#fe5d66]"
                 >
                   <svg
                     width="22"
@@ -103,7 +103,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     Home
                   </Link>
@@ -111,7 +111,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     Features
                   </Link>
@@ -119,7 +119,7 @@ const Footer = () => {
                 <li>
                   {/* <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     About
                   </Link> */}
@@ -127,7 +127,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     Testimonial
                   </Link>
@@ -144,7 +144,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     How it works
                   </Link>
@@ -152,7 +152,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     Privacy policy
                   </Link>
@@ -160,7 +160,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     Terms of Service
                   </Link>
@@ -168,7 +168,7 @@ const Footer = () => {
                 <li>
                   {/* <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     Refund policy
                   </Link> */}
@@ -185,7 +185,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                    Clinical diagnosis
 
@@ -194,7 +194,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                   Pharmacogenomics
                   </Link>
@@ -202,7 +202,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     Preventive Genomics
                   </Link>
@@ -210,7 +210,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                    Research & Development
                   </Link>
@@ -227,7 +227,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     FAQ
                   </Link>
@@ -235,7 +235,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     Blogs
                   </Link>
@@ -243,7 +243,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     Support
                   </Link>
@@ -251,7 +251,7 @@ const Footer = () => {
                 <li>
                   {/* <Link
                     href="#"
-                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fdb73e]"
+                    className="mb-3 inline-block text-base text-[#09173b] hover:text-[#fe5d66]"
                   >
                     About
                   </Link> */}
@@ -270,19 +270,19 @@ const Footer = () => {
                 <div className="-mx-3 flex items-center justify-center md:justify-start">
                   <Link
                     href="#"
-                    className="px-3 text-base text-[#09173b] hover:text-[#fdb73e] hover:underline"
+                    className="px-3 text-base text-[#09173b] hover:text-[#fe5d66] hover:underline"
                   >
                     Privacy policy
                   </Link>
                   <Link
                     href="#"
-                    className="px-3 text-base text-[#09173b] hover:text-[#fdb73e] hover:underline"
+                    className="px-3 text-base text-[#09173b] hover:text-[#fe5d66] hover:underline"
                   >
                     Legal notice
                   </Link>
                   <Link
                     href="#"
-                    className="px-3 text-base text-[#09173b] hover:text-[#fdb73e] hover:underline"
+                    className="px-3 text-base text-[#09173b] hover:text-[#fe5d66] hover:underline"
                   >
                     Terms of service
                   </Link>

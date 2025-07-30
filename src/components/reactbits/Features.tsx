@@ -33,25 +33,25 @@ export function FeatureSteps({
     {
       title: "Clinical diagnosis",
       solution: "Genetic Answers for Clearer Clinical Decisions",
-      icon: <Image src="/icons/note.webp" alt="Precision Diagnostics" width={40} height={40} className="text-[#fdb73e]" />,
+      icon: <Image src="/icons/note.webp" alt="Precision Diagnostics" width={40} height={40} className="text-[#fe5d66]" />,
       color: "from-[#09173b] to-[#09173b]"
     },
     {
       title: "Pharmacogenomics",
       solution: "Right Drug, Right Dose, right from the Start — Advancing Safer, Smarter, Personalized Care",
-      icon: <Image src="/icons/drugs.webp" alt="Pharmacogenomics" width={40} height={40} className="text-[#fdb73e]" />,
+      icon: <Image src="/icons/drugs.webp" alt="Pharmacogenomics" width={40} height={40} className="text-[#fe5d66]" />,
       color: "from-[#09173b] to-[#09173b]"
     },
     {
       title: "Research & Development",
       solution: "Research to real world",
-      icon: <Image src="/icons/prevent.webp" alt="Clinical R&D" width={40} height={40} className="text-[#fdb73e]" />,
+      icon: <Image src="/icons/prevent.webp" alt="Clinical R&D" width={40} height={40} className="text-[#fe5d66]" />,
       color: "from-[#09173b] to-[#09173b]"
     },
     {
       title: "Preventive Genomics",
       solution: "Empower Your Health Through Genomic Insights",
-      icon: <Image src="/icons/loupe.webp" alt="Preventive Genomics" width={40} height={40} className="text-[#fdb73e]" />,
+      icon: <Image src="/icons/loupe.webp" alt="Preventive Genomics" width={40} height={40} className="text-[#fe5d66]" />,
       color: "from-[#09173b] to-[#09173b]"
     }
   ]
@@ -100,8 +100,8 @@ export function FeatureSteps({
                   <p className="text-center text-gray-600 mb-3 text-[1vw]">{feature.solution}</p>
                   
                   {/* Click Indicator */}
-                  <div className="mt-2 flex items-center gap-2 bg-white/40 backdrop-blur-sm px-3 py-1 rounded-full border border-[#fdb73e]">
-                    <FaPlus size={10} className="text-[#fdb73e]" />
+                  <div className="mt-2 flex items-center gap-2 bg-white/40 backdrop-blur-sm px-3 py-1 rounded-full border border-[#fe5d66]">
+                    <FaPlus size={10} className="text-[#fe5d66]" />
                     <span className="text-xs font-medium text-[#09173b]">Click to explore</span>
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export function FeatureSteps({
                         <h3 className="text-[1vw]  text-white">{feature.title}</h3>
                       </div>
                       <button 
-                        className="w-5 h-5 p-3 rounded-full bg-[#fdb73e] flex items-center justify-center text-black"
+                        className="w-5 h-5 p-3 rounded-full bg-[#fe5d66] flex items-center justify-center text-black"
                         onClick={(e) => {
                           e.stopPropagation()
                           setActiveFeature(null)
@@ -149,7 +149,7 @@ export function FeatureSteps({
                     {/* Footer */}
                     <div className="p-3 border-t border-[#09173b]/10">
                       <button 
-                        className="w-full py-2 text-white rounded-lg font-medium flex items-center text-[1vw] justify-center gap-2 bg-gradient-to-r from-[#09173b] to-[#09173b] hover:from-[#fdb73e] hover:to-[#fdb73e] transition-colors duration-300"
+                        className="w-full py-2 text-white rounded-lg font-medium flex items-center text-[1vw] justify-center gap-2 bg-gradient-to-r from-[#09173b] to-[#09173b] hover:from-[#fe5d66] hover:to-[#fe5d66] transition-colors duration-300"
                         onClick={(e) => {
                           e.stopPropagation()
                           // This would typically link to a more detailed page

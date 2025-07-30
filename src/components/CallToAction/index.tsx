@@ -19,7 +19,7 @@ const CallToAction = () => {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/"
-                  className="inline-block rounded-full border border-transparent bg-[#fdb73e] px-7 py-3 text-base font-medium text-black transition hover:scale-110 hover:border-2 hover:border-white"
+                  className="inline-block rounded-full border border-transparent bg-[#fe5d66] px-7 py-3 text-base font-medium text-black transition hover:scale-110 hover:border-2 hover:border-white"
                 >
                   <div className="flex flex-row items-center justify-start gap-2 text-white">
                     <FaCalendarCheck className="text-[1vw] text-white " />
@@ -29,7 +29,7 @@ const CallToAction = () => {
                 
                 <Link
                   href="/"
-                  className="inline-block rounded-full border border-transparent bg-[#fdb73e] px-7 py-3 text-base font-medium text-black transition hover:scale-110 hover:border-2 hover:border-white"
+                  className="inline-block rounded-full border border-transparent bg-[#fe5d66] px-7 py-3 text-base font-medium text-black transition hover:scale-110 hover:border-2 hover:border-white"
                 >
                   <div className="flex flex-row items-center justify-start gap-2 text-white">
                     <FaHandshake className="text-[1vw] text-white " />
@@ -39,7 +39,7 @@ const CallToAction = () => {
                 
                 <Link
                   href="/"
-                  className="inline-block rounded-full border border-transparent bg-[#fdb73e] px-7 py-3 text-base font-medium text-black transition hover:scale-110 hover:border-2 hover:border-white"
+                  className="inline-block rounded-full border border-transparent bg-[#fe5d66] px-7 py-3 text-base font-medium text-black transition hover:scale-110 hover:border-2 hover:border-white"
                 >
                   <div className="flex flex-row items-center justify-start gap-2 text-white">
                     <FaNetworkWired className="text-[1vw] text-white " />
@@ -49,7 +49,7 @@ const CallToAction = () => {
                 
                 {/* <Link
                   href="/"
-                  className="inline-block rounded-full border border-transparent bg-[#fdb73e] px-7 py-3 text-base font-medium text-black transition hover:scale-110 hover:border-2 hover:border-white"
+                  className="inline-block rounded-full border border-transparent bg-[#fe5d66] px-7 py-3 text-base font-medium text-black transition hover:scale-110 hover:border-2 hover:border-white"
                 >
                   <div className="flex flex-row items-center justify-start gap-2 text-white">
                     <FaHospital className="text-[1vw] text-white " />

@@ -23,29 +23,34 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
 }) => {
   return (
     <div className="relative z-20 mx-auto flex h-[80vh] w-[100vw] flex-col justify-center px-[6vw] ">
+      
       <div className="flex h-full w-full flex-wrap items-center justify-center">
+        
         <div className="w-full">
           <div
             className="hero-content wow fadeInUp mx-auto text-center"
             data-wow-delay=".2s"
           >
+            
             <div className="mb-[8vh] mt-[0vw]">
+              
               {/* <h3 className="mb-[2vh] text-[2vw] underline italic leading-[1.1] text-white font-bold ">NMC Genetics</h3> */}
               <div className="mb-[2vh] flex flex-col items-center justify-center text-[4vw] font-normal leading-[1.1] text-white">
                 {/* <DnaCanvas modelPath="/dna2.glb" /> */}
+                
                 <h1 className="w-[80%] font-heading font-thin">From Unknowns to Outcomes.</h1>
               </div>
               <div className="mb-[2vh] mt-[-5vw] h-[2vw] font-heading font-semibold text-white">
                 <TypewriterEffect />
               </div>
             </div>
-            <DotLottieReact src="/dnaloader.lottie" loop autoplay className="mt-[-10vw]"/>
-            {/* <p className="mx-auto my-[6vh] mt-[12vw] w-[0vw] rounded-full bg-transparent p-[1.5vw] text-[1.25vw] font-medium text-red-700">
-              Neotech World Lab empowers healthcare systems, doctors, and
+            {/* <DotLottieReact src="/dnaloader.lottie" loop autoplay className="mt-[-10vw]"/> */}
+            <p className="mx-auto my-[6vh] mt-[12vw] w-[20vw] h-[40vh] rounded-full bg-transparent p-[1.5vw] text-[1.25vw] font-medium text-red-700">
+              {/* Neotech World Lab empowers healthcare systems, doctors, and
               researchers to make every treatment count—by harnessing genomics
               to reduce guesswork, refine diagnosis, and enable truly
-              personalized care.
-            </p> */}
+              personalized care. */}
+            </p>
             <div className="mb-[2vh] flex w-full flex-col justify-center mt-[-25vh]">
               {/* <div className="relative mb-[6vh] ml-[10vw] h-[0.2vh] w-[70vw] bg-white/40">
                 <div
@@ -71,7 +76,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
                   <div className="mr-[-10vw] flex w-full max-w-[12vw] items-center">
                     <Link
                       href={heroButtons[buttonCurrent].href}
-                      className="mr-[1vw] cursor-none whitespace-nowrap rounded-full bg-[#fdb73e] px-[2vw] py-[2vh] text-[1vw] font-semibold text-white shadow transition "
+                      className="mr-[1vw] cursor-none whitespace-nowrap rounded-full bg-[#fe5d66] px-[2vw] py-[2vh] text-[1vw] font-semibold text-white shadow transition "
                       style={{ minWidth: "12vw", textAlign: "center" }}
                     >
                       {heroButtons[buttonCurrent].label}

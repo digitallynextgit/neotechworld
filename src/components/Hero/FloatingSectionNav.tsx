@@ -86,19 +86,19 @@ function FloatingSectionNav() {
     <nav
       ref={navRef}
       // className={`fixed left-8 top-1/2 z-40 flex -translate-y-1/2 flex-col items-start gap-4 bg-red-200/10 p-4  transition-colors duration-300 ${isOnWhiteBg ? "text-gray-900" : "text-white"}`}
-       className="fixed left-8 top-1/2 z-40 flex -translate-y-1/2 flex-col items-start gap-4   transition-colors duration-300 text-[#e49c3a]"
+       className="fixed left-8 top-1/2 z-40 flex -translate-y-1/2 flex-col items-start gap-4   transition-colors duration-300 text-[#fe5d66]"
     >
       {sectionNav.map((item) => (
         <button
           key={item.id}
           onClick={() => handleClick(item.id)}
           // className={`flex items-center gap-2 text-[1.25vw] font-bold transition ${active === item.id ? (isOnWhiteBg ? "font-bold text-gray-900" : "font-bold text-white") : isOnWhiteBg ? "text-white" : "text-white/80"}`}
-          className={`flex items-center gap-2 text-[1vw] font-bold transition text-[#e49c3a]`}
+          className={`flex items-center gap-2 text-[1vw] font-bold transition text-[#fe5d66]`}
           style={{ outline: "none" }}
         >
           <span
             // className={`h-2 w-2 rounded-full transition-all duration-200 ${active === item.id ? (isOnWhiteBg ? "bg-gray-900" : "bg-white/80") : isOnWhiteBg ? "bg-gray-300" : "bg-white/30"}`}
-            className={`h-2 w-2 rounded-full transition-all duration-200 ${active === item.id ? "bg-[#e49c3a]" : "bg-white/30"}`}
+            className={`h-2 w-2 rounded-full transition-all duration-200 ${active === item.id ? "bg-[#fe5d66]" : "bg-white/30"}`}
           ></span>
           <span>{item.label}</span>
         </button>

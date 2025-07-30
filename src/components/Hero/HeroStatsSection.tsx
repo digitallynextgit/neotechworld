@@ -55,14 +55,14 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
       <div className="absolute right-0 top-[11vw] flex items-center gap-4 z-20">
         <button
           onClick={prevCard}
-          className="flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-2 border-[#fdb73e] text-[#fdb73e] hover:bg-[#fdb73e] hover:text-white transition-colors duration-300"
+          className="flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-2 border-[#fe5d66] text-[#fe5d66] hover:bg-[#fe5d66] hover:text-white transition-colors duration-300"
           aria-label="Previous slide"
         >
           <CaretLeft weight="bold" className="h-3 w-3" />
         </button>
         <button
           onClick={nextCard}
-          className="flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-2 border-[#fdb73e] text-[#fdb73e] hover:bg-[#fdb73e] hover:text-white transition-colors duration-300"
+          className="flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-2 border-[#fe5d66] text-[#fe5d66] hover:bg-[#fe5d66] hover:text-white transition-colors duration-300"
           aria-label="Next slide"
         >
           <CaretRight weight="bold" className="h-3 w-3" />
@@ -83,13 +83,13 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
               key={i}
               className="flex-shrink-0 w-1/3 px-4" // w-1/3 since we want 3 visible at once
             >
-              <div className="flex flex-col justify-between h-full gap-0 rounded-md border border-[#fdb73e] bg-transparent p-4">
-                <div className="text-[#fdb73e]">
+              <div className="flex flex-col justify-between h-full gap-0 rounded-md border border-[#fe5d66] bg-transparent p-4">
+                <div className="text-[#fe5d66]">
                   {stat.icon}
                 </div>
                 <h2 className="font-regular flex flex-row items-end gap-2 text-left text-[4vw] tracking-tighter text-white">
                   {stat.prefix && (
-                    <span className="text-[2vw] text-[#fdb73e]">{stat.prefix}</span>
+                    <span className="text-[2vw] text-[#fe5d66]">{stat.prefix}</span>
                   )}
                   {stat.isText ? (
                     <span className="text-[2.5vw] text-white">
@@ -98,7 +98,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
                   ) : stat.isDecrease ? (
                     <>
                       <span className="text-white">{stat.value}</span>
-                      <span className="text-[2vw] text-[#fdb73e]">{stat.suffix}</span>
+                      <span className="text-[2vw] text-[#fe5d66]">{stat.suffix}</span>
                     </>
                   ) : (
                     <>
@@ -106,7 +106,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
                     </>
                   )}
                 </h2>
-                <p className="text-left text-[1.25vw] leading-relaxed tracking-tight text-[#fdb73e]">
+                <p className="text-left text-[1.25vw] leading-relaxed tracking-tight text-[#fe5d66]">
                   {stat.label}
                 </p>
               </div>

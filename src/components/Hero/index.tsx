@@ -19,6 +19,7 @@ import TypewriterEffect from "../Typewritter/TypewriterEffect";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Link } from "lucide-react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { clientsData } from '../Clients/clientsData';
 gsap.registerPlugin(ScrollTrigger);
 
 type Blog = {
@@ -303,8 +304,8 @@ const Hero = ({ posts }: HeroProps) => {
     <>
       {/* Hero Content */}
       <main id="hero-main-section">
+       
         <div className="relative z-10 flex w-full items-center justify-center mt-[7vw]">
-           {/* <DnaCanvas modelPath="/dna3.glb" /> */}
         <HeroMainContent
           buttonProgress={buttonProgress}
           heroButtons={heroButtons}
@@ -316,6 +317,9 @@ const Hero = ({ posts }: HeroProps) => {
         {/* Content */}
 
       </main>
+      
+      {/* DNA Model positioned below hero section */}
+   
       {/* Floating section nav appears after hero section is out of view */}
       <FloatingSectionNavAfterHero />
       {/* Section 1 */}

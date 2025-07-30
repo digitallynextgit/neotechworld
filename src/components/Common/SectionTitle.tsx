@@ -4,7 +4,7 @@ const SectionTitle = ({
   paragraph,
   width = "635px",
   center,
-  subtitleClassName = "mb-2 block text-lg font-semibold text-[#fdb73e]",
+  subtitleClassName = "mb-2 block text-lg font-semibold text-[#fe5d66]",
   titleClassName = "mb-4 text-7xl font-bold text-[#09173b] sm:text-4xl md:text-[4vw] md:leading-[1.2] font-heading",
   className = "",
 }: {
