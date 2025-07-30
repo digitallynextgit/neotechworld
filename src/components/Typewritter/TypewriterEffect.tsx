@@ -36,9 +36,9 @@ const TypewriterEffect = ({ onImageChange }: TypewriterEffectProps) => {
 
   return (
     <div 
-      className="relative w-full max-w-[85vw] lg:max-w-[75vw] mx-auto font-bold"
+      className="relative w-full max-w-[85vw] lg:max-w-[75vw] mx-auto font-bold font-heading"
       style={{ 
-        fontFamily: 'Playfair Display, sans-serif',
+        // fontFamily: 'Playfair Display, sans-serif',
         height: '280px',
         display: 'flex',
         alignItems: 'center',

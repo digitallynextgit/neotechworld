@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
             <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-[#09173b]">
+              <h4 className="mb-9 text-lg font-semibold text-[#09173b] font-heading">
                 About Us
               </h4>
               <ul>
@@ -137,7 +137,7 @@ const Footer = () => {
           </div>
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
             <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-[#09173b]">
+              <h4 className="mb-9 text-lg font-semibold text-[#09173b] font-heading">
                 Features
               </h4>
               <ul>
@@ -178,7 +178,7 @@ const Footer = () => {
           </div>
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
             <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-[#09173b]">
+              <h4 className="mb-9 text-lg font-semibold text-[#09173b] font-heading">
                 Our Products
               </h4>
               <ul>
@@ -220,7 +220,7 @@ const Footer = () => {
           </div>
           <div className="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
             <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-[#09173b]">
+              <h4 className="mb-9 text-lg font-semibold text-[#09173b] font-heading">
                 Useful Links
               </h4>
               <ul>

@@ -173,7 +173,7 @@ export function Offering() {
         >
           <Card className="card-animate flex flex-col items-center justify-center p-[2vh] text-center">
             <HiOutlineWrench className="card-icon text-[6vh] text-gray-700" />
-            <h2 className="card-title mt-[1vh] text-[3vh] font-bold">
+            <h2 className="card-title mt-[1vh] text-[3vh] font-bold font-heading">
               Precision Diagnostics
             </h2>
             <p className="card-description mt-[1vh] text-[2vh] font-medium">
@@ -184,7 +184,7 @@ export function Offering() {
 
           <Card className="card-animate flex flex-col items-center justify-center p-[2vh] text-center">
             <FiLock className="card-icon text-[6vh] text-gray-700" />
-            <h2 className="card-title mt-[1vh] text-[3vh] font-bold">
+            <h2 className="card-title mt-[1vh] text-[3vh] font-bold font-heading">
               Pharmacogenomics
             </h2>
             <p className="card-description mt-[1vh] text-[2vh] font-medium">
@@ -195,7 +195,7 @@ export function Offering() {
 
           <Card className="card-animate flex flex-col items-center justify-center p-[2vh] text-center">
             <LuRocket className="card-icon text-[6vh] text-gray-700" />
-            <h2 className="card-title mt-[1vh] text-[3vh] font-bold">
+            <h2 className="card-title mt-[1vh] text-[3vh] font-bold font-heading">
               Preventive Genomics
             </h2>
             <p className="card-description mt-[1vh] text-[2vh] font-medium">
@@ -205,7 +205,7 @@ export function Offering() {
 
           <Card className="card-animate flex flex-col items-center justify-center p-[2vh] text-center">
             <FiShield className="card-icon text-[6vh] text-gray-700" />
-            <h2 className="card-title mt-[1vh] text-[3vh] font-bold">
+            <h2 className="card-title mt-[1vh] text-[3vh] font-bold font-heading">
               Clinical R&D & Registry Solutions
             </h2>
             <p className="card-description mt-[1vh] text-[2vh] font-medium">

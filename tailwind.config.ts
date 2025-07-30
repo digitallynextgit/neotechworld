@@ -10,6 +10,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Oxanium', 'cursive'],
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },

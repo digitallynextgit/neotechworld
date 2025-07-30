@@ -104,7 +104,7 @@ const ScrollFloat: React.FC<ScrollFloatProps> = ({
   return (
     <h2
       ref={containerRef}
-      className={`my-5 overflow-hidden ${containerClassName}`}
+      className={`my-5 overflow-hidden font-heading ${containerClassName}`}
     >
       {content}
     </h2>
