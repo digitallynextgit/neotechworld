@@ -200,9 +200,9 @@ export default function WhoWeServe() {
             </ScrollFloat>
             <Link
               href={"/"}
-              className="hover:scale-60 relative -mr-[8vw] flex scale-50 items-center gap-3 rounded-full bg-white px-16 py-6 text-[2vw] duration-200 hover:bg-red-500 hover:text-white "
+              className="hover:scale-60 relative -mr-[8vw] flex scale-50 items-center gap-3 rounded-full bg-white px-16 py-6 text-[2vw] duration-200 hover:bg-[#fdb73e] hover:text-white "
             >
-              <span className="rounded-full border border-white bg-red-500 p-4 text-white hover:scale-110 hover:border-2">
+              <span className="rounded-full border border-white bg-[#fdb73e] p-4 text-white hover:scale-110 hover:border-2">
                 <Calculator weight="thin" className="h-10 w-10" />
               </span>
               Find your Solutions{" "}
@@ -287,7 +287,7 @@ export default function WhoWeServe() {
                 }}
               >
                 <div className="mb-4 flex items-center gap-4">
-                  <div className="rounded-full text-red-500 p-3">
+                  <div className="rounded-full text-[#fdb73e] p-3">
                     {servicesData[active].icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white">
@@ -332,7 +332,7 @@ export default function WhoWeServe() {
                       className={cn(
                         "rounded-full px-4 py-2 text-sm transition-all duration-300",
                         isActive(index)
-                          ? "bg-red-500 text-white "
+                          ? "bg-[#fdb73e] text-white "
                           : "bg-red-700 bg-opacity-20 text-white hover:bg-opacity-40"
                       )}
                     >
@@ -343,7 +343,7 @@ export default function WhoWeServe() {
                 <div className="flex gap-4">
                   <button
                     onClick={handlePrev}
-                    className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-red-500 "
+                    className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-[#fdb73e] "
                   >
                     <CaretLeft
                       weight="thin"
@@ -352,7 +352,7 @@ export default function WhoWeServe() {
                   </button>
                   <button
                     onClick={handleNext}
-                    className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-red-500 "
+                    className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-[#fdb73e] "
                   >
                     <CaretRight
                       weight="thin"
@@ -366,7 +366,7 @@ export default function WhoWeServe() {
         </div>
 
         {/* <div className="mt-16 flex justify-center gap-4">
-          <button className="flex items-center gap-3 rounded-full border border-red-500 bg-transparent px-6 py-3 text-[1vw] text-red-500 transition-colors duration-300 hover:scale-110 hover:border-2 hover:border-white hover:bg-red-500 hover:text-white">
+          <button className="flex items-center gap-3 rounded-full border border-[#fdb73e] bg-transparent px-6 py-3 text-[1vw] text-[#fdb73e] transition-colors duration-300 hover:scale-110 hover:border-2 hover:border-white hover:bg-[#fdb73e] hover:text-white">
             Find Your Solution
           </button>
           <button className="flex items-center gap-3 rounded-full border border-white bg-transparent px-6 py-3 text-[1vw] text-white transition-colors duration-300 hover:scale-110 hover:border-2 hover:bg-white hover:text-black">

@@ -4,8 +4,8 @@ const SectionTitle = ({
   paragraph,
   width = "635px",
   center,
-  subtitleClassName = "mb-2 block text-lg font-semibold text-primary",
-  titleClassName = "mb-4 text-5xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2] font-heading",
+  subtitleClassName = "mb-2 block text-lg font-semibold text-[#fdb73e]",
+  titleClassName = "mb-4 text-7xl font-bold text-[#09173b] sm:text-4xl md:text-[4vw] md:leading-[1.2] font-heading",
   className = "",
 }: {
   subtitle?: string;
@@ -34,7 +34,7 @@ const SectionTitle = ({
         <h2 className={titleClassName}>
           {title}
         </h2>
-        <p className="text-base leading-relaxed text-body-color dark:text-dark-6 sm:leading-relaxed">
+        <p className="text-[1vw] leading-relaxed tex-black sm:leading-relaxed">
           {paragraph}
         </p>
       </div>

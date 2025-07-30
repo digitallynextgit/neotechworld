@@ -1,11 +1,8 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import React, { useState, useRef } from "react"
 import { cn } from "@/lib/utils"
-import { FaBrain, FaDna, FaTools, FaSearch, FaArrowRight, FaPlus } from "react-icons/fa"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import { FaArrowRight, FaPlus } from "react-icons/fa"
 import Image from "next/image"
 
 interface Feature {
@@ -29,67 +26,33 @@ export function FeatureSteps({
   const [activeFeature, setActiveFeature] = useState<number | null>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
   
-  useEffect(() => {
-    // Register ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger)
-    
-    if (cardsRef.current) {
-      const cards = cardsRef.current.querySelectorAll('.feature-card')
-      
-      // Create GSAP animation for each card
-      cards.forEach((card, index) => {
-        gsap.fromTo(card, 
-          { y: 100, opacity: 0 },
-          { 
-            y: 0, 
-            opacity: 1, 
-            duration: 0.8, 
-            delay: index * 0.2,
-            scrollTrigger: {
-              trigger: card,
-              start: "top bottom-=100",
-              end: "bottom top",
-              toggleActions: "play reverse restart reverse", // Play animation every time element enters viewport
-              scrub: false, // Don't tie animation progress to scroll position
-              markers: false, // Set to true for debugging
-              once: false // Allow animation to play multiple times
-            }
-          }
-        )
-      })
-    }
-    
-    return () => {
-      // Clean up ScrollTrigger instances
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
-  }, [])
+  // Animation removed as requested
 
-  // Default features with red color theme
+  // Default features with blue and yellow color theme
   const defaultFeatures: Feature[] = [
     {
       title: "Clinical diagnosis",
       solution: "Genetic Answers for Clearer Clinical Decisions",
-      icon: <Image src="/icons/note.webp" alt="Precision Diagnostics" width={50} height={50} className="text-[#C8AB6B]" />,
-      color: "from-red-400 to-red-600"
+      icon: <Image src="/icons/note.webp" alt="Precision Diagnostics" width={40} height={40} className="text-[#fdb73e]" />,
+      color: "from-[#09173b] to-[#09173b]"
     },
     {
       title: "Pharmacogenomics",
-      solution: "Right Drug, Right Dose, right from the Start — Advancing Safer,Smarter, Personalized Care/ Genetic Insights for Smarter Prescribing",
-      icon: <Image src="/icons/drugs.webp" alt="Pharmacogenomics" width={50} height={50} className="text-[#C8AB6B]" />,
-      color: "from-red-400 to-red-600"
+      solution: "Right Drug, Right Dose, right from the Start — Advancing Safer, Smarter, Personalized Care",
+      icon: <Image src="/icons/drugs.webp" alt="Pharmacogenomics" width={40} height={40} className="text-[#fdb73e]" />,
+      color: "from-[#09173b] to-[#09173b]"
     },
     {
       title: "Research & Development",
       solution: "Research to real world",
-      icon: <Image src="/icons/prevent.webp" alt="Clinical R&D" width={50} height={50} className="text-[#C8AB6B]" />,
-      color: "from-red-400 to-red-600"
+      icon: <Image src="/icons/prevent.webp" alt="Clinical R&D" width={40} height={40} className="text-[#fdb73e]" />,
+      color: "from-[#09173b] to-[#09173b]"
     },
     {
       title: "Preventive Genomics",
       solution: "Empower Your Health Through Genomic Insights",
-      icon: <Image src="/icons/loupe.webp" alt="Preventive Genomics" width={50} height={50} className="text-[#C8AB6B]" />,
-      color: "from-red-400 to-red-600"
+      icon: <Image src="/icons/loupe.webp" alt="Preventive Genomics" width={40} height={40} className="text-[#fdb73e]" />,
+      color: "from-[#09173b] to-[#09173b]"
     }
   ]
 
@@ -98,30 +61,30 @@ export function FeatureSteps({
   return (
     <div className={cn("py-16 relative", className)}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  text-center">
           {title}
         </h2>
 
-        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
           {featuresToRender.map((feature, index) => (
             <div
                 key={index}
                 className={cn(
                   "feature-card relative overflow-hidden rounded-2xl cursor-pointer",
-                  "h-[60vh] transition-all duration-300 border-2 border-red-700",
+                  "h-[65vh] transition-all duration-300 border-2 border-[#09173b]",
                   "backdrop-blur-lg bg-white/10 shadow-lg hover:shadow-xl"
                 )}
                 onClick={() => setActiveFeature(activeFeature === index ? null : index)}
               >
-                {/* Glass Effect Background with Red Tint */}
-                <div className="absolute inset-0 bg-gradient-to-br from-red-100/30 to-red-50/20 backdrop-filter backdrop-blur-md" />
+                {/* Glass Effect Background with Blue Tint */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#09173b]/10 to-[#09173b]/5 backdrop-filter backdrop-blur-md" />
                 
                 {/* Card Content */}
-                <div className="relative z-10 h-full flex flex-col items-center justify-center p-6 text-gray-800">
+                <div className="relative z-10 h-full flex flex-col items-center justify-center p-4 text-gray-800">
                   {/* Icon with colored background */}
-                  <div className="mb-6">
+                  <div className="mb-4">
                     <div className={cn(
-                      "w-20 h-20 rounded-full flex items-center justify-center",
+                      "w-12 h-12 rounded-full flex items-center justify-center",
                       "bg-white", feature.color, "text-white"
                     )}>
                       {feature.icon}
@@ -129,82 +92,76 @@ export function FeatureSteps({
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-xl font-bold mb-2 text-center">
+                  <h3 className="text-md font-bold mb-2 text-center">
                     {feature.title}
                   </h3>
                   
                   {/* Solution */}
-                  <p className="text-center text-gray-600 mb-4">{feature.solution}</p>
+                  <p className="text-center text-gray-600 mb-3 text-[1vw]">{feature.solution}</p>
                   
                   {/* Click Indicator */}
-                  <div className="mt-4 flex items-center gap-2 bg-white/40 backdrop-blur-sm px-4 py-2 rounded-full border border-red-700">
-                    <FaPlus size={12} className="text-red-700" />
-                    <span className="text-sm font-medium text-red-700">Click to explore</span>
+                  <div className="mt-2 flex items-center gap-2 bg-white/40 backdrop-blur-sm px-3 py-1 rounded-full border border-[#fdb73e]">
+                    <FaPlus size={10} className="text-[#fdb73e]" />
+                    <span className="text-xs font-medium text-[#09173b]">Click to explore</span>
                   </div>
                 </div>
                 
                 {/* Expanded View */}
-                <AnimatePresence>
-                  {activeFeature === index && (
-                    <motion.div 
-                      className="absolute inset-0 bg-white/70 backdrop-filter backdrop-blur-lg z-20 flex flex-col border-2 border-red-700 rounded-2xl"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.9 }}
-                      transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                    >
-                      {/* Header with red band */}
-                      <div className="h-24 flex items-center justify-between px-6 bg-gradient-to-r from-red-500 to-red-700">
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white">
-                            {feature.icon}
-                          </div>
-                          <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                        </div>
-                        <button 
-                          className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white"
-                          onClick={(e) => {
-                            e.stopPropagation()
-                            setActiveFeature(null)
-                          }}
-                        >
-                          ×
-                        </button>
+                {activeFeature === index && (
+                  <div 
+                    className="absolute inset-0 bg-white/70 backdrop-filter backdrop-blur-lg z-20 flex flex-col border-2 border-[#09173b] rounded-2xl"
+                  >
+                    {/* Header with blue band */}
+                    <div className="h-20 flex items-center justify-between px-4 bg-gradient-to-r from-[#09173b] to-[#09173b]">
+                      <div className="flex items-center gap-3">
+                        {/* <div className="w-10 h-10 rounded-full  flex items-center justify-center text-white">
+                          {feature.icon}
+                        </div> */}
+                        <h3 className="text-[1vw]  text-white">{feature.title}</h3>
                       </div>
+                      <button 
+                        className="w-5 h-5 p-3 rounded-full bg-[#fdb73e] flex items-center justify-center text-black"
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setActiveFeature(null)
+                        }}
+                      >
+                        ×
+                      </button>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-grow p-4 overflow-auto">
+                      <h4 className="text-sm font-bold mb-3 text-[#09173b]">{feature.solution}</h4>
                       
-                      {/* Content */}
-                      <div className="flex-grow p-6 overflow-auto">
-                        <h4 className="text-xl font-bold mb-4 text-red-700">{feature.solution}</h4>
-                        
-                        <div className="space-y-4">
-                          <div className="p-4 bg-red-50 rounded-lg border border-red-100">
-                            <h5 className="font-medium mb-2 text-red-700">Key Benefits</h5>
-                            <ul className="list-disc pl-5 space-y-1 text-red-700">
-                              <li>Improved patient outcomes</li>
-                              <li>Reduced healthcare costs</li>
-                              <li>Personalized treatment plans</li>
-                            </ul>
-                          </div>
+                      <div className="space-y-3">
+                        <div className="p-3 bg-[#09173b]/5 rounded-lg border border-[#09173b]/20">
+                          <h5 className="text-[1vw] mb-2 text-[#09173b]">Key Benefits</h5>
+                          <ul className="list-disc pl-5 space-y-1 text-[#09173b] text-[.85vw]">
+                            <li>Improved patient outcomes</li>
+                            <li>Reduced healthcare costs</li>
+                            <li>Personalized treatment plans</li>
+                          </ul>
                         </div>
                       </div>
-                      
-                      {/* Footer */}
-                      <div className="p-4 border-t border-red-100">
-                        <button 
-                          className="w-full py-3 text-white rounded-lg font-medium flex items-center justify-center gap-2 bg-gradient-to-r from-red-500 to-red-700"
-                          onClick={(e) => {
-                            e.stopPropagation()
-                            // This would typically link to a more detailed page
-                            console.log(`Learn more about ${feature.title}`)
-                          }}
-                        >
-                          Learn more
-                          <FaArrowRight />
-                        </button>
-                      </div>
-                    </motion.div>
-                      )}
-                </AnimatePresence>
+                    </div>
+                    
+                    {/* Footer */}
+                    <div className="p-3 border-t border-[#09173b]/10">
+                      <button 
+                        className="w-full py-2 text-white rounded-lg font-medium flex items-center text-[1vw] justify-center gap-2 bg-gradient-to-r from-[#09173b] to-[#09173b] hover:from-[#fdb73e] hover:to-[#fdb73e] transition-colors duration-300"
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          // This would typically link to a more detailed page
+                          console.log(`Learn more about ${feature.title}`)
+                        }}
+                      >
+                        Learn more
+                        <FaArrowRight size={14} />
+                      </button>
+                    </div>
+                  </div>
+                )}
                 </div>
           ))}
         </div>

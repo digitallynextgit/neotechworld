@@ -22,7 +22,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
   scrollToNextSection,
 }) => {
   return (
-    <div className="relative z-20 mx-auto flex h-[80vh] w-[100vw] flex-col justify-center px-[6vw] md:mt-[-55vw] lg:mt-[-38vw]">
+    <div className="relative z-20 mx-auto flex h-[80vh] w-[100vw] flex-col justify-center px-[6vw] ">
       <div className="flex h-full w-full flex-wrap items-center justify-center">
         <div className="w-full">
           <div
@@ -59,7 +59,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
                 <div className="flex items-center gap-[1vw]">
                   <Link
                     href="#"
-                    className="-ml-[14vw] whitespace-nowrap rounded-full border border-white bg-white/90 px-[2vw] py-[2vh] text-[1vw] font-semibold text-red shadow transition ease-in hover:scale-105  hover:bg-red-500 hover:text-white hover:transition-all"
+                    className="-ml-[14vw] whitespace-nowrap rounded-full border border-white bg-white px-[2vw] py-[2vh] text-[1vw] font-semibold text-black shadow transition ease-in hover:scale-105  hover:bg-red-500 hover:text-white hover:transition-all"
                     style={{ minWidth: "12vw", textAlign: "center" }}
                   >
                     Empower your mission &rarr;
@@ -71,7 +71,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
                   <div className="mr-[-10vw] flex w-full max-w-[12vw] items-center">
                     <Link
                       href={heroButtons[buttonCurrent].href}
-                      className="mr-[1vw] cursor-none whitespace-nowrap rounded-full bg-white px-[2vw] py-[2vh] text-[1vw] font-semibold text-[#FF5C5C] shadow transition hover:bg-white/90"
+                      className="mr-[1vw] cursor-none whitespace-nowrap rounded-full bg-[#fdb73e] px-[2vw] py-[2vh] text-[1vw] font-semibold text-white shadow transition hover:bg-white/90"
                       style={{ minWidth: "12vw", textAlign: "center" }}
                     >
                       {heroButtons[buttonCurrent].label}

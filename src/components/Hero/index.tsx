@@ -10,11 +10,15 @@ import {
   // FloatingSectionNav,
   FloatingSectionNavAfterHero,
 } from "./FloatingSectionNav";
-import HeroStatsSection from "./HeroStatsSection";
+import HeroStatsSection from "@/components/Hero/HeroStatsSection";
 import HeroMainContent from "./HeroMainContent";
 import Features from "../Features";
 import { FeatureSteps } from "../reactbits/Features";
 import { statsData } from "@/data/statsData";
+import TypewriterEffect from "../Typewritter/TypewriterEffect";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { Link } from "lucide-react";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 gsap.registerPlugin(ScrollTrigger);
 
 type Blog = {
@@ -37,13 +41,14 @@ const features = [
   {
     step: "Step 1",
     title: "Treating More with Less",
-    content: "Chronic care in India often means 4–6 drugs per patient. Many are redundant or ineffective, creating a financial and operational burden. NeoTech helps simplify treatment at scale.",
+    content:
+      "Chronic care in India often means 4–6 drugs per patient. Many are redundant or ineffective, creating a financial and operational burden. NeoTech helps simplify treatment at scale.",
     images: [
       "https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg",
       "https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg",
-      "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg"
+      "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg",
     ],
-    currentImageIndex: 0
+    currentImageIndex: 0,
   },
   {
     step: "Step 2",
@@ -53,20 +58,21 @@ const features = [
     images: [
       "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg",
       "https://images.pexels.com/photos/4210611/pexels-photo-4210611.jpeg",
-      "https://images.pexels.com/photos/3683102/pexels-photo-3683102.jpeg"
+      "https://images.pexels.com/photos/3683102/pexels-photo-3683102.jpeg",
     ],
-    currentImageIndex: 0
+    currentImageIndex: 0,
   },
   {
     step: "Step 3",
     title: "From Research to Real-World Use",
-    content:"India leads in scientific discovery, but lags in implementation. NeoTech bridges this gap with clinical-ready tools that doctors and health departments can use every day.",
+    content:
+      "India leads in scientific discovery, but lags in implementation. NeoTech bridges this gap with clinical-ready tools that doctors and health departments can use every day.",
     images: [
       "https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg",
       "https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg",
-      "https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg"
+      "https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg",
     ],
-    currentImageIndex: 0
+    currentImageIndex: 0,
   },
 ];
 
@@ -140,16 +146,16 @@ const Hero = ({ posts }: HeroProps) => {
   useEffect(() => {
     const observer = new window.IntersectionObserver(
       ([entry]) => {
-        console.log('Stats section intersection:', entry.isIntersecting);
+        console.log("Stats section intersection:", entry.isIntersecting);
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }, // Lower threshold and negative rootMargin to trigger earlier
+      { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }, // Lower threshold and negative rootMargin to trigger earlier
     );
     if (sectionRef.current) {
-      console.log('Observing stats section');
+      console.log("Observing stats section");
       observer.observe(sectionRef.current);
     } else {
-      console.error('Stats section ref not available');
+      console.error("Stats section ref not available");
     }
     return () => observer.disconnect();
   }, []);
@@ -237,23 +243,30 @@ const Hero = ({ posts }: HeroProps) => {
     idx: number;
   }) => {
     const [count, setCount] = useState(start);
-    
+
     useEffect(() => {
-      console.log(`Counter ${idx} - shouldStart:`, shouldStart, 'start:', start, 'end:', end);
+      console.log(
+        `Counter ${idx} - shouldStart:`,
+        shouldStart,
+        "start:",
+        start,
+        "end:",
+        end,
+      );
       if (!shouldStart) {
         setCount(start); // Reset to start when not in view
         return;
       }
-      
+
       let startTimestamp: number | null = null;
       let animationFrameId: number;
-      
+
       const step = (timestamp: number) => {
         if (!startTimestamp) startTimestamp = timestamp;
         const progress = Math.min((timestamp - startTimestamp) / duration, 1);
         const value = Math.round(start + (end - start) * progress);
         setCount(value);
-        
+
         if (progress < 1) {
           animationFrameId = requestAnimationFrame(step);
         } else {
@@ -268,9 +281,9 @@ const Hero = ({ posts }: HeroProps) => {
           }
         }
       };
-      
+
       animationFrameId = requestAnimationFrame(step);
-      
+
       // Cleanup function
       return () => {
         if (animationFrameId) {
@@ -279,26 +292,19 @@ const Hero = ({ posts }: HeroProps) => {
       };
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [start, end, duration, shouldStart, idx]);
-    
+
     return count;
-  }
+  };
 
   const [showWhiteTransition, setShowWhiteTransition] = useState(false);
   const whatWeSolveRef = useRef<HTMLDivElement>(null);
 
-
   return (
     <>
-
       {/* Hero Content */}
       <main id="hero-main-section">
-        <div className="relative z-10 flex w-full items-center justify-center">
-          <div className="mx-auto h-[100vh] w-full max-w-[1600px]">
-            {/* <DnaCanvas modelPath="/dna3.glb" /> */}
-    
-          </div>
-        </div>
-        {/* Content */}
+        <div className="relative z-10 flex w-full items-center justify-center mt-[7vw]">
+           {/* <DnaCanvas modelPath="/dna3.glb" /> */}
         <HeroMainContent
           buttonProgress={buttonProgress}
           heroButtons={heroButtons}
@@ -306,6 +312,9 @@ const Hero = ({ posts }: HeroProps) => {
           setButtonCurrent={setButtonCurrent}
           scrollToNextSection={scrollToNextSection}
         />
+        </div>
+        {/* Content */}
+
       </main>
       {/* Floating section nav appears after hero section is out of view */}
       <FloatingSectionNavAfterHero />
@@ -317,25 +326,18 @@ const Hero = ({ posts }: HeroProps) => {
       >
         <HeroStatsSection
           statsData={statsData}
-          inView={inView}
-          getCounterValue={useCountUpBounceForHero}
-          boxRefs={boxRefs}
-          iconRefs={iconRefs}
-          numberRefs={numberRefs}
-          buttonRefs={buttonRefs}
         />
       </section>
       {/* What We Solve Section */}
       <section
         id="expertise"
         ref={whatWeSolveRef}
-        className="relative z-30 -mt-[10vw] flex  w-full flex-col justify-center pt-[15vw] pb-[10vw] lg:pl-[20vw] lg:pr-[10vw]"
+        className="relative z-30 -mt-[18vw] flex  w-full flex-col justify-center pb-[5vw] pt-[15vw] lg:pl-[20vw] lg:pr-[10vw]"
         style={{
           background:
             "linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 80%)",
         }}
       >
-
         <div className=" w-full ">
           {/* Large heading at the top */}
           <div className="flex flex-row items-center justify-between ">
@@ -343,10 +345,9 @@ const Hero = ({ posts }: HeroProps) => {
               containerClassName="mb-6"
               textClassName=" text-[4.5vw] text-white font-medium "
             >
-             What We Solve—and How
+              What We Solve—and How
             </ScrollFloat>
             {/* CTA Button centered below columns */}
-            
           </div>
 
           <div className=" w-[68vw] rotate-180 border-[.02vw] border-white" />
@@ -354,11 +355,9 @@ const Hero = ({ posts }: HeroProps) => {
           // features={features}
           // title="Your Journey Starts Here"
           // autoPlayInterval={4000}
-
-        />
+          />
         </div>
       </section>
-      
     </>
   );
 };

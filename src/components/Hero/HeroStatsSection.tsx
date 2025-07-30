@@ -1,91 +1,90 @@
-import React from "react";
-import ScrollFloat from "../reactbits/ScrollFloat";
-import { Stat } from "@/data/statsData";
+import React, { useState, useEffect, useCallback } from 'react';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
+
+interface Stat {
+  value: string | number;
+  label: string;
+  icon?: React.ReactNode;
+  prefix?: string;
+  suffix?: string;
+  isText?: boolean;
+  isDecrease?: boolean;
+}
 
 interface HeroStatsSectionProps {
   statsData: Stat[];
-  inView: boolean;
-  getCounterValue: (args: {
-    start: number;
-    end: number;
-    duration: number;
-    shouldStart: boolean;
-    idx: number;
-  }) => number;
-  boxRefs: React.MutableRefObject<(HTMLDivElement | null)[]>;
-  iconRefs: React.MutableRefObject<(HTMLDivElement | null)[]>;
-  numberRefs: React.MutableRefObject<(HTMLSpanElement | null)[]>;
-  buttonRefs: React.MutableRefObject<(HTMLAnchorElement | null)[]>;
 }
 
-const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
-  statsData,
-  inView,
-  getCounterValue,
-  boxRefs,
-  iconRefs,
-  numberRefs,
-  buttonRefs,
-}) => {
-  console.log("HeroStatsSection rendered, inView:", inView);
-  console.log("statsData length:", statsData.length);
+const VISIBLE_COUNT = 6; // How many cards shown at once
 
-  // const counterRefs = React.useRef<(number | null)[]>(statsData.map(() => null));
+const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
+  const cardsLength = statsData.length;
 
-  // Create counters for each stat that needs counting animation
-  const counters = statsData.map((stat, index) => {
-    if (stat.isText) return { value: stat.value };
+  // Slide next/prev index
+  const nextCard = useCallback(() => {
+    setActiveCardIndex(prev => (prev + 1) % cardsLength);
+  }, [cardsLength]);
 
-    // Call the function prop to get the counter value
-    const counterValue = getCounterValue({
-      start: stat.start,
-      end: stat.end,
-      duration: stat.duration,
-      shouldStart: inView,
-      idx: index,
-    });
+  const prevCard = useCallback(() => {
+    setActiveCardIndex(prev => (prev - 1 + cardsLength) % cardsLength);
+  }, [cardsLength]);
 
-    return { value: counterValue };
-  });
+  // Auto-rotation disabled as per user request
+  // useEffect(() => {
+  //   const interval = setInterval(nextCard, 2000);
+  //   return () => clearInterval(interval);
+  // }, [nextCard]);
+
+  // Calculate actual sliding position (in %) to ensure proper window, handle wrapping
+  const getTranslate = () => {
+    // Each card is 100/3 = 33.333...% of the container width
+    return `-${activeCardIndex * (100 / VISIBLE_COUNT)}%`;
+  };
 
   return (
-    <>
-      <main id="result" className="relative z-20 mx-auto lg:pl-[20vw]">
-        <ScrollFloat
-          animationDuration={1}
-          ease="back.inOut(2)"
-          scrollStart="center bottom+=50%"
-          scrollEnd="bottom bottom-=40%"
-          stagger={0.03}
-          textClassName="text-[4vw] text-white font-medium "
+    <main id="result" className="relative z-20 mx-auto lg:pl-[20vw]">
+      <h2 className="text-[4vw] text-white font-medium font-heading mb-4">
+        Results That Speak for Themselves
+      </h2>
+      <p className="mb-10 text-[1.5vw] text-white">
+        When care is guided by genomic and data insight, outcomes improve—
+        for individuals, systems, and society.
+      </p>
+            {/* Navigation arrows - position top right for better visibility */}
+      <div className="absolute right-0 top-[11vw] flex items-center gap-4 z-20">
+        <button
+          onClick={prevCard}
+          className="flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-2 border-[#fdb73e] text-[#fdb73e] hover:bg-[#fdb73e] hover:text-white transition-colors duration-300"
+          aria-label="Previous slide"
         >
-          Results That Speak for Themselves
-        </ScrollFloat>
-        <p className="mb-10 text-[1.5vw] text-white ">
-          When care is guided by genomic and data insight, outcomes improve—for
-          individuals, systems, and society.
-        </p>
-        <div className="grid w-full grid-cols-1 gap-4 text-left sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3">
-          {statsData.map((stat, i) => {
-            // console.log(`Rendering stat ${i}:`, stat);
-            const count = stat.isText ? stat.value : counters[i].value;
-            // console.log(`Stat ${i} count:`, count);
-            return (
-              <div
-                ref={(el) => {
-                  boxRefs.current[i] = el;
-                  console.log(`Box ref ${i} set:`, !!el);
-                }}
-                key={i}
-                className="flex flex-col justify-between gap-0 rounded-md border border-[#fdb73e] bg-transparent p-4"
-              >
-                <div
-                  className="text-[#fdb73e]"
-                  ref={(el) => {
-                    iconRefs.current[i] = el;
-                    console.log(`Icon ref ${i} set:`, !!el);
-                  }}
-                >
+          <CaretLeft weight="bold" className="h-3 w-3" />
+        </button>
+        <button
+          onClick={nextCard}
+          className="flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-2 border-[#fdb73e] text-[#fdb73e] hover:bg-[#fdb73e] hover:text-white transition-colors duration-300"
+          aria-label="Next slide"
+        >
+          <CaretRight weight="bold" className="h-3 w-3" />
+        </button>
+      </div>
+
+      <div className="relative w-full overflow-hidden">
+        {/* Interactive sliding row */}
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{
+            width: `${(cardsLength /7) * 100}%`,
+            transform: `translateX(${getTranslate()})`,
+          }}
+        >
+          {statsData.map((stat, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 w-1/3 px-4" // w-1/3 since we want 3 visible at once
+            >
+              <div className="flex flex-col justify-between h-full gap-0 rounded-md border border-[#fdb73e] bg-transparent p-4">
+                <div className="text-[#fdb73e]">
                   {stat.icon}
                 </div>
                 <h2 className="font-regular flex flex-row items-end gap-2 text-left text-[4vw] tracking-tighter text-white">
@@ -93,45 +92,17 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
                     <span className="text-[2vw] text-[#fdb73e]">{stat.prefix}</span>
                   )}
                   {stat.isText ? (
-                    <span
-                      ref={(el) => {
-                        numberRefs.current[i] = el;
-                        console.log(`Text ref ${i} set:`, !!el);
-                      }}
-                      className="text-[2.5vw] text-white"
-                    >
-                      {count}
+                    <span className="text-[2.5vw] text-white">
+                      {stat.value}
                     </span>
                   ) : stat.isDecrease ? (
                     <>
-                      <span
-                        ref={(el) => {
-                          numberRefs.current[i] = el;
-                          console.log(`Number ref ${i} set:`, !!el);
-                        }}
-                        className="text-white"
-                      >
-                        {count}
-                      </span>
-                      <span className="text-[2vw] text-[#fdb73e]">
-                        {stat.suffix}
-                      </span>
+                      <span className="text-white">{stat.value}</span>
+                      <span className="text-[2vw] text-[#fdb73e]">{stat.suffix}</span>
                     </>
                   ) : (
                     <>
-                      <span
-                        ref={(el) => {
-                          numberRefs.current[i] = el;
-                          console.log(
-                            `Number ref ${i} set (non-decrease):`,
-                            !!el,
-                          );
-                        }}
-                        className="text-white"
-                      >
-                        {count}
-                        {stat.suffix}
-                      </span>
+                      <span className="text-white">{stat.value}{stat.suffix}</span>
                     </>
                   )}
                 </h2>
@@ -139,16 +110,13 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({
                   {stat.label}
                 </p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
-        <div className="mt-[6vw] flex flex-wrap justify-center gap-4">
-          {/* <PrimaryButton className="text-red-500" href="#">Book a Pilot Program</PrimaryButton> */}
-          {/* <PrimaryButton className="text-red-500" href="#">Download Use Case Brief</PrimaryButton> */}
-          {/* <PrimaryButton className="text-red-500" href="#">Talk to Our Experts</PrimaryButton> */}
-        </div>
-      </main>
-    </>
+      </div>
+
+
+    </main>
   );
 };
 

@@ -150,7 +150,7 @@ export default function HowItWorks() {
     <section
       ref={sectionRef}
       id="works"
-      className=" z-10 overflow-hidden  bg-white"
+      className=" z-10 overflow-hidden  bg-white "
     >
       <div className=" ">
         <div className="flex flex-col items-center gap-8 md:flex-row">
@@ -159,7 +159,7 @@ export default function HowItWorks() {
             <div ref={titleRef} className="">
               <ScrollFloat
                 containerClassName=""
-                textClassName="text-[7vw]  leading-[1] text-red-700 font-medium"
+                textClassName="text-[7vw]  leading-[1] text-[#09173b] font-medium"
               >
                 How
                 <br /> Neotech Works
@@ -177,8 +177,8 @@ export default function HowItWorks() {
                     {/* <div className="mb-0 text-[2vw]">
                       {steps[currentStepIndex].icon}
                     </div> */}
-                    <h3 className="text-center text-[1vw] font-semibold flex flex-row items-center justify-between gap-2 text-red-700 bg-white p-4 rounded-full border border-red-700">
-                        <span className="bg-red-700 text-[1vw] text-white p-3 border border-red-700 rounded-full"><FaUserDoctor />  </span>{steps[currentStepIndex].title}
+                    <h3 className="text-center text-[1vw] font-semibold flex flex-row items-center justify-between gap-2 text-[#09173b] bg-white p-4 rounded-full border border-[#09173b]">
+                        <span className="bg-[#09173b] text-[1vw] text-white p-3 border border-[#09173b] rounded-full"><FaUserDoctor />  </span>{steps[currentStepIndex].title}
                     </h3>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ export default function HowItWorks() {
               >
                 <div
                   key={currentFeatureIndex}
-                  className="flex w-full animate-[fadeIn_.25s_ease-in-out_forwards] items-center rounded-full border-2 border-red-700 text-red-700 p-3 text-[1vw]
+                  className="flex w-full animate-[fadeIn_.25s_ease-in-out_forwards] items-center rounded-full border-2 border-[#09173b] text-[#09173b] p-3 text-[1vw]
                           opacity-0 shadow-sm transition-all duration-200 ease-in-out"
                 >
                   <div className="mr-4  text-[1.5vw]">✓</div>
@@ -219,7 +219,7 @@ export default function HowItWorks() {
                     (prev) => (prev - 1 + steps.length) % steps.length,
                   );
                 }}
-                className="transform rounded-full bg-white/20 border border-red-700 p-5 text-[1.25vw] text-red-700 transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
+                className="transform rounded-full bg-white/20 border border-[#09173b] p-5 text-[1.25vw] text-[#09173b] transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
               >
                 ←
               </button>
@@ -230,7 +230,7 @@ export default function HowItWorks() {
                   }
                   setCurrentStepIndex((prev) => (prev + 1) % steps.length);
                 }}
-                className="transform rounded-full bg-white/20 border border-red-700 p-5 text-[1.25vw] text-red-700 transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
+                className="transform rounded-full bg-white/20 border border-[#09173b] p-5 text-[1.25vw] text-[#09173b] transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
               >
                 →
               </button>
