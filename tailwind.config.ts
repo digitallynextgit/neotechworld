@@ -12,7 +12,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        heading: ['Oxanium', 'cursive'],
+        heading: ['Roboto', 'sans-serif'],
       },
       keyframes: {
         fadeIn: {
