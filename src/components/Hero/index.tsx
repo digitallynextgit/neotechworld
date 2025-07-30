@@ -345,7 +345,7 @@ const Hero = ({ posts }: HeroProps) => {
               containerClassName="mb-6"
               textClassName=" text-[4.5vw] text-white font-medium "
             >
-              What We Solve—and How
+              WHAT WE SOLVE AND HOW
             </ScrollFloat>
             {/* CTA Button centered below columns */}
           </div>

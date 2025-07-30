@@ -194,9 +194,9 @@ export default function WhoWeServe() {
           <div className="flex max-w-[80vw] flex-row justify-between gap-2">
             <ScrollFloat
               containerClassName=""
-              textClassName="text-[6vw] leading-[1] text-white font-medium text-left"
+              textClassName="text-[6vw] leading-[1] text-white font-medium text-left "
             >
-              WHO WE SERVE
+             WHO WE SERVER
             </ScrollFloat>
             <Link
               href={"/"}

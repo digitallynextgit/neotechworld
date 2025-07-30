@@ -44,7 +44,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
 
   return (
     <main id="result" className="relative z-20 mx-auto lg:pl-[20vw]">
-      <h2 className="text-[4vw] text-white font-medium font-heading mb-4">
+      <h2 className="text-[4vw] text-white font-thin font-heading mb-4">
         Results That Speak for Themselves
       </h2>
       <p className="mb-10 text-[1.5vw] text-white">

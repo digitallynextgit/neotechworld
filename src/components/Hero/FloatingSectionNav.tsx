@@ -93,7 +93,7 @@ function FloatingSectionNav() {
           key={item.id}
           onClick={() => handleClick(item.id)}
           // className={`flex items-center gap-2 text-[1.25vw] font-bold transition ${active === item.id ? (isOnWhiteBg ? "font-bold text-gray-900" : "font-bold text-white") : isOnWhiteBg ? "text-white" : "text-white/80"}`}
-          className={`flex items-center gap-2 text-[1.25vw] font-bold transition text-[#e49c3a]`}
+          className={`flex items-center gap-2 text-[1vw] font-bold transition text-[#e49c3a]`}
           style={{ outline: "none" }}
         >
           <span

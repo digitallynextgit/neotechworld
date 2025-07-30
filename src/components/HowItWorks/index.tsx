@@ -159,10 +159,10 @@ export default function HowItWorks() {
             <div ref={titleRef} className="">
               <ScrollFloat
                 containerClassName=""
-                textClassName="text-[7vw]  leading-[1] text-[#09173b] font-medium"
+                textClassName="text-[7vw] leading-[1]  uppercase text-[#09173b] font-medium"
               >
-                How
-                <br /> Neotech Works
+                HOW
+                <br /> NEOTECH WORKS
               </ScrollFloat>
             </div>
             <div className="flex flex-row items-center gap-0 justify-between mt-[-1vw] ml-[-4vw]">
@@ -241,7 +241,7 @@ export default function HowItWorks() {
             <div className="relative overflow-hidden ">
               <video
                 ref={videoRef}
-                className="h-full w-full"
+                className="h-full w-full "
                 autoPlay
                 muted
                 loop
