@@ -189,12 +189,12 @@ export default function WhoWeServe() {
         backgroundPosition: "center",
       }}
     >
-      <div className="ml-[12vw] px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <div className="title-container mb-16">
-          <div className="flex max-w-[80vw] flex-row justify-between gap-2">
+          <div className="flex  flex-row justify-between gap-2">
             <ScrollFloat
               containerClassName=""
-              textClassName="text-[6vw] leading-[1] text-white font-medium text-left "
+              textClassName="text-[5.5vw] leading-[1] text-white font-medium text-left "
             >
              WHO WE SERVER
             </ScrollFloat>

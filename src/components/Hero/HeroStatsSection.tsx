@@ -43,7 +43,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
   };
 
   return (
-    <main id="result" className="relative z-20 mx-auto lg:pl-[20vw]">
+    <main id="result" className="relative z-20 mx-auto max-w-5xl">
       <h2 className="text-[4vw] text-white font-thin font-heading mb-4">
         Results That Speak for Themselves
       </h2>
@@ -74,7 +74,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            width: `${(cardsLength /7) * 100}%`,
+            width: `${(cardsLength /6) * 100}%`,
             transform: `translateX(${getTranslate()})`,
           }}
         >

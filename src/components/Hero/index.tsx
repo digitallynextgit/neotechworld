@@ -321,12 +321,12 @@ const Hero = ({ posts }: HeroProps) => {
       {/* DNA Model positioned below hero section */}
    
       {/* Floating section nav appears after hero section is out of view */}
-      <FloatingSectionNavAfterHero />
+      {/* <FloatingSectionNavAfterHero /> */}
       {/* Section 1 */}
       <section
         id="home"
         ref={sectionRef}
-        className="relative overflow-hidden py-[20vh] pr-[6vw]"
+        className="relative overflow-hidden py-[20vh] "
       >
         <HeroStatsSection
           statsData={statsData}
@@ -336,13 +336,13 @@ const Hero = ({ posts }: HeroProps) => {
       <section
         id="expertise"
         ref={whatWeSolveRef}
-        className="relative z-30 -mt-[18vw] flex  w-full flex-col justify-center pb-[5vw] pt-[15vw] lg:pl-[20vw] lg:pr-[10vw]"
+        className="relative z-30 -mt-[18vw] flex  w-full flex-col justify-center pb-[5vw] pt-[15vw] "
         style={{
           background:
             "linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 80%)",
         }}
       >
-        <div className=" w-full ">
+        <div className=" w-full max-w-5xl mx-auto">
           {/* Large heading at the top */}
           <div className="flex flex-row items-center justify-between ">
             <ScrollFloat

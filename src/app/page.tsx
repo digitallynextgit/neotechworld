@@ -37,8 +37,8 @@ export default function Home() {
         muted
         loop
         playsInline
-        className="pointer-events-none fixed inset-0 z-0 h-[35vh] w-[30vw] object-cover mt-[22vw] ml-[35vw]"
-        src="/newdna.gif"
+        className="pointer-events-none fixed inset-0 z-0 h-[100vh] w-[100vw] object-cover"
+        src="/dna2.mp4"
       /> */}
       {/* <img
   className="pointer-events-none fixed inset-0 z-0 h-[100vh] w-[100vw] object-cover"
@@ -49,7 +49,7 @@ export default function Home() {
       {/* <Image src="/bgimage.webp" alt="" width={1200} height={100}/> */}
       <div className="relative z-10 overflow-hidden ">
         <div className="absolute inset-0 z-0 h-screen">
-           <DnaCanvas modelPath="/dna.glb" />
+           {/* <DnaCanvas modelPath="/dna.glb" /> */}
          </div>
         {/* <ScrollUp /> */}
         <Hero />
