@@ -113,7 +113,7 @@ const Header = () => {
       <header className={`fixed left-0 top-0 z-50 w-full flex items-center justify-between px-20 py-2 transition-all duration-300 ${sticky ? 'bg-black/30 backdrop-blur-md shadow-lg' : ''}`}>
         {/* Logo and Brand */}
         <Link className="flex items-center gap-3 text-white hover:text-white" href={"/"}>
-          <Image src="/logo.webp" alt="Logo" width={1200} height={64} className="w-[11vw] h-full"/>
+          <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[11vw] h-full"/>
           {/* <span className="text-white text-2xl font-semibold">Hematogenix</span> */}
         </Link>
         {/* Right Icons */}
@@ -146,7 +146,7 @@ const Header = () => {
             style={{ transform: 'translateY(-100%)' }}
           >
             <div className="p-6 w-full flex items-start">
-              <Image src="/logo.webp" alt="Logo" width={1200} height={64} className="w-[200px] h-full"/>
+              <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[200px] h-full"/>
             </div>
             <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start gap-2">
               <div className="flex flex-col gap-1 text-white text-sm">
