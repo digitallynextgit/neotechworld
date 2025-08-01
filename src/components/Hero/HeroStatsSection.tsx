@@ -43,7 +43,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
   };
 
   return (
-    <main id="result" className="relative z-20 mx-auto max-w-5xl">
+    <main id="result" className="relative z-20 mx-auto max-w-5xl bg-black/20 rounded-3xl p-10">
       <h2 className="text-[4vw] text-white font-thin font-heading mb-4">
         Results That Speak for Themselves
       </h2>
@@ -52,7 +52,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
         for individuals, systems, and society.
       </p>
             {/* Navigation arrows - position top right for better visibility */}
-      <div className="absolute right-0 top-[11vw] flex items-center gap-4 z-20">
+      <div className="absolute right-[10vw] top-[14vw] flex items-center gap-4 z-20">
         <button
           onClick={prevCard}
           className="flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-2 border-[#fe5d66] text-[#fe5d66] hover:bg-[#fe5d66] hover:text-white transition-colors duration-300"

@@ -342,7 +342,7 @@ const Hero = ({ posts }: HeroProps) => {
             "linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 80%)",
         }}
       >
-        <div className=" w-full max-w-5xl mx-auto">
+        <div className=" w-full max-w-5xl mx-auto  bg-black/20 rounded-3xl p-10">
           {/* Large heading at the top */}
           <div className="flex flex-row items-center justify-between ">
             <ScrollFloat

@@ -5,7 +5,7 @@ import { FaCalendarCheck, FaHandshake, FaNetworkWired, FaHospital } from "react-
 const CallToAction = () => {
   return (
     <section id="blogs" className="relative z-10 overflow-hidden ">
-      <div className="relative max-w-[85vw] overflow-hidden rounded-r-full py-24">
+      <div className="relative max-w-5xl  bg-black/20 rounded-3xl p-10 overflow-hidden rounded-r-full py-24">
         <div className="-mx-4 flex flex-wrap items-stretch ml-[12vw]">
           <div className="w-full px-4">
             <div className="text-left"> {/* Ensure all content is left-aligned */}

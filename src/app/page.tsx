@@ -32,14 +32,16 @@ export default function Home() {
   return (
     <main className="relative overflow-x-auto bg-[#09173b]">
       {/* Full-page background video */}
-      {/* <video
+      <video
         autoPlay
         muted
         loop
         playsInline
-        className="pointer-events-none fixed inset-0 z-0 h-[100vh] w-[100vw] object-cover"
-        src="/dna2.mp4"
-      /> */}
+        className="pointer-events-none fixed inset-0 z-0 h-[100vh] w-[100vw] object-cover opacity-60"
+        src="/videoplayback.mp4"
+      /> 
+
+
       {/* <img
   className="pointer-events-none fixed inset-0 z-0 h-[100vh] w-[100vw] object-cover"
   src="/newdna.gif"

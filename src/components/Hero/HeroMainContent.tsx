@@ -22,9 +22,9 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
   scrollToNextSection,
 }) => {
   return (
-    <div className="relative z-20 mx-auto flex flex-col justify-center px-[6vw] ">
+    <div className="relative z-20 mx-auto flex flex-col justify-center px-[6vw] bg-black/20 rounded-full max-w-7xl h-[80vh]">
       
-      <div className="flex h-full w-full flex-wrap items-center justify-center">
+      <div className="flex h-full w-full flex-wrap items-center justify-center ">
         
         <div className="w-full">
           <div
@@ -32,26 +32,26 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
             data-wow-delay=".2s"
           >
             
-            <div className="mb-[8vh] mt-[0vw]">
+            <div className="">
               
               {/* <h3 className="mb-[2vh] text-[2vw] underline italic leading-[1.1] text-white font-bold ">NMC Genetics</h3> */}
               <div className="mb-[2vh] flex flex-col items-center justify-center text-[4vw] font-normal leading-[1.1] text-white">
                 {/* <DnaCanvas modelPath="/dna2.glb" /> */}
                 
-                <h1 className="w-[80%] font-heading font-thin">From Unknowns to Outcomes.</h1>
+                <h1 className="w-[80%] font-heading font-thin text-white">From Unknowns to Outcomes.</h1>
               </div>
               <div className="mb-[2vh] mt-[-5vw] h-[2vw] font-heading font-semibold text-white">
                 <TypewriterEffect />
               </div>
             </div>
-            <DotLottieReact src="/dnaloader.lottie" loop autoplay className="mt-[-10vw]"/>
+            {/* <DotLottieReact src="/dnaloader.lottie" loop autoplay className="mt-[-10vw]"/> */}
             {/* <p className="mx-auto my-[6vh] mt-[12vw] w-[20vw] h-[40vh] rounded-full bg-transparent p-[1.5vw] text-[1.25vw] font-medium text-red-700">
               Neotech World Lab empowers healthcare systems, doctors, and
               researchers to make every treatment count—by harnessing genomics
               to reduce guesswork, refine diagnosis, and enable truly
               personalized care.
             </p> */}
-            <div className="mb-[2vh] flex w-full flex-col justify-center mt-[-25vh]">
+            <div className="mb-[2vh] flex w-full flex-col justify-center mt-[20vh]">
               {/* <div className="relative mb-[6vh] ml-[10vw] h-[0.2vh] w-[70vw] bg-white/40">
                 <div
                   className="absolute left-0 top-0 h-full bg-white transition-all duration-200"
@@ -59,12 +59,12 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
                 />
               </div> */}
               {/* Button Ticker (split layout) */}
-              <div className="mx-auto flex w-full max-w-[40vw] flex-row items-center justify-between px-[2vw] pb-[1vh]">
+              <div className="mx-auto flex w-full  flex-row items-center justify-between px-[2vw] pb-[1vh]">
                 {/* Left: Empower your mission + left arrow */}
                 <div className="flex items-center gap-[1vw]">
                   <Link
                     href="#"
-                    className="-ml-[14vw] whitespace-nowrap rounded-full border border-white bg-white px-[2vw] py-[2vh] text-[1vw] font-semibold text-black shadow transition ease-in hover:scale-105  hover:bg-red-500 hover:text-white hover:transition-all"
+                    className=" whitespace-nowrap rounded-full border border-white bg-white px-[2vw] py-[2vh] text-[1vw] font-semibold text-black shadow transition ease-in hover:scale-105  hover:bg-red-500 hover:text-white hover:transition-all"
                     style={{ minWidth: "12vw", textAlign: "center" }}
                   >
                     Empower your mission &rarr;
@@ -73,7 +73,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
                 {/* Right: Ticker for other buttons */}
                 <div className="flex flex-1 flex-col items-end justify-end">
                   {/* Button Content Row */}
-                  <div className="mr-[-10vw] flex w-full max-w-[12vw] items-center">
+                  <div className=" flex w-full max-w-[20vw] items-center">
                     <Link
                       href={heroButtons[buttonCurrent].href}
                       className="mr-[1vw] cursor-none whitespace-nowrap rounded-full bg-[#fe5d66] px-[2vw] py-[2vh] text-[1vw] font-semibold text-white shadow transition "
