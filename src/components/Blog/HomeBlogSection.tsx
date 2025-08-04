@@ -6,13 +6,7 @@ const HomeBlogSection = ({ posts }: any) => {
     <section className="bg-white relative pb-10 pt-20  lg:pb-20 lg:pt-[120px]">
       <div className="ml-[12vw] max-w-[80vw]">
         <div className="mb-[60px]">
-          <SectionTitle
-            subtitle="Our Blogs"
-            title="OUR RECENT NEWS"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
-            width="640px"
-            center
-          />
+          <h2 className="lg:text-[5vw] text-[12vw] text-center lg:text-left">OUR RECENT NEWS</h2 >
         </div>
 
         <div className="-mx-4 flex flex-wrap">

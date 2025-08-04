@@ -6,10 +6,10 @@ const CallToAction = () => {
   return (
     <section id="blogs" className="relative z-10 overflow-hidden ">
       <div className="relative max-w-5xl  bg-black/20 rounded-3xl p-10 overflow-hidden rounded-r-full py-24">
-        <div className="-mx-4 flex flex-wrap items-stretch ml-[12vw]">
+        <div className="-mx-4 flex flex-wrap items-stretch lg:ml-[12vw]">
           <div className="w-full px-4">
             <div className="text-left"> {/* Ensure all content is left-aligned */}
-              <h2 className="mb-2.5 text-[5vw] font-medium text-white">
+              <h2 className="mb-2.5 lg:text-[4vw] text-[10vw] font-medium text-white">
                 We are here to support you.
               </h2>
               {/* <p className="mb-6 max-w-[53vw] text-base leading-[1.5] text-white">
