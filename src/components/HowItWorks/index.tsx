@@ -23,11 +23,11 @@ const FEATURE_DISPLAY_TIME = 3000; // 3 seconds per feature
 const STEP_DISPLAY_TIME = 3000; // 3 seconds per step
 
 const stepIcons = [
-  <FaVial className="text-3xl text-[#09173b]" />,
-  <FaDna className="text-3xl text-[#09173b]" />,
-  <FaFileMedical className="text-3xl text-[#09173b]" />,
-  <FaUserMd className="text-3xl text-[#09173b]" />,
-  <FaCapsules className="text-3xl text-[#09173b]" />,
+  <FaVial key="step1" className="text-3xl text-[#09173b]" />,
+  <FaDna key="step2" className="text-3xl text-[#09173b]" />,
+  <FaFileMedical key="step3" className="text-3xl text-[#09173b]" />,
+  <FaUserMd key="step4" className="text-3xl text-[#09173b]" />,
+  <FaCapsules key="step5" className="text-3xl text-[#09173b]" />,
 ];
 
 export default function HowItWorks() {
