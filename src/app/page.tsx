@@ -14,6 +14,7 @@ import HowItWorks from "@/components/HowItWorks";
 // import Team from "@/components/Team";
 // import ProofStats from "@/components/stats/ProofStats";
 import WhoWeServe from "@/components/stats/WhoWeServe";
+import VideoSection from "@/components/VideoSection";
 
 // import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
@@ -57,6 +58,7 @@ export default function Home() {
         <Hero />
         {/* <Offering /> */}
         <HowItWorks />
+        <VideoSection />
         {/* <ProofStats /> */}
         <WhoWeServe />
  
