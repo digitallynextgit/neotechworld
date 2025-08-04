@@ -15,11 +15,23 @@ interface HeroStatsSectionProps {
   statsData: Stat[];
 }
 
-const VISIBLE_COUNT = 6; // How many cards shown at once
+const DESKTOP_VISIBLE_COUNT = 6; // How many cards shown at once on desktop
+const MOBILE_VISIBLE_COUNT = 1; // Show one card at a time on mobile
 
 const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
   const cardsLength = statsData.length;
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Slide next/prev index
   const nextCard = useCallback(() => {
@@ -38,21 +50,22 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
 
   // Calculate actual sliding position (in %) to ensure proper window, handle wrapping
   const getTranslate = () => {
-    // Each card is 100/3 = 33.333...% of the container width
-    return `-${activeCardIndex * (100 / VISIBLE_COUNT)}%`;
+    // Calculate percentage based on viewport
+    const visibleCount = isMobile ? MOBILE_VISIBLE_COUNT : DESKTOP_VISIBLE_COUNT;
+    return `-${activeCardIndex * (100 / visibleCount)}%`;
   };
 
   return (
-    <main id="result" className="relative z-20 mx-auto max-w-5xl bg-black/20 rounded-3xl p-10">
-      <h2 className="text-[4vw] text-white font-thin font-heading mb-4">
+    <main id="result" className="relative z-20 mx-auto max-w-5xl bg-black/20 rounded-3xl lg:p-10 p-4">
+      <h2 className="lg:text-[4vw] text-[12vw] text-white font-thin font-heading mb-4">
         Results That Speak for Themselves
       </h2>
-      <p className="mb-10 text-[1.5vw] text-white">
+      <p className="mb-6 lg:mb-10 lg:text-[1.5vw] text-[4vw] text-white">
         When care is guided by genomic and data insight, outcomes improve—
         for individuals, systems, and society.
       </p>
             {/* Navigation arrows - position top right for better visibility */}
-      <div className="absolute right-[10vw] top-[14vw] flex items-center gap-4 z-20">
+      <div className="absolute right-[10vw] lg:top-[14vw] top-[95vw] flex items-center gap-4 z-20">
         <button
           onClick={prevCard}
           className="flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-2 border-[#fe5d66] text-[#fe5d66] hover:bg-[#fe5d66] hover:text-white transition-colors duration-300"
@@ -74,31 +87,31 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            width: `${(cardsLength /6) * 100}%`,
+            width: `${(cardsLength / (isMobile ? MOBILE_VISIBLE_COUNT : DESKTOP_VISIBLE_COUNT)) * 100}%`,
             transform: `translateX(${getTranslate()})`,
           }}
         >
           {statsData.map((stat, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-1/3 px-4" // w-1/3 since we want 3 visible at once
+              className="flex-shrink-0 w-full lg:w-1/3 px-2 lg:px-4" // full width on mobile, w-1/3 on desktop
             >
-              <div className="flex flex-col justify-between h-full gap-0 rounded-md border border-[#fe5d66] bg-transparent p-4">
+              <div className="flex flex-col justify-between h-full gap-2 lg:gap-0 rounded-md border lg:border-[#fe5d66] border-transparent bg-transparent p-4 lg:p-6">
                 <div className="text-[#fe5d66]">
                   {stat.icon}
                 </div>
-                <h2 className="font-regular flex flex-row items-end gap-2 text-left text-[4vw] tracking-tighter text-white">
+                <h2 className="font-regular flex flex-row items-end gap-2 text-left text-[8vw] lg:text-[4vw] tracking-tighter text-white">
                   {stat.prefix && (
-                    <span className="text-[2vw] text-[#fe5d66]">{stat.prefix}</span>
+                    <span className="text-[4vw] lg:text-[2vw] text-[#fe5d66]">{stat.prefix}</span>
                   )}
                   {stat.isText ? (
-                    <span className="text-[2.5vw] text-white">
+                    <span className="text-[6vw] lg:text-[2.5vw] text-white">
                       {stat.value}
                     </span>
                   ) : stat.isDecrease ? (
                     <>
                       <span className="text-white">{stat.value}</span>
-                      <span className="text-[2vw] text-[#fe5d66]">{stat.suffix}</span>
+                      <span className="text-[4vw] lg:text-[2vw] text-[#fe5d66]">{stat.suffix}</span>
                     </>
                   ) : (
                     <>
@@ -106,7 +119,7 @@ const HeroStatsSection: React.FC<HeroStatsSectionProps> = ({ statsData }) => {
                     </>
                   )}
                 </h2>
-                <p className="text-left text-[1.25vw] leading-relaxed tracking-tight text-[#fe5d66]">
+                <p className="text-left text-[3vw] lg:text-[1.25vw] leading-relaxed tracking-tight text-[#fe5d66]">
                   {stat.label}
                 </p>
               </div>
