@@ -110,25 +110,25 @@ const Header = () => {
   return (
     <>
       {/* Header Bar */}
-      <header className={`fixed left-0 top-0 z-50 w-full flex items-center justify-between px-20 py-2 transition-all duration-300 ${sticky ? 'bg-black/30 backdrop-blur-md shadow-lg' : ''}`}>
+      <header className={`fixed left-0 top-0 z-50 w-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 py-2 transition-all duration-300 ${sticky ? 'bg-black/30 backdrop-blur-md shadow-lg' : ''}`}>
         {/* Logo and Brand */}
         <Link className="flex items-center gap-3 text-white hover:text-white" href={"/"}>
-          <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[11vw] h-full"/>
+          <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[36vw] h-full max-w-[180px] min-w-[100px] sm:w-[18vw] md:w-[11vw]"/>
           {/* <span className="text-white text-2xl font-semibold">Hematogenix</span> */}
         </Link>
         {/* Right Icons */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 sm:gap-6">
           {/* Search Icon */}
           <button aria-label="Search" className="focus:outline-none">
-            <IoSearch className="text-[#fe5d66] text-[3vw]"/>
+            <IoSearch className="text-[#fe5d66] text-2xl sm:text-[3vw]"/>
           </button>
           {/* Hamburger Button */}
           <button
             aria-label="Open Menu"
-            className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg focus:outline-none"
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white flex items-center justify-center shadow-lg focus:outline-none"
             onClick={openMenu}
           >
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
               <rect x="7" y="11" width="18" height="2.5" rx="1.25" fill="#222" />
               <rect x="7" y="18.5" width="18" height="2.5" rx="1.25" fill="#222" />
             </svg>
@@ -142,11 +142,11 @@ const Header = () => {
           {/* Left box: logo, Made by Büro, slides from top */}
           <div
             ref={leftBoxRef}
-            className="fixed top-0 left-0 h-full w-1/4 min-w-[25vw] bg-[#091534] z-[1001]"
+            className="fixed top-0 left-0 h-1/4 w-full min-h-[25vh] sm:h-full sm:w-1/4 sm:min-w-[25vw] bg-[#091534] z-[1001]"
             style={{ transform: 'translateY(-100%)' }}
           >
             <div className="p-6 w-full flex items-start">
-              <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[200px] h-full"/>
+              <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[120px] h-full sm:w-[200px]"/>
             </div>
             <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start gap-2">
               <div className="flex flex-col gap-1 text-white text-sm">
@@ -159,22 +159,22 @@ const Header = () => {
           {/* Right box: menu, slides from bottom */}
           <div
             ref={rightBoxRef}
-            className="fixed bottom-0 right-0 h-full w-3/4 min-w-[75vw] bg-[#09173b] z-[1002]"
+            className="fixed bottom-0 right-0 h-3/4 w-full min-h-[75vh] sm:h-full sm:w-3/4 sm:min-w-[75vw] bg-[#09173b] z-[1002]"
             style={{ transform: 'translateY(100%)' }}
           >
             {/* Top right: dropdown and close button */}
-            <div className="w-full flex justify-end items-start p-8 gap-4">
+            <div className="w-full flex justify-end items-start p-4 sm:p-8 gap-2 sm:gap-4">
               <button
                 aria-label="Close Menu"
-                className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg focus:outline-none"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white flex items-center justify-center shadow-lg focus:outline-none"
                 onClick={() => setMenuOpen(false)}
               >
-                <FiX size={32} color="#222" />
+                <FiX size={28} color="#222" className="sm:w-8 sm:h-8" />
               </button>
             </div>
             {/* Center: menu items, animated in with staggered fade/slide */}
-            <div className="flex flex-row w-full h-full">
-              <ul className="flex flex-col items-start justify-center flex-1 gap-6 pl-12 py-2 mt-[-10vw]">
+            <div className="flex flex-col sm:flex-row w-full h-full">
+              <ul className="flex flex-col items-start justify-center flex-1 gap-4 sm:gap-6 pl-6 sm:pl-12 py-2 mt-0 sm:mt-[-10vw]">
                 {menuData.map((item, idx) => (
                   <li
                     key={item.id}
@@ -182,15 +182,15 @@ const Header = () => {
                     onMouseEnter={() => handleMenuHover(idx)}
                     onMouseLeave={() => handleMenuLeave(idx)}
                   >
-                    <div className="flex flex-row items-center gap-4">
+                    <div className="flex flex-row items-center gap-2 sm:gap-4">
                       <span
                         ref={el => { lineRefs.current[idx] = el!; }}
-                        className="block h-[5px] w-12 mt-[1vw]  bg-white origin-left scale-x-0"
+                        className="block h-[3px] sm:h-[5px] w-8 sm:w-12 mt-2 sm:mt-[1vw] bg-white origin-left scale-x-0"
                         style={{ display: 'block', transform: 'scaleX(0)' }}
                       />
                       <span
                         ref={el => { menuItemRefs.current[idx] = el!; }}
-                        className={`text-white text-5xl font-light transition-all duration-300 opacity-0 translate-y-8
+                        className={`text-white text-2xl sm:text-5xl font-light transition-all duration-300 opacity-0 translate-y-8
                           ${menuOpen ? `opacity-100 translate-y-0 delay-[${200 + idx * 100}ms]` : ''}`}
                         style={{ transitionDelay: menuOpen ? `${200 + idx * 100}ms` : '0ms' }}
                       >
@@ -203,14 +203,14 @@ const Header = () => {
                 ))}
               </ul>
               {/* Right vertical links */}
-              <div className="flex flex-col items-end justify-center gap-6 pr-16 py-12">
-                <Link href="/careers"> <span className="text-white text-4xl font-light cursor-pointer">Careers</span></Link>
-                <Link href="/resources"> <span className="text-white text-4xl font-light cursor-pointer">News and Events</span></Link>
-               <Link href="/contacts">  <span className="text-white text-4xl font-light cursor-pointer">Contacts</span></Link>
+              <div className="flex flex-row sm:flex-col items-end justify-center gap-4 sm:gap-6 pr-6 sm:pr-16 py-6 sm:py-12">
+                <Link href="/careers"> <span className="text-white text-xl sm:text-4xl font-light cursor-pointer">Careers</span></Link>
+                <Link href="/resources"> <span className="text-white text-xl sm:text-4xl font-light cursor-pointer">News and Events</span></Link>
+               <Link href="/contact">  <span className="text-white text-xl sm:text-4xl font-light cursor-pointer">Contacts</span></Link>
               </div>
             </div>
             {/* Bottom right: sound, 4K icon */}
-            <div className="w-full flex flex-col items-end p-8 gap-2">
+            <div className="w-full flex flex-col items-end p-4 sm:p-8 gap-2">
               <div className="flex gap-2 items-center mt-2">
                 {/* Sound Icon */}
                 <button className="w-8 h-8 flex items-center justify-center bg-white/20 rounded-full">

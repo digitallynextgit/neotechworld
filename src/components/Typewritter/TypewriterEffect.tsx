@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import Typewriter from 'typewriter-effect';
-import { typewriterData } from '@/components/Typewritter/typewriter-data';
+import React, { useState, useEffect, useRef } from "react";
+import Typewriter from "typewriter-effect";
+import { typewriterData } from "@/components/Typewritter/typewriter-data";
 
 interface TypewriterEffectProps {
   onImageChange?: (image: string) => void;
@@ -10,8 +10,8 @@ interface TypewriterEffectProps {
 
 const TypewriterEffect = ({ onImageChange }: TypewriterEffectProps) => {
   const [showTag, setShowTag] = useState(false);
-  const [currentTag, setCurrentTag] = useState('');
-  const [currentImage, setCurrentImage] = useState('');
+  const [currentTag, setCurrentTag] = useState("");
+  const [currentImage, setCurrentImage] = useState("");
   const [, setTagVisible] = useState(false);
   const typewriterRef = useRef<HTMLDivElement>(null);
 
@@ -35,50 +35,49 @@ const TypewriterEffect = ({ onImageChange }: TypewriterEffectProps) => {
   }, [currentImage, onImageChange]);
 
   return (
-    <div 
-      className="relative w-full max-w-[85vw] lg:max-w-[75vw] mx-auto font-bold font-heading"
-      style={{ 
+    <div
+      className="relative mx-auto w-full max-w-[85vw] font-heading font-bold lg:max-w-[75vw]"
+      style={{
         // fontFamily: 'Playfair Display, sans-serif',
-        height: '280px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
+        height: "280px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      <div 
+      <div
         className="w-full"
         style={{
-          position: 'relative',
-          height: '200px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center'
+          position: "relative",
+          height: "200px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         {/* Typewriter text container */}
-        <div 
-  ref={typewriterRef}
-  className="w-full text-center"
-  style={{
-    height: '120px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '4vw', // ← this line
-    lineHeight: 1.2,
-    fontWeight: 'semibold'
-  }}
->
+        <div
+          ref={typewriterRef}
+          className="w-full text-center text-[12vw] sm:text-[5vw] md:text-[4vw] lg:text-[4vw]"
+          style={{
+            height: "120px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            lineHeight: 1.2,
+            fontWeight: "semibold",
+          }}
+        >
           <Typewriter
             onInit={(typewriter) => {
               let sequence = typewriter;
-              
-              typewriterData.forEach((item,) => {
+
+              typewriterData.forEach((item) => {
                 const processedText = item.text
-                  .replace(/<span class='styled-word'>/g, '')
-                  .replace(/<\/span>/g, '');
-                  
+                  .replace(/<span class='styled-word'>/g, "")
+                  .replace(/<\/span>/g, "");
+
                 // Set the image before starting to type the text
                 sequence = sequence
                   .callFunction(() => {
@@ -103,28 +102,28 @@ const TypewriterEffect = ({ onImageChange }: TypewriterEffectProps) => {
               loop: true,
               delay: 50,
               deleteSpeed: 25,
-              cursor: '',
+              cursor: "",
               // html: true
             }}
           />
         </div>
 
         {/* Tag container - always present but only visible when needed */}
-        <div 
+        <div
           style={{
-            height: '60px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            height: "60px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
             opacity: showTag ? 1 : 0,
-            transition: 'opacity 0.5s ease-in-out'
+            transition: "opacity 0.5s ease-in-out",
           }}
         >
-          <span 
+          <span
             style={{
-              fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
-              color: '#ffff',
-              fontWeight: 'bold'
+              fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
+              color: "#ffff",
+              fontWeight: "bold",
             }}
           >
             {currentTag}

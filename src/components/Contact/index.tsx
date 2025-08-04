@@ -17,38 +17,38 @@ const Contact = () => {
                   For inquiries or to begin your genomic journey
                 </h2>
               </div>
-              <div className="flex mb-12 justify-between">
-               <div>
-                 <h3 className="mb-[18px] text-[2vw] font-normal text-white ">Our Location</h3>
-                 <Link
-                   className="text-base text-dark-6 underline hover:text-primary transition-colors hover:text-white"
-                   href="https://www.google.com/maps/search/?api=1&query=221-223,+Vipul+Agora,+MG+Road,+Gurugram,+Haryana-122001"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                 >
-                   221-223, Vipul Agora, MG Road,<br />Gurugram, Haryana-122001
-                 </Link>
-               </div>
-               <div>
-                 <h3 className="mb-[18px] text-[2vw] font-normal text-white ">How Can We Help?</h3>
-                 <Link
-                   className="text-base text-dark-6 underline hover:text-primary transition-colors hover:text-white"
-                   href="mailto:info@neotechworldlab.com"
-                 >
-                   info@neotechworldlab.com
-                 </Link>
-               </div>
-               <div>
-                 <h3 className="mb-[18px] text-[2vw] font-normal text-white hover:text-white">Website</h3>
-                 <Link    
-                   className="text-base text-dark-6 underline hover:text-primary transition-colors hover:text-white"
-                   href="https://neotechworldlab.com"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                 >
-                   neotechworldlab.com
-                 </Link>
-               </div>
+              <div className="flex flex-col gap-8 mb-12 sm:flex-row sm:justify-between sm:gap-0">
+                <div className="w-full sm:w-1/3">
+                  <h3 className="mb-3 text-lg sm:mb-[18px] sm:text-[2vw] font-normal text-white">Our Location</h3>
+                  <Link
+                    className="text-base sm:text-base text-dark-6 underline hover:text-primary transition-colors hover:text-white break-words"
+                    href="https://www.google.com/maps/search/?api=1&query=221-223,+Vipul+Agora,+MG+Road,+Gurugram,+Haryana-122001"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    221-223, Vipul Agora, MG Road,<br />Gurugram, Haryana-122001
+                  </Link>
+                </div>
+                <div className="w-full sm:w-1/3">
+                  <h3 className="mb-3 text-lg sm:mb-[18px] sm:text-[2vw] font-normal text-white">How Can We Help?</h3>
+                  <Link
+                    className="text-base sm:text-base text-dark-6 underline hover:text-primary transition-colors hover:text-white break-words"
+                    href="mailto:info@neotechworldlab.com"
+                  >
+                    info@neotechworldlab.com
+                  </Link>
+                </div>
+                <div className="w-full sm:w-1/3">
+                  <h3 className="mb-3 text-lg sm:mb-[18px] sm:text-[2vw] font-normal text-white">Website</h3>
+                  <Link    
+                    className="text-base sm:text-base text-dark-6 underline hover:text-primary transition-colors hover:text-white break-words"
+                    href="https://neotechworldlab.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    neotechworldlab.com
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
