@@ -1,4 +1,4 @@
-import ComingSoon from '../coming-soon/page';
+import ComingSoon from "@/components/ComingSoon";
 
 export default function AboutPage() {
   return <ComingSoon pageName="About" />;
