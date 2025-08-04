@@ -223,7 +223,7 @@ export default function HowItWorks() {
                     (prev) => (prev - 1 + steps.length) % steps.length,
                   );
                 }}
-                className="transform rounded-full bg-white/20 border border-[#09173b] p-5 lg:text-[1.25vw] text-[5vw] text-[#09173b] transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
+                className="transform rounded-full bg-white/20 border border-[#09173b] p-5 lg:text-[1.25vw] text-[6vw] text-[#09173b] transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
               >
                 ←
               </button>

@@ -109,7 +109,7 @@ export function FeatureSteps({
                 {/* Expanded View */}
                 {activeFeature === index && (
                   <div 
-                    className="absolute inset-0 bg-white/70 backdrop-filter backdrop-blur-lg z-20 flex flex-col border-2 border-[#09173b] rounded-2xl"
+                    className="absolute inset-0 bg-white z-20 flex flex-col border-2 border-[#09173b] rounded-2xl"
                   >
                     {/* Header with blue band */}
                     <div className="h-20 flex items-center justify-between px-4 bg-gradient-to-r from-[#09173b] to-[#09173b]">

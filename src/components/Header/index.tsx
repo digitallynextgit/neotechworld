@@ -146,7 +146,9 @@ const Header = () => {
             style={{ transform: 'translateY(-100%)' }}
           >
             <div className="p-6 w-full flex items-start">
-              <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[120px] h-full sm:w-[200px]"/>
+              <Link href="/" onClick={closeMenu}>
+                <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[120px] h-full sm:w-[200px]"/>
+              </Link>
             </div>
             <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start gap-2">
               <div className="flex flex-col gap-1 text-white text-sm">
@@ -174,7 +176,7 @@ const Header = () => {
             </div>
             {/* Center: menu items, animated in with staggered fade/slide */}
             <div className="flex flex-col sm:flex-row w-full h-full">
-              <ul className="flex flex-col items-start justify-center flex-1 gap-4 sm:gap-6 pl-6 sm:pl-12 py-2 mt-0 sm:mt-[-10vw]">
+              <ul className="flex flex-col items-start justify-center flex-1 gap-4 sm:gap-6 pl-6 sm:pl-12 py-2 mt-0 sm:mt-[-10vw] mb-8 sm:mb-0">
                 {menuData.map((item, idx) => (
                   <li
                     key={item.id}
@@ -203,10 +205,10 @@ const Header = () => {
                 ))}
               </ul>
               {/* Right vertical links */}
-              <div className="flex flex-row sm:flex-col items-end justify-center gap-4 sm:gap-6 pr-6 sm:pr-16 py-6 sm:py-12">
-                <Link href="/careers"> <span className="text-white text-xl sm:text-4xl font-light cursor-pointer">Careers</span></Link>
-                <Link href="/resources"> <span className="text-white text-xl sm:text-4xl font-light cursor-pointer">News and Events</span></Link>
-               <Link href="/contact">  <span className="text-white text-xl sm:text-4xl font-light cursor-pointer">Contacts</span></Link>
+              <div className="flex flex-row sm:flex-col items-end justify-center gap-4 sm:gap-6 pr-6 sm:pr-16 py-6 sm:py-12 w-full sm:w-auto">
+                <Link href="/careers" onClick={closeMenu}><span className="text-white text-xl sm:text-4xl font-light cursor-pointer">Careers</span></Link>
+                <Link href="/resources" onClick={closeMenu}><span className="text-white text-xl sm:text-4xl font-light cursor-pointer">News and Events</span></Link>
+                <Link href="/contact" onClick={closeMenu}><span className="text-white text-xl sm:text-4xl font-light cursor-pointer">Contacts</span></Link>
               </div>
             </div>
             {/* Bottom right: sound, 4K icon */}
