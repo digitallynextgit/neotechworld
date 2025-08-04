@@ -61,7 +61,7 @@ export function FeatureSteps({
   return (
     <div className={cn("py-16 relative", className)}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  text-center">
+        <h2 className="text-3xl md:text-4xl lg:text-7xl font-bold  text-center">
           {title}
         </h2>
 
@@ -71,7 +71,7 @@ export function FeatureSteps({
                 key={index}
                 className={cn(
                   "feature-card relative overflow-hidden rounded-2xl cursor-pointer",
-                  "h-[65vh] transition-all duration-300 border-2 border-[#09173b]",
+                  "lg:h-[65vh] h-[45vh] transition-all duration-300 border-2 border-[#09173b]",
                   "backdrop-blur-lg bg-white/10 shadow-lg hover:shadow-xl"
                 )}
                 onClick={() => setActiveFeature(activeFeature === index ? null : index)}
@@ -92,12 +92,12 @@ export function FeatureSteps({
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-md font-bold mb-2 text-center">
+                  <h3 className="lg:text-[1.5vw] text-[7vw] font-bold mb-2 text-center">
                     {feature.title}
                   </h3>
                   
                   {/* Solution */}
-                  <p className="text-center text-gray-600 mb-3 text-[1vw]">{feature.solution}</p>
+                  <p className="text-center text-gray-800 mb-3 lg:text-[1vw] text-[4vw]">{feature.solution}</p>
                   
                   {/* Click Indicator */}
                   <div className="mt-2 flex items-center gap-2 bg-white/40 backdrop-blur-sm px-3 py-1 rounded-full border border-[#fe5d66]">
@@ -117,7 +117,7 @@ export function FeatureSteps({
                         {/* <div className="w-10 h-10 rounded-full  flex items-center justify-center text-white">
                           {feature.icon}
                         </div> */}
-                        <h3 className="text-[1vw]  text-white">{feature.title}</h3>
+                        <h3 className="lg:text-[1vw] text-[5vw]  text-white">{feature.title}</h3>
                       </div>
                       <button 
                         className="w-5 h-5 p-3 rounded-full bg-[#fe5d66] flex items-center justify-center text-black"
@@ -136,8 +136,8 @@ export function FeatureSteps({
                       
                       <div className="space-y-3">
                         <div className="p-3 bg-[#09173b]/5 rounded-lg border border-[#09173b]/20">
-                          <h5 className="text-[1vw] mb-2 text-[#09173b]">Key Benefits</h5>
-                          <ul className="list-disc pl-5 space-y-1 text-[#09173b] text-[.85vw]">
+                          <h5 className="lg:text-[1vw] text-[4vw] mb-2 text-[#09173b]">Key Benefits</h5>
+                          <ul className="list-disc pl-5 space-y-1 text-[#09173b] lg:text-[.85vw] text-[3vw]">
                             <li>Improved patient outcomes</li>
                             <li>Reduced healthcare costs</li>
                             <li>Personalized treatment plans</li>

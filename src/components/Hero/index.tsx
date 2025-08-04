@@ -347,14 +347,21 @@ const Hero = ({ posts }: HeroProps) => {
           <div className="flex flex-row items-center justify-between ">
             <ScrollFloat
               containerClassName="mb-6"
-              textClassName=" text-[4.5vw] text-white font-medium "
+              textClassName=" lg:text-[4.5vw] hidden lg:block text-white font-medium "
             >
               WHAT WE SOLVE AND HOW
+            </ScrollFloat>
+
+            <ScrollFloat
+              containerClassName="mb-6"
+              textClassName=" text-[13vw] lg:hidden block text-white font-medium "
+            >
+              WHAT WE <br/>SOLVE AND HOW
             </ScrollFloat>
             {/* CTA Button centered below columns */}
           </div>
 
-          <div className=" w-[68vw] rotate-180 border-[.02vw] border-white" />
+          <div className=" lg:w-[68vw]  rotate-180 border-[.02vw] border-white" />
           <FeatureSteps
           // features={features}
           // title="Your Journey Starts Here"
