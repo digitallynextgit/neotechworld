@@ -49,18 +49,19 @@ const menuData: Menu[] = [
       { id: 56, title: "FAQs", path: "#", newTab: false },
     ],
   },
+
   // {
   //   id: 6,
   //   title: "News & Events",
   //   path: "/blogs",
   //   newTab: false,
   // },
-  // {
-  //   id: 7,
-  //   title: "Contact Us",
-  //   path: "/contact",
-  //   newTab: false,
-  // },
+  {
+    id: 7,
+    title: "Contact Us",
+    path: "/contact",
+    newTab: false,
+  },
 ];
 
 export default menuData;

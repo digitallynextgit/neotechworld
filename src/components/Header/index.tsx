@@ -208,7 +208,7 @@ const Header = () => {
               <div className="flex flex-row sm:flex-col items-end justify-center gap-4 sm:gap-6 pr-6 sm:pr-16 py-6 sm:py-12 w-full sm:w-auto">
                 <Link href="/careers" onClick={closeMenu}><span className="text-white text-xl sm:text-4xl font-light cursor-pointer">Careers</span></Link>
                 <Link href="/resources" onClick={closeMenu}><span className="text-white text-xl sm:text-4xl font-light cursor-pointer">News and Events</span></Link>
-                <Link href="/contact" onClick={closeMenu}><span className="text-white text-xl sm:text-4xl font-light cursor-pointer">Contacts</span></Link>
+                {/* <Link href="/contact  " onClick={closeMenu}><span className="text-white text-xl sm:text-4xl font-light cursor-pointer hidden lg:block">Contacts</span></Link> */}
               </div>
             </div>
             {/* Bottom right: sound, 4K icon */}
