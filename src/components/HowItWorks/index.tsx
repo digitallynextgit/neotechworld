@@ -57,6 +57,10 @@ export default function HowItWorks() {
   useEffect(() => {
     if (!sectionRef.current) return;
 
+    // Check if we're on mobile
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) return; // Don't run animations on mobile
+
     // Create a timeline for the section animations
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -155,17 +159,17 @@ export default function HowItWorks() {
       <div className=" ">
         <div className="flex flex-col items-center gap-8 md:flex-row">
           {/* Left side content (60%) */}
-          <div className="flex w-[50%] flex-col items-center justify-between pl-[14vw]">
+          <div className="flex w-full md:w-[50%] flex-col items-center justify-between md:pl-[14vw] px-4">
             <div ref={titleRef} className="">
               <ScrollFloat
                 containerClassName=""
-                textClassName="text-[7vw] leading-[1]  uppercase text-[#09173b] font-medium"
+                textClassName="text-[16vw] md:text-[7vw] leading-[1] uppercase text-[#09173b] font-medium lg:text-center text-left"
               >
                 HOW
                 <br /> NEOTECH WORKS
               </ScrollFloat>
             </div>
-            <div className="flex flex-row items-center gap-0 justify-between mt-[-1vw] ml-[-4vw]">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-0 justify-between md:mt-[-1vw] md:ml-[-4vw]">
               {/* Single Step Display */}
               <div ref={flowRef} className="my-6 w-full">
                 <div className="flex items-center justify-center">
@@ -177,8 +181,8 @@ export default function HowItWorks() {
                     {/* <div className="mb-0 text-[2vw]">
                       {steps[currentStepIndex].icon}
                     </div> */}
-                    <h3 className="text-center text-[1vw] font-semibold flex flex-row items-center justify-between gap-2 text-[#09173b] bg-white p-4 rounded-full border border-[#09173b]">
-                        <span className="bg-[#09173b] text-[1vw] text-white p-3 border border-[#09173b] rounded-full"><FaUserDoctor />  </span>{steps[currentStepIndex].title}
+                    <h3 className="text-center text-[14px] md:text-[1vw] font-semibold flex flex-row items-center justify-between gap-2 text-[#09173b] bg-white p-4 rounded-full border border-[#09173b]">
+                        <span className="bg-[#09173b] text-[14px] md:text-[1vw] text-white p-3 border border-[#09173b] rounded-full"><FaUserDoctor />  </span>{steps[currentStepIndex].title}
                     </h3>
                   </div>
                 </div>
@@ -200,16 +204,16 @@ export default function HowItWorks() {
               >
                 <div
                   key={currentFeatureIndex}
-                  className="flex w-full animate-[fadeIn_.25s_ease-in-out_forwards] items-center rounded-full border-2 border-[#09173b] text-[#09173b] p-3 text-[1vw]
-                          opacity-0 shadow-sm transition-all duration-200 ease-in-out"
+                  className="flex w-full md:animate-[fadeIn_.25s_ease-in-out_forwards] items-center rounded-full border-2 border-[#09173b] text-[#09173b] p-3 text-[14px] md:text-[1vw]
+                          md:opacity-0 shadow-sm transition-all duration-200 ease-in-out"
                 >
-                  <div className="mr-4  text-[1.5vw]">✓</div>
+                  <div className="mr-4  lg:text-[1.5vw] text-[5vw]">✓</div>
                   {features[currentFeatureIndex]}
                 </div>
               </div>
             </div>
             {/* Step Navigation Arrows */}
-            <div className="mb-0 flex justify-center space-x-2 ml-[-8vw]">
+            <div className="mb-0 flex justify-center space-x-2 ml-[-8vw] mt-[10vw]">
               <button
                 onClick={() => {
                   if (stepIntervalRef.current) {
@@ -219,7 +223,7 @@ export default function HowItWorks() {
                     (prev) => (prev - 1 + steps.length) % steps.length,
                   );
                 }}
-                className="transform rounded-full bg-white/20 border border-[#09173b] p-5 text-[1.25vw] text-[#09173b] transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
+                className="transform rounded-full bg-white/20 border border-[#09173b] p-5 lg:text-[1.25vw] text-[5vw] text-[#09173b] transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
               >
                 ←
               </button>
@@ -230,15 +234,15 @@ export default function HowItWorks() {
                   }
                   setCurrentStepIndex((prev) => (prev + 1) % steps.length);
                 }}
-                className="transform rounded-full bg-white/20 border border-[#09173b] p-5 text-[1.25vw] text-[#09173b] transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
+                className="transform rounded-full bg-white/20 border border-[#09173b] p-5 lg:text-[1.25vw] text-[6vw] text-[#09173b] transition-colors duration-200 ease-in-out hover:scale-110 hover:bg-white/30"
               >
                 →
               </button>
             </div>
           </div>
           {/* Right side video (40%) */}
-          <div className="w-[50%] ">
-            <div className="relative overflow-hidden ">
+          <div className="w-full md:w-[50%] mt-8 md:mt-0">
+            <div className="relative overflow-hidden">
               <video
                 ref={videoRef}
                 className="h-full w-full "
