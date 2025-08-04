@@ -149,7 +149,7 @@ export function FeatureSteps({
                     {/* Footer */}
                     <div className="p-3 border-t border-[#09173b]/10">
                       <button 
-                        className="w-full py-2 text-white rounded-lg font-medium flex items-center text-[1vw] justify-center gap-2 bg-gradient-to-r from-[#09173b] to-[#09173b] hover:from-[#fe5d66] hover:to-[#fe5d66] transition-colors duration-300"
+                        className="w-full py-2 text-white rounded-lg font-medium flex items-center lg:text-[1vw] text-[5vw] justify-center gap-2 bg-gradient-to-r from-[#09173b] to-[#09173b] hover:from-[#fe5d66] hover:to-[#fe5d66] transition-colors duration-300"
                         onClick={(e) => {
                           e.stopPropagation()
                           // This would typically link to a more detailed page

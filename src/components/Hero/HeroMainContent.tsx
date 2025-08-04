@@ -40,7 +40,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
 
                 <h1 className="w-[80%] font-heading font-thin text-white lg:text-[4vw] text-[12vw]">From Unknowns to Outcomes.</h1>
               </div>
-              <div className="mb-[2vh] mt-[-5vw] h-[2vw] font-heading font-semibold text-white">
+              <div className="mb-[2vh] lg:mt-[-5vw] mt-[-10vw] h-[2vw] font-heading font-semibold text-white">
                 <TypewriterEffect />
               </div>
             </div>
@@ -51,7 +51,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
               to reduce guesswork, refine diagnosis, and enable truly
               personalized care.
             </p> */}
-            <div className="mb-[2vh] flex w-full flex-col justify-center mt-[20vh]">
+            <div className="mb-[2vh] flex w-full flex-col justify-center mt-[25vh]">
               
               <div className="mx-auto flex w-full flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4 px-4 sm:px-[2vw] py-[1vh]">
                 {/* Left: Empower your mission + left arrow */}
@@ -64,7 +64,7 @@ const HeroMainContent: React.FC<HeroMainContentProps> = ({
                   </Link>
                 </div>
                 {/* Right: Ticker for other buttons */}
-                <div className="flex w-full sm:w-auto sm:flex-1 flex-col items-center sm:items-end justify-end">
+                <div className="flex w-full sm:w-auto sm:flex-1 flex-col items-center sm:items-end justify-end z-[1001]">
                   {/* Button Content Row */}
                   <div className="flex w-full sm:max-w-[20vw] items-center justify-center sm:justify-end gap-2 sm:gap-4">
                     <Link
