@@ -190,26 +190,48 @@ export default function WhoWeServe() {
       }}
     >
       <div className="max-w-5xl mx-auto px-4 bg-black/20 rounded-3xl p-10">
-        <div className="title-container mb-16">
-          <div className="flex  flex-row justify-between gap-2">
+        <div className="title-container lg:mb-16">
+          <div className="flex flex-col lg:flex-row justify-between gap-2">
             <ScrollFloat
               containerClassName=""
-              textClassName="text-[5.15vw] leading-[1] text-white font-medium text-left "
+              textClassName="lg:text-[5.15vw] text-[12vw] lg:leading-[1] text-white font-medium text-left "
             >
              WHO WE SERVE
             </ScrollFloat>
             <Link
               href={"/"}
-              className="hover:scale-60 relative -mr-[8vw] flex scale-50 items-center gap-3 rounded-full bg-white px-16 py-6 text-[2vw] duration-200 hover:bg-[#fe5d66] hover:text-white "
+              className="hover:scale-60 relative lg:-mr-[8vw] flex scale-50 items-center gap-3 rounded-full bg-white px-16 py-6 lg:text-[2vw] text-[6vw] duration-200 hover:bg-[#fe5d66] hover:text-white mt-[-10vw] lg:mt-0"
             >
-              <span className="rounded-full border border-white bg-[#fe5d66] p-4 text-white hover:scale-110 hover:border-2">
+              <span className="rounded-full border border-white bg-[#fe5d66] p-4 text-white hover:scale-110 hover:border-2 ">
                 <Calculator weight="thin" className="h-10 w-10" />
               </span>
               Find your Solutions{" "}
             </Link>
           </div>
           <div className="my-10 w-[80vw] rotate-180 border-[.05vw] border-gray-200" />
+           
         </div>
+        <div className="flex gap-4 lg:hidden ">
+                  <button
+                    onClick={handlePrev}
+                    className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-[#fe5d66] "
+                  >
+                    <CaretLeft
+                      weight="thin"
+                      className="h-6 w-6 text-white transition-transform duration-300 group-hover/button:rotate-12"
+                    />
+                  </button>
+                  <button
+                    onClick={handleNext}
+                    className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-[#fe5d66] "
+                  >
+                    <CaretRight
+                      weight="thin"
+                      className="h-6 w-6 text-white transition-transform duration-300 group-hover/button:-rotate-12"
+                    />
+                  </button>
+                </div>
+        
 
         <div className="mx-auto max-w-7xl px-4 py-10 md:px-8 lg:px-12">
           <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
@@ -340,7 +362,7 @@ export default function WhoWeServe() {
                     </button>
                   ))}
                 </div>
-                <div className="flex gap-4">
+                <div className="lg:flex gap-4 hidden ">
                   <button
                     onClick={handlePrev}
                     className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-[#fe5d66] "
