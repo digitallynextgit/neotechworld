@@ -48,16 +48,12 @@ const VideoSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
-            <span className="text-blue-400 text-sm font-medium">Featured Video</span>
-          </div>
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6">
-            Experience
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {" "}NeoTech
-            </span>
+          
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-normal text-white mb-6">
+            Experience NeoTech
+           
           </h2>
-          <p className="text-gray-300 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-lg lg:text-base max-w-2xl mx-auto leading-relaxed font-normal">
             Discover our innovative technology and vision through this exclusive showcase video
           </p>
         </div>
