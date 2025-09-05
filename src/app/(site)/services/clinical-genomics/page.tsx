@@ -304,7 +304,7 @@ export default function ClinicalGenomicsPage() {
             </h2>
             <p className="mb-8 text-xl leading-relaxed text-gray-300">
               Clinical genomics is the application of genomic information and
-              technologies in clinical care. It involves analyzing a patient's
+              technologies in clinical care. It involves analyzing a patient&apos;s
               DNA to identify genetic variants that may cause disease, influence
               treatment response, or affect disease risk. This field enables
               healthcare providers to make more informed decisions about

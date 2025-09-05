@@ -485,7 +485,7 @@ export default function PreventiveGenomicsPage() {
                     <Stethoscope className="h-8 w-8 text-[#fe5d66]" />
                     <h3 className="text-xl font-bold text-white">Clinical Genomics</h3>
                   </div>
-                  <p className="text-gray-300 mb-4">If you're already managing a condition, see Clinical Genomics for comprehensive diagnostic testing.</p>
+                  <p className="text-gray-300 mb-4">If you&apos;re already managing a condition, see Clinical Genomics for comprehensive diagnostic testing.</p>
                   <div className="flex items-center gap-2 text-[#fe5d66] font-semibold">
                     Learn More
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

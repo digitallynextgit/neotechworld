@@ -253,7 +253,7 @@ export default function PharmacogenomicsPage() {
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
               Pharmacogenomics (PGx) is the study of how your genes affect your response to medications. 
-              By analyzing specific genetic variants, we can predict how you'll metabolize certain drugs, 
+              By analyzing specific genetic variants, we can predict how you&apos;ll metabolize certain drugs, 
               helping healthcare providers choose the most effective medications and dosages while minimizing 
               adverse reactions. This personalized approach to prescribing is revolutionizing medicine.
             </p>
@@ -379,7 +379,7 @@ export default function PharmacogenomicsPage() {
                       <div className="bg-slate-800/50 rounded-lg p-4">
                         <h4 className="text-[#fe5d66] font-semibold mb-2">Solution</h4>
                         <p className="text-gray-300 text-sm">
-                          Switch to alternative antiplatelet therapy (Prasugrel or Ticagrelor) that doesn't depend on CYP2C19.
+                          Switch to alternative antiplatelet therapy (Prasugrel or Ticagrelor) that doesn&apos;t depend on CYP2C19.
                         </p>
                       </div>
                     </div>
