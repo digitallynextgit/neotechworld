@@ -4,14 +4,13 @@ import { IoSearch } from "react-icons/io5";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { FiX } from "react-icons/fi";
 
 import menuData from "./menuData";
 
-const OVERLAY_COLOR = "#FF5C5C";
 
 const Header = () => {
   const { data: session } = useSession();
@@ -47,9 +46,11 @@ const Header = () => {
   };
 
   const { theme, setTheme } = useTheme();
+  const router = useRouter();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [showMenuOverlay, setShowMenuOverlay] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const leftBoxRef = useRef<HTMLDivElement>(null);
   const rightBoxRef = useRef<HTMLDivElement>(null);
 
@@ -107,6 +108,24 @@ const Header = () => {
     setTimeout(() => setShowMenuOverlay(false), 450); // match GSAP duration
   };
 
+  // Handle navigation with preloader
+  const handleNavigation = (href: string) => {
+    if (href && href !== '#' && href !== pathUrl) {
+      setIsLoading(true);
+      closeMenu();
+      
+      // Simulate loading time and navigate
+      setTimeout(() => {
+        router.push(href);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 500);
+      }, 300);
+    } else {
+      closeMenu();
+    }
+  };
+
   return (
     <>
       {/* Header Bar */}
@@ -136,6 +155,36 @@ const Header = () => {
         </div>
       </header>
 
+      {/* Preloader */}
+      {isLoading && (
+        <div className="fixed inset-0 z-[9999] bg-[#091534] flex items-center justify-center">
+          <div className="text-center">
+            {/* DNA Helix Animation */}
+            <div className="relative w-24 h-24 mx-auto mb-8">
+              <div className="absolute inset-0 border-4 border-[#fe5d66]/20 rounded-full animate-spin"></div>
+              <div className="absolute inset-2 border-4 border-[#fe5d66]/40 rounded-full animate-spin" style={{animationDirection: 'reverse', animationDuration: '1.5s'}}></div>
+              <div className="absolute inset-4 border-4 border-[#fe5d66] rounded-full animate-spin" style={{animationDuration: '2s'}}></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-3 h-3 bg-[#fe5d66] rounded-full animate-pulse"></div>
+              </div>
+            </div>
+            
+            {/* Loading Text */}
+            <div className="text-white text-xl font-light mb-4">Loading...</div>
+            
+            {/* Progress Bar */}
+            <div className="w-64 h-1 bg-white/20 rounded-full overflow-hidden">
+              <div className="h-full bg-gradient-to-r from-[#fe5d66] to-orange-400 rounded-full animate-pulse" style={{width: '100%', animation: 'loading 2s ease-in-out infinite'}}></div>
+            </div>
+            
+            {/* DNA Particles */}
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-[#fe5d66] rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
+            <div className="absolute top-3/4 right-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+            <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-orange-400 rounded-full animate-bounce" style={{animationDelay: '1.5s'}}></div>
+          </div>
+        </div>
+      )}
+
       {/* Overlay Menu */}
       {menuOpen && (
         <>
@@ -146,9 +195,9 @@ const Header = () => {
             style={{ transform: 'translateY(-100%)' }}
           >
             <div className="p-6 w-full flex items-start">
-              <Link href="/" onClick={closeMenu}>
+              <span onClick={() => handleNavigation('/')} className="cursor-pointer">
                 <Image src="/mainlogo.webp" alt="Logo" width={1200} height={64} className="w-[120px] h-full sm:w-[200px]"/>
-              </Link>
+              </span>
             </div>
             <div className="absolute bottom-0 left-0 p-6 w-full flex flex-col items-start gap-2">
               <div className="flex flex-col gap-1 text-white text-sm">
@@ -196,9 +245,9 @@ const Header = () => {
                           ${menuOpen ? `opacity-100 translate-y-0 delay-[${200 + idx * 100}ms]` : ''}`}
                         style={{ transitionDelay: menuOpen ? `${200 + idx * 100}ms` : '0ms' }}
                       >
-                        <Link href={item.path || '#'} onClick={() => setMenuOpen(false)}>
+                        <span onClick={() => handleNavigation(item.path || '#')}>
                           {item.title}
-                        </Link>
+                        </span>
                       </span>
                     </div>
                   </li>
@@ -206,9 +255,9 @@ const Header = () => {
               </ul>
               {/* Right vertical links */}
               <div className="flex flex-row sm:flex-col items-end justify-center gap-4 sm:gap-6 pr-6 sm:pr-16 py-6 sm:py-12 w-full sm:w-auto">
-                <Link href="/careers" onClick={closeMenu}><span className="text-white text-xl sm:text-4xl font-light cursor-pointer">Careers</span></Link>
-                <Link href="/resources" onClick={closeMenu}><span className="text-white text-xl sm:text-4xl font-light cursor-pointer">News and Events</span></Link>
-                {/* <Link href="/contact  " onClick={closeMenu}><span className="text-white text-xl sm:text-4xl font-light cursor-pointer hidden lg:block">Contacts</span></Link> */}
+                <span onClick={() => handleNavigation('/careers')} className="text-white text-xl sm:text-4xl font-light cursor-pointer">Careers</span>
+                <span onClick={() => handleNavigation('/resources')} className="text-white text-xl sm:text-4xl font-light cursor-pointer">News and Events</span>
+                {/* <span onClick={() => handleNavigation('/contact')} className="text-white text-xl sm:text-4xl font-light cursor-pointer hidden lg:block">Contacts</span> */}
               </div>
             </div>
             {/* Bottom right: sound, 4K icon */}
