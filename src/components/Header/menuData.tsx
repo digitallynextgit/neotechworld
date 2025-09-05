@@ -16,12 +16,13 @@ const menuData: Menu[] = [
   {
     id: 3,
     title: "Services",
+    path: "/services",
     newTab: false,
     submenu: [
-      { id: 31, title: "Precision Diagnostics", path: "#", newTab: false },
-      { id: 32, title: "Pharmacogenomics", path: "#", newTab: false },
-      { id: 33, title: "Preventive Genomics", path: "#", newTab: false },
-      { id: 34, title: "R&D and Public Health Integration", path: "#", newTab: false },
+      { id: 31, title: "Clinical Genomics", path: "/services/clinical-genomics", newTab: false },
+      { id: 32, title: "Pharmacogenomics", path: "/services/pharmacogenomics", newTab: false },
+      { id: 33, title: "Preventive Genomics", path: "/services/preventive-genomics", newTab: false },
+      { id: 34, title: "All Services", path: "/services", newTab: false },
     ],
   },
   {
