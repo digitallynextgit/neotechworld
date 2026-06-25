@@ -4,7 +4,8 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Forgot Password | Play SaaS Starter Kit and Boilerplate for Next.js",
+  title: "Forgot Password",
+  description: "Reset the password for your NeoTech World account.",
 };
 
 const ForgotPasswordPage = () => {

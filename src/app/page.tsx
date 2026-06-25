@@ -22,9 +22,11 @@ import { Metadata } from "next";
 import DnaCanvas from "@/components/Hero/DnaModel";
 
 export const metadata: Metadata = {
-  title: "NeoTech",
+  title: {
+    absolute: "NeoTech World | Precision Genomics & Personalized Medicine",
+  },
   description:
-    "A NextJS website.",
+    "NeoTech World brings precision genomics to healthcare—clinical genomics, pharmacogenomics and preventive testing that help doctors prescribe the right drug at the right dose and help people understand their genetic risks for better health outcomes.",
 };
 
 export default function Home() {

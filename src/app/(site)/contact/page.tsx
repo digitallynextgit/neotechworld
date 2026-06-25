@@ -3,9 +3,9 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Contact Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-  description: "This is contact page description",
+  title: "Contact Us",
+  description:
+    "Get in touch with NeoTech World to discuss clinical genomics, pharmacogenomics and preventive genomic testing for your hospital, lab, organization or personal health needs.",
 };
 
 const ContactPage = () => {

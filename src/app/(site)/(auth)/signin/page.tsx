@@ -3,8 +3,9 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Sign In | Play SaaS Starter Kit and Boilerplate for Next.js",
+  title: "Sign In",
+  description:
+    "Sign in to your NeoTech World account to access your genomic reports and precision medicine insights.",
 };
 
 const SigninPage = () => {
